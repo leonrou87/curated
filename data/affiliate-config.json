@@ -1,0 +1,12 @@
+{
+  "site": { "name": "Curated", "url": "" },
+  "networks": {
+    "sovrn": { "enabled": true, "publisherId": "", "label": "Sovrn Commerce / Skimlinks", "note": "Default layer — auto-affiliates outbound links across thousands of merchants. Approval is fast and does not require existing sales." },
+    "amazon": { "enabled": false, "associateTag": "", "paapiAccessKey": "", "paapiSecret": "", "region": "us-east-1", "label": "Amazon Associates", "note": "High value but gated by the 3-sale rule (3 qualifying sales / 180 days). PA-API access only after those sales. Until then the Amazon adapter no-ops gracefully." },
+    "shareasale": { "enabled": false, "affiliateId": "", "label": "ShareASale", "note": "Direct network. Often 2-4x Sovrn's rate for merchants you feature heavily." },
+    "cj": { "enabled": false, "websiteId": "", "label": "CJ Affiliate (Commission Junction)", "note": "Premium network for established brands." },
+    "impact": { "enabled": false, "accountSid": "", "label": "Impact.com", "note": "Premium network; many DTC brands run their programs here." }
+  },
+  "analytics": { "ga4": "", "plausibleDomain": "" },
+  "updatedAt": null
+}

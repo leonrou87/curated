@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ───────────────────────────────────────────────────────────────────────────
+   tokens.css — all design tokens from DESIGN-SYSTEM.md, both themes.
+   Fonts: Fraunces (display serif), Inter (UI sans), Geist Mono — swappable via
+   --serif / --sans / --mono so a human can drop in licensed faces (Canela/Suisse).
+─────────────────────────────────────────────────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap");
+
+:root {
+  /* ---- Dark (default) ---- */
+  --bg: #0e0e0f;
+  --surface: #161617;
+  --surface-2: #1f1f21;
+  --line: #2a2a2d;
+  --ink: #f4f2ee;
+  --ink-soft: #b9b6af;
+  --ink-mute: #7e7b75;
+
+  --accent: #c8612f;
+  --accent-soft: #e08a5a;
+  --accent-ink: #0e0e0f;
+
+  --positive: #5b8c6e;
+  --warning: #c9a14a;
+  --danger: #b4544a;
+
+  --overlay-grad: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.72) 100%);
+
+  /* fonts (swap these two vars to drop in licensed faces) */
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "Inter", system-ui, sans-serif;
+  --mono: "Geist Mono", ui-monospace, monospace;
+
+  /* type scale */
+  --t-display: clamp(2.5rem, 6vw, 5rem);
+  --t-h1: clamp(2rem, 4vw, 3.25rem);
+  --t-h2: clamp(1.5rem, 2.6vw, 2.25rem);
+  --t-h3: 1.5rem;
+  --t-body: 1.0625rem;
+  --t-small: 0.9375rem;
+  --t-caption: 0.8125rem;
+  --tracking-caps: 0.08em;
+
+  /* space / radius / elevation */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px;
+  --s-6: 32px; --s-7: 48px; --s-8: 64px; --s-9: 96px; --s-10: 128px;
+  --r-sm: 6px; --r-md: 12px; --r-lg: 20px; --r-xl: 28px; --r-pill: 999px;
+  --e-1: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --e-2: 0 6px 24px rgba(0, 0, 0, 0.34);
+  --e-3: 0 18px 60px rgba(0, 0, 0, 0.45);
+
+  /* motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 140ms; --dur-base: 240ms; --dur-slow: 420ms; --dur-reveal: 900ms;
+}
+
+[data-theme="light"] {
+  --bg: #f6f3ee;
+  --surface: #ffffff;
+  --surface-2: #efeae2;
+  --line: #e0d9ce;
+  --ink: #17150f;
+  --ink-soft: #4a463d;
+  --ink-mute: #847e70;
+  --accent: #b4501f;
+  --accent-soft: #d06e3c;
+  --accent-ink: #ffffff;
+}
+
+* { box-sizing: border-box; }
+html, body { padding: 0; margin: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: var(--t-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--accent); color: var(--accent-ink); }
+
+a { color: inherit; text-decoration: none; }
+
+/* focus ring — accent, 2px, offset (a11y) */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* shared editorial primitives */
+.eyebrow {
+  font-size: var(--t-caption);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+.serif { font-family: var(--serif); }
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 10px 16px;
+  z-index: 100;
+  border-radius: 0 0 var(--r-md) 0;
+}
+.skip-link:focus { left: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

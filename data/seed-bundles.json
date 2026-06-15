@@ -1,0 +1,6646 @@
+{
+  "products": [
+    {
+      "id": "p_001",
+      "title": "Satin Slip Midi Dress",
+      "brand": "Reformation",
+      "category": "dress",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_001",
+      "imageUrls": [
+        "/seed/p_001.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Reformation",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_001?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 24800,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "anchor"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#9C7B4E",
+          "family": "olive",
+          "undertone": "warm",
+          "role": "statement",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "flowy",
+        "volume": "regular",
+        "weight": "statement",
+        "seasons": [
+          "summer",
+          "fall"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Reformation",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "anchor"
+        ]
+      }
+    },
+    {
+      "id": "p_002",
+      "title": "Strappy Block Heel",
+      "brand": "Sam Edelman",
+      "category": "shoes",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_002",
+      "imageUrls": [
+        "/seed/p_002.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Sam Edelman",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_002?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 13000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#C9A88B",
+          "family": "tan",
+          "undertone": "warm",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Sam Edelman",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "shoes"
+        ]
+      }
+    },
+    {
+      "id": "p_003",
+      "title": "Suede Envelope Clutch",
+      "brand": "Mango",
+      "category": "bag",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_003",
+      "imageUrls": [
+        "/seed/p_003.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Mango",
+          "priceTier": "budget",
+          "affiliateUrl": "https://go.sovrn.com/p_003?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 4600,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bag"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#7A5C3A",
+          "family": "brown",
+          "undertone": "warm",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Mango",
+        "brandTier": 2,
+        "priceTier": "budget",
+        "slotRoles": [
+          "bag"
+        ]
+      }
+    },
+    {
+      "id": "p_004",
+      "title": "Gold Drop Earrings",
+      "brand": "Mejuri",
+      "category": "accessory",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_004",
+      "imageUrls": [
+        "/seed/p_004.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Mejuri",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_004?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 9800,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "accessory"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#C8A951",
+          "family": "beige",
+          "undertone": "warm",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Mejuri",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "accessory"
+        ]
+      }
+    },
+    {
+      "id": "p_005",
+      "title": "Relaxed Wool Blazer",
+      "brand": "COS",
+      "category": "outerwear",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_005",
+      "imageUrls": [
+        "/seed/p_005.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "COS",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_005?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 19000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top",
+        "outerwear"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#3C4A5A",
+          "family": "navy",
+          "undertone": "cool",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "structured",
+        "volume": "regular",
+        "weight": "statement",
+        "seasons": [
+          "fall",
+          "winter",
+          "spring"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "COS",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "top",
+          "outerwear"
+        ]
+      }
+    },
+    {
+      "id": "p_006",
+      "title": "Silk-Blend Shell Top",
+      "brand": "Everlane",
+      "category": "top",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_006",
+      "imageUrls": [
+        "/seed/p_006.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Everlane",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_006?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 7800,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#EFE9DD",
+          "family": "cream",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Everlane",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "top"
+        ]
+      }
+    },
+    {
+      "id": "p_007",
+      "title": "Tailored Straight Trouser",
+      "brand": "Everlane",
+      "category": "bottom",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_007",
+      "imageUrls": [
+        "/seed/p_007.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Everlane",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_007?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 9800,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bottom"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#2E3138",
+          "family": "charcoal",
+          "undertone": "cool",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "structured",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Everlane",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "bottom"
+        ]
+      }
+    },
+    {
+      "id": "p_008",
+      "title": "Leather Penny Loafer",
+      "brand": "Vagabond",
+      "category": "shoes",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_008",
+      "imageUrls": [
+        "/seed/p_008.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Vagabond",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_008?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 14000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#2A2A2A",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Vagabond",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "shoes"
+        ]
+      }
+    },
+    {
+      "id": "p_009",
+      "title": "Structured Leather Tote",
+      "brand": "Madewell",
+      "category": "bag",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_009",
+      "imageUrls": [
+        "/seed/p_009.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Madewell",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_009?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 17800,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bag"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#5A4632",
+          "family": "brown",
+          "undertone": "warm",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Madewell",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "bag"
+        ]
+      }
+    },
+    {
+      "id": "p_010",
+      "title": "Unstructured Linen Blazer",
+      "brand": "Suitsupply",
+      "category": "outerwear",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_010",
+      "imageUrls": [
+        "/seed/p_010.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Suitsupply",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_010?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 29900,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top",
+        "outerwear"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#6E6A5A",
+          "family": "olive",
+          "undertone": "warm",
+          "role": "statement",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "structured",
+        "volume": "regular",
+        "weight": "statement",
+        "seasons": [
+          "summer",
+          "spring"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Suitsupply",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "top",
+          "outerwear"
+        ]
+      }
+    },
+    {
+      "id": "p_011",
+      "title": "Cotton Oxford Shirt",
+      "brand": "Uniqlo",
+      "category": "top",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_011",
+      "imageUrls": [
+        "/seed/p_011.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Uniqlo",
+          "priceTier": "budget",
+          "affiliateUrl": "https://go.sovrn.com/p_011?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 4000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#F2EFE8",
+          "family": "white",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Uniqlo",
+        "brandTier": 1,
+        "priceTier": "budget",
+        "slotRoles": [
+          "top"
+        ]
+      }
+    },
+    {
+      "id": "p_012",
+      "title": "Pleated Wool Trouser",
+      "brand": "J.Crew",
+      "category": "bottom",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_012",
+      "imageUrls": [
+        "/seed/p_012.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "J.Crew",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_012?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 12800,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bottom"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#6B6256",
+          "family": "tan",
+          "undertone": "warm",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "structured",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "J.Crew",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "bottom"
+        ]
+      }
+    },
+    {
+      "id": "p_013",
+      "title": "Suede Tassel Loafer",
+      "brand": "Cole Haan",
+      "category": "shoes",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_013",
+      "imageUrls": [
+        "/seed/p_013.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Cole Haan",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_013?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 17000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#6E4A2E",
+          "family": "brown",
+          "undertone": "warm",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Cole Haan",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "shoes"
+        ]
+      }
+    },
+    {
+      "id": "p_014",
+      "title": "Woven Leather Belt",
+      "brand": "Anderson's",
+      "category": "accessory",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_014",
+      "imageUrls": [
+        "/seed/p_014.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Anderson's",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_014?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 9500,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "accessory",
+        "belt"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#5A3A22",
+          "family": "brown",
+          "undertone": "warm",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Anderson's",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "accessory",
+          "belt"
+        ]
+      }
+    },
+    {
+      "id": "p_015",
+      "title": "Heavyweight Hoodie",
+      "brand": "Lululemon",
+      "category": "top",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_015",
+      "imageUrls": [
+        "/seed/p_015.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Lululemon",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_015?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 11800,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top"
+      ],
+      "styling": {
+        "formality": 2,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#2C2C2C",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "relaxed",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "fall",
+          "winter",
+          "spring"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Lululemon",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "top"
+        ]
+      }
+    },
+    {
+      "id": "p_016",
+      "title": "Relaxed Nylon Cargo",
+      "brand": "Carhartt WIP",
+      "category": "bottom",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_016",
+      "imageUrls": [
+        "/seed/p_016.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Carhartt WIP",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_016?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 12800,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bottom"
+      ],
+      "styling": {
+        "formality": 2,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#3A4030",
+          "family": "olive",
+          "undertone": "warm",
+          "role": "accent",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "relaxed",
+        "volume": "voluminous",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Carhartt WIP",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "bottom"
+        ]
+      }
+    },
+    {
+      "id": "p_017",
+      "title": "Retro Runner Sneaker",
+      "brand": "New Balance",
+      "category": "shoes",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_017",
+      "imageUrls": [
+        "/seed/p_017.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "New Balance",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_017?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 15000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes"
+      ],
+      "styling": {
+        "formality": 2,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#D8D2C6",
+          "family": "grey",
+          "undertone": "neutral",
+          "role": "statement",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "statement",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "New Balance",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "shoes"
+        ]
+      }
+    },
+    {
+      "id": "p_018",
+      "title": "Washed Cotton Cap",
+      "brand": "Carhartt WIP",
+      "category": "accessory",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_018",
+      "imageUrls": [
+        "/seed/p_018.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Carhartt WIP",
+          "priceTier": "budget",
+          "affiliateUrl": "https://go.sovrn.com/p_018?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 3200,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "accessory"
+      ],
+      "styling": {
+        "formality": 2,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#2C2C2C",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Carhartt WIP",
+        "brandTier": 2,
+        "priceTier": "budget",
+        "slotRoles": [
+          "accessory"
+        ]
+      }
+    },
+    {
+      "id": "p_019",
+      "title": "Tiered Cotton Maxi",
+      "brand": "Free People",
+      "category": "dress",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_019",
+      "imageUrls": [
+        "/seed/p_019.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Free People",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_019?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 16800,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "anchor"
+      ],
+      "styling": {
+        "formality": 2,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#B5651D",
+          "family": "orange",
+          "undertone": "warm",
+          "role": "statement",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "flowy",
+        "volume": "voluminous",
+        "weight": "statement",
+        "seasons": [
+          "summer"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Free People",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "anchor"
+        ]
+      }
+    },
+    {
+      "id": "p_020",
+      "title": "Suede Ankle Boot",
+      "brand": "Steve Madden",
+      "category": "shoes",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_020",
+      "imageUrls": [
+        "/seed/p_020.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Steve Madden",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_020?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 12000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes"
+      ],
+      "styling": {
+        "formality": 2,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#8A6A45",
+          "family": "tan",
+          "undertone": "warm",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Steve Madden",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "shoes"
+        ]
+      }
+    },
+    {
+      "id": "p_021",
+      "title": "Fringe Crossbody",
+      "brand": "Mango",
+      "category": "bag",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_021",
+      "imageUrls": [
+        "/seed/p_021.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Mango",
+          "priceTier": "budget",
+          "affiliateUrl": "https://go.sovrn.com/p_021?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 6000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bag"
+      ],
+      "styling": {
+        "formality": 2,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#6E4A2E",
+          "family": "brown",
+          "undertone": "warm",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Mango",
+        "brandTier": 2,
+        "priceTier": "budget",
+        "slotRoles": [
+          "bag"
+        ]
+      }
+    },
+    {
+      "id": "p_022",
+      "title": "Wide-Brim Felt Hat",
+      "brand": "Lack of Color",
+      "category": "accessory",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_022",
+      "imageUrls": [
+        "/seed/p_022.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Lack of Color",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_022?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 9900,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "accessory"
+      ],
+      "styling": {
+        "formality": 2,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#8B5A2B",
+          "family": "brown",
+          "undertone": "warm",
+          "role": "accent",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Lack of Color",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "accessory"
+        ]
+      }
+    },
+    {
+      "id": "p_023",
+      "title": "Fine-Gauge Mock Knit",
+      "brand": "COS",
+      "category": "top",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_023",
+      "imageUrls": [
+        "/seed/p_023.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "COS",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_023?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 6900,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#1E1E1E",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "fitted",
+        "volume": "slim",
+        "weight": "basic",
+        "seasons": [
+          "fall",
+          "winter"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "COS",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "top"
+        ]
+      }
+    },
+    {
+      "id": "p_024",
+      "title": "Leather Column Skirt",
+      "brand": "Aritzia",
+      "category": "bottom",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_024",
+      "imageUrls": [
+        "/seed/p_024.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Aritzia",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_024?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 14800,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bottom"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#161616",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "statement",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "fitted",
+        "volume": "slim",
+        "weight": "statement",
+        "seasons": [
+          "fall",
+          "winter"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Aritzia",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "bottom"
+        ]
+      }
+    },
+    {
+      "id": "p_025",
+      "title": "Pointed Slingback",
+      "brand": "Sam Edelman",
+      "category": "shoes",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_025",
+      "imageUrls": [
+        "/seed/p_025.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Sam Edelman",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_025?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 14000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#1A1A1A",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Sam Edelman",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "shoes"
+        ]
+      }
+    },
+    {
+      "id": "p_026",
+      "title": "Mini Top-Handle Bag",
+      "brand": "Charles & Keith",
+      "category": "bag",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_026",
+      "imageUrls": [
+        "/seed/p_026.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Charles & Keith",
+          "priceTier": "budget",
+          "affiliateUrl": "https://go.sovrn.com/p_026?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 7900,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bag"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#2A2A2A",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Charles & Keith",
+        "brandTier": 2,
+        "priceTier": "budget",
+        "slotRoles": [
+          "bag"
+        ]
+      }
+    },
+    {
+      "id": "p_027",
+      "title": "Navy Wool Suit Jacket",
+      "brand": "SuitSupply",
+      "category": "outerwear",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_027",
+      "imageUrls": [
+        "/seed/p_027.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "SuitSupply",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_027?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 34000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top",
+        "outerwear"
+      ],
+      "styling": {
+        "formality": 5,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#26303F",
+          "family": "navy",
+          "undertone": "cool",
+          "role": "statement",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "structured",
+        "volume": "regular",
+        "weight": "statement",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "SuitSupply",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "top",
+          "outerwear"
+        ]
+      }
+    },
+    {
+      "id": "p_028",
+      "title": "White Dress Shirt",
+      "brand": "Charles Tyrwhitt",
+      "category": "top",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_028",
+      "imageUrls": [
+        "/seed/p_028.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Charles Tyrwhitt",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_028?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 7000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top"
+      ],
+      "styling": {
+        "formality": 5,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#F4F2ED",
+          "family": "white",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Charles Tyrwhitt",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "top"
+        ]
+      }
+    },
+    {
+      "id": "p_029",
+      "title": "Matching Suit Trouser",
+      "brand": "SuitSupply",
+      "category": "bottom",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_029",
+      "imageUrls": [
+        "/seed/p_029.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "SuitSupply",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_029?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 16000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bottom"
+      ],
+      "styling": {
+        "formality": 5,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#26303F",
+          "family": "navy",
+          "undertone": "cool",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "structured",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "SuitSupply",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "bottom"
+        ]
+      }
+    },
+    {
+      "id": "p_030",
+      "title": "Black Cap-Toe Oxford",
+      "brand": "Allen Edmonds",
+      "category": "shoes",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_030",
+      "imageUrls": [
+        "/seed/p_030.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Allen Edmonds",
+          "priceTier": "premium",
+          "affiliateUrl": "https://go.sovrn.com/p_030?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 39500,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes"
+      ],
+      "styling": {
+        "formality": 5,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#171717",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Allen Edmonds",
+        "brandTier": 3,
+        "priceTier": "premium",
+        "slotRoles": [
+          "shoes"
+        ]
+      }
+    },
+    {
+      "id": "p_031",
+      "title": "Emerald Satin Slip",
+      "brand": "Whistles",
+      "category": "dress",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_031",
+      "imageUrls": [
+        "/seed/p_031.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Whistles",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_031?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 22000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "anchor"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#1F5C46",
+          "family": "green",
+          "undertone": "cool",
+          "role": "statement",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "flowy",
+        "volume": "regular",
+        "weight": "statement",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Whistles",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "anchor"
+        ]
+      }
+    },
+    {
+      "id": "p_032",
+      "title": "Black Strappy Sandal",
+      "brand": "Stuart Weitzman",
+      "category": "shoes",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_032",
+      "imageUrls": [
+        "/seed/p_032.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Stuart Weitzman",
+          "priceTier": "premium",
+          "affiliateUrl": "https://go.sovrn.com/p_032?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 29800,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#161616",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Stuart Weitzman",
+        "brandTier": 3,
+        "priceTier": "premium",
+        "slotRoles": [
+          "shoes"
+        ]
+      }
+    },
+    {
+      "id": "p_033",
+      "title": "Black Satin Clutch",
+      "brand": "Mango",
+      "category": "bag",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_033",
+      "imageUrls": [
+        "/seed/p_033.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Mango",
+          "priceTier": "budget",
+          "affiliateUrl": "https://go.sovrn.com/p_033?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 5000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bag"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#1A1A1A",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Mango",
+        "brandTier": 2,
+        "priceTier": "budget",
+        "slotRoles": [
+          "bag"
+        ]
+      }
+    },
+    {
+      "id": "p_034",
+      "title": "Gold Cuff Bracelet",
+      "brand": "Mejuri",
+      "category": "accessory",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_034",
+      "imageUrls": [
+        "/seed/p_034.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Mejuri",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_034?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 12000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "accessory"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#C8A951",
+          "family": "beige",
+          "undertone": "warm",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Mejuri",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "accessory"
+        ]
+      }
+    },
+    {
+      "id": "p_035",
+      "title": "Corduroy Overshirt",
+      "brand": "Uniqlo",
+      "category": "outerwear",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_035",
+      "imageUrls": [
+        "/seed/p_035.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Uniqlo",
+          "priceTier": "budget",
+          "affiliateUrl": "https://go.sovrn.com/p_035?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 6000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top",
+        "outerwear"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#7A5230",
+          "family": "brown",
+          "undertone": "warm",
+          "role": "statement",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "relaxed",
+        "volume": "regular",
+        "weight": "statement",
+        "seasons": [
+          "fall"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Uniqlo",
+        "brandTier": 1,
+        "priceTier": "budget",
+        "slotRoles": [
+          "top",
+          "outerwear"
+        ]
+      }
+    },
+    {
+      "id": "p_036",
+      "title": "Heavy Cotton Tee",
+      "brand": "Asket",
+      "category": "top",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_036",
+      "imageUrls": [
+        "/seed/p_036.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Asket",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_036?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 4500,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top"
+      ],
+      "styling": {
+        "formality": 2,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#EFEAE0",
+          "family": "cream",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Asket",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "top"
+        ]
+      }
+    },
+    {
+      "id": "p_037",
+      "title": "Tapered Chino",
+      "brand": "J.Crew",
+      "category": "bottom",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_037",
+      "imageUrls": [
+        "/seed/p_037.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "J.Crew",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_037?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 9000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bottom"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#3F4636",
+          "family": "olive",
+          "undertone": "warm",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "J.Crew",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "bottom"
+        ]
+      }
+    },
+    {
+      "id": "p_038",
+      "title": "Leather Court Sneaker",
+      "brand": "CommonProjects",
+      "category": "shoes",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_038",
+      "imageUrls": [
+        "/seed/p_038.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "CommonProjects",
+          "priceTier": "premium",
+          "affiliateUrl": "https://go.sovrn.com/p_038?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 42000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#EDEAE2",
+          "family": "cream",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "CommonProjects",
+        "brandTier": 4,
+        "priceTier": "premium",
+        "slotRoles": [
+          "shoes"
+        ]
+      }
+    },
+    {
+      "id": "p_039",
+      "title": "Cropped Cloud Hoodie",
+      "brand": "Alo Yoga",
+      "category": "top",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_039",
+      "imageUrls": [
+        "/seed/p_039.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Alo Yoga",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_039?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 11800,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top"
+      ],
+      "styling": {
+        "formality": 1,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#2D2D2D",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "fitted",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Alo Yoga",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "top"
+        ]
+      }
+    },
+    {
+      "id": "p_040",
+      "title": "High-Rise Legging",
+      "brand": "Lululemon",
+      "category": "bottom",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_040",
+      "imageUrls": [
+        "/seed/p_040.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Lululemon",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_040?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 9800,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bottom"
+      ],
+      "styling": {
+        "formality": 1,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#1F1F1F",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "fitted",
+        "volume": "slim",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Lululemon",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "bottom"
+        ]
+      }
+    },
+    {
+      "id": "p_041",
+      "title": "Cloud Running Shoe",
+      "brand": "On",
+      "category": "shoes",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_041",
+      "imageUrls": [
+        "/seed/p_041.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "On",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_041?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 15000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes"
+      ],
+      "styling": {
+        "formality": 1,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#D9D5CC",
+          "family": "grey",
+          "undertone": "neutral",
+          "role": "statement",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "statement",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "On",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "shoes"
+        ]
+      }
+    },
+    {
+      "id": "p_042",
+      "title": "Belt Bag",
+      "brand": "Lululemon",
+      "category": "bag",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_042",
+      "imageUrls": [
+        "/seed/p_042.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Lululemon",
+          "priceTier": "budget",
+          "affiliateUrl": "https://go.sovrn.com/p_042?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 3800,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bag"
+      ],
+      "styling": {
+        "formality": 1,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#2D2D2D",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Lululemon",
+        "brandTier": 3,
+        "priceTier": "budget",
+        "slotRoles": [
+          "bag"
+        ]
+      }
+    },
+    {
+      "id": "p_043",
+      "title": "Linen Shirt Dress",
+      "brand": "Quince",
+      "category": "dress",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_043",
+      "imageUrls": [
+        "/seed/p_043.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Quince",
+          "priceTier": "budget",
+          "affiliateUrl": "https://go.sovrn.com/p_043?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 7000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "anchor"
+      ],
+      "styling": {
+        "formality": 2,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#EDE6D6",
+          "family": "cream",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "relaxed",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "summer"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Quince",
+        "brandTier": 2,
+        "priceTier": "budget",
+        "slotRoles": [
+          "anchor"
+        ]
+      }
+    },
+    {
+      "id": "p_044",
+      "title": "Leather Slide Sandal",
+      "brand": "Ancient Greek",
+      "category": "shoes",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_044",
+      "imageUrls": [
+        "/seed/p_044.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Ancient Greek",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_044?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 19500,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes"
+      ],
+      "styling": {
+        "formality": 2,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#8A6A45",
+          "family": "tan",
+          "undertone": "warm",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "summer"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Ancient Greek",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "shoes"
+        ]
+      }
+    },
+    {
+      "id": "p_045",
+      "title": "Straw Market Tote",
+      "brand": "Mango",
+      "category": "bag",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_045",
+      "imageUrls": [
+        "/seed/p_045.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Mango",
+          "priceTier": "budget",
+          "affiliateUrl": "https://go.sovrn.com/p_045?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 5600,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bag"
+      ],
+      "styling": {
+        "formality": 2,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#C9A86A",
+          "family": "beige",
+          "undertone": "warm",
+          "role": "accent",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "statement",
+        "seasons": [
+          "summer"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Mango",
+        "brandTier": 2,
+        "priceTier": "budget",
+        "slotRoles": [
+          "bag"
+        ]
+      }
+    },
+    {
+      "id": "p_046",
+      "title": "Packable Straw Hat",
+      "brand": "Madewell",
+      "category": "accessory",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_046",
+      "imageUrls": [
+        "/seed/p_046.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Madewell",
+          "priceTier": "budget",
+          "affiliateUrl": "https://go.sovrn.com/p_046?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 4800,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "accessory"
+      ],
+      "styling": {
+        "formality": 2,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#C9A86A",
+          "family": "beige",
+          "undertone": "warm",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "summer"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Madewell",
+        "brandTier": 2,
+        "priceTier": "budget",
+        "slotRoles": [
+          "accessory"
+        ]
+      }
+    },
+    {
+      "id": "p_047",
+      "title": "Wool Overcoat",
+      "brand": "COS",
+      "category": "outerwear",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_047",
+      "imageUrls": [
+        "/seed/p_047.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "COS",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_047?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 29000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top",
+        "outerwear"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#3A3A38",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "statement",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "structured",
+        "volume": "regular",
+        "weight": "statement",
+        "seasons": [
+          "winter"
+        ],
+        "weather": [
+          "cold"
+        ],
+        "brand": "COS",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "top",
+          "outerwear"
+        ]
+      }
+    },
+    {
+      "id": "p_048",
+      "title": "Merino Crewneck",
+      "brand": "Uniqlo",
+      "category": "top",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_048",
+      "imageUrls": [
+        "/seed/p_048.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Uniqlo",
+          "priceTier": "budget",
+          "affiliateUrl": "https://go.sovrn.com/p_048?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 5000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#2E3A2C",
+          "family": "olive",
+          "undertone": "warm",
+          "role": "accent",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "winter",
+          "fall"
+        ],
+        "weather": [
+          "cold"
+        ],
+        "brand": "Uniqlo",
+        "brandTier": 1,
+        "priceTier": "budget",
+        "slotRoles": [
+          "top"
+        ]
+      }
+    },
+    {
+      "id": "p_049",
+      "title": "Wool Flannel Trouser",
+      "brand": "Spier & Mackay",
+      "category": "bottom",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_049",
+      "imageUrls": [
+        "/seed/p_049.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Spier & Mackay",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_049?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 12000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bottom"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#3C3C3C",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "structured",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "winter"
+        ],
+        "weather": [
+          "cold"
+        ],
+        "brand": "Spier & Mackay",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "bottom"
+        ]
+      }
+    },
+    {
+      "id": "p_050",
+      "title": "Leather Chelsea Boot",
+      "brand": "Thursday",
+      "category": "shoes",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_050",
+      "imageUrls": [
+        "/seed/p_050.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Thursday",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_050?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 20000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#3A2A1E",
+          "family": "brown",
+          "undertone": "warm",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "winter",
+          "fall"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Thursday",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "shoes"
+        ]
+      }
+    },
+    {
+      "id": "p_051",
+      "title": "Complete Box Club Set (10pc)",
+      "brand": "Callaway",
+      "category": "golf",
+      "subcategory": "clubs",
+      "canonicalUrl": "https://example.com/p_051",
+      "imageUrls": [
+        "/seed/p_051.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Callaway",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_051?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 60000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "anchor",
+        "primary-gear"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#222222",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "statement",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Callaway",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "anchor",
+          "primary-gear"
+        ]
+      }
+    },
+    {
+      "id": "p_052",
+      "title": "Soft Distance Balls (12)",
+      "brand": "Titleist",
+      "category": "golf",
+      "subcategory": "balls",
+      "canonicalUrl": "https://example.com/p_052",
+      "imageUrls": [
+        "/seed/p_052.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Titleist",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_052?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 3000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bottom",
+        "consumable"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#F4F4F0",
+          "family": "white",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Titleist",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "bottom",
+          "consumable"
+        ]
+      }
+    },
+    {
+      "id": "p_053",
+      "title": "Leather Golf Glove",
+      "brand": "FootJoy",
+      "category": "golf",
+      "subcategory": "glove",
+      "canonicalUrl": "https://example.com/p_053",
+      "imageUrls": [
+        "/seed/p_053.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "FootJoy",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_053?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 2200,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top",
+        "apparel"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#EDEDE8",
+          "family": "white",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "FootJoy",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "top",
+          "apparel"
+        ]
+      }
+    },
+    {
+      "id": "p_054",
+      "title": "Spikeless Golf Shoe",
+      "brand": "Adidas",
+      "category": "golf",
+      "subcategory": "shoes",
+      "canonicalUrl": "https://example.com/p_054",
+      "imageUrls": [
+        "/seed/p_054.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Adidas",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_054?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 11000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes",
+        "apparel"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#2C2C2C",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Adidas",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "shoes",
+          "apparel"
+        ]
+      }
+    },
+    {
+      "id": "p_055",
+      "title": "Bamboo Tees + Marker Kit",
+      "brand": "Pride",
+      "category": "golf",
+      "subcategory": "accessory",
+      "canonicalUrl": "https://example.com/p_055",
+      "imageUrls": [
+        "/seed/p_055.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Pride",
+          "priceTier": "budget",
+          "affiliateUrl": "https://go.sovrn.com/p_055?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 1400,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "accessory",
+        "accessory-kit"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#6B6256",
+          "family": "tan",
+          "undertone": "warm",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Pride",
+        "brandTier": 1,
+        "priceTier": "budget",
+        "slotRoles": [
+          "accessory",
+          "accessory-kit"
+        ]
+      }
+    },
+    {
+      "id": "p_056",
+      "title": "Espresso Machine",
+      "brand": "Breville",
+      "category": "coffee",
+      "subcategory": "machine",
+      "canonicalUrl": "https://example.com/p_056",
+      "imageUrls": [
+        "/seed/p_056.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Breville",
+          "priceTier": "premium",
+          "affiliateUrl": "https://go.sovrn.com/p_056?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 70000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "anchor",
+        "primary-gear"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#C8C8C8",
+          "family": "grey",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "statement",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Breville",
+        "brandTier": 3,
+        "priceTier": "premium",
+        "slotRoles": [
+          "anchor",
+          "primary-gear"
+        ]
+      }
+    },
+    {
+      "id": "p_057",
+      "title": "Conical Burr Grinder",
+      "brand": "Baratza",
+      "category": "coffee",
+      "subcategory": "grinder",
+      "canonicalUrl": "https://example.com/p_057",
+      "imageUrls": [
+        "/seed/p_057.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Baratza",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_057?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 17000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top",
+        "primary-gear"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#1F1F1F",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Baratza",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "top",
+          "primary-gear"
+        ]
+      }
+    },
+    {
+      "id": "p_058",
+      "title": "Precision Coffee Scale",
+      "brand": "Acaia",
+      "category": "coffee",
+      "subcategory": "scale",
+      "canonicalUrl": "https://example.com/p_058",
+      "imageUrls": [
+        "/seed/p_058.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Acaia",
+          "priceTier": "premium",
+          "affiliateUrl": "https://go.sovrn.com/p_058?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 15000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bottom",
+        "tool"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#2A2A2A",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Acaia",
+        "brandTier": 4,
+        "priceTier": "premium",
+        "slotRoles": [
+          "bottom",
+          "tool"
+        ]
+      }
+    },
+    {
+      "id": "p_059",
+      "title": "Stoneware Cup Set (2)",
+      "brand": "East Fork",
+      "category": "coffee",
+      "subcategory": "cups",
+      "canonicalUrl": "https://example.com/p_059",
+      "imageUrls": [
+        "/seed/p_059.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "East Fork",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_059?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 6800,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes",
+        "tool"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#9C8C74",
+          "family": "beige",
+          "undertone": "warm",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "East Fork",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "shoes",
+          "tool"
+        ]
+      }
+    },
+    {
+      "id": "p_060",
+      "title": "Single-Origin Beans Sub",
+      "brand": "Onyx",
+      "category": "coffee",
+      "subcategory": "beans",
+      "canonicalUrl": "https://example.com/p_060",
+      "imageUrls": [
+        "/seed/p_060.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Onyx",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_060?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 2200,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "accessory",
+        "consumable"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#5A3A22",
+          "family": "brown",
+          "undertone": "warm",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Onyx",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "accessory",
+          "consumable"
+        ]
+      }
+    },
+    {
+      "id": "p_061",
+      "title": "27\" 4K Monitor",
+      "brand": "Dell",
+      "category": "desk",
+      "subcategory": "monitor",
+      "canonicalUrl": "https://example.com/p_061",
+      "imageUrls": [
+        "/seed/p_061.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Dell",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_061?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 33000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "anchor",
+        "primary-gear"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#202020",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "statement",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Dell",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "anchor",
+          "primary-gear"
+        ]
+      }
+    },
+    {
+      "id": "p_062",
+      "title": "Low-Profile Mech Keyboard",
+      "brand": "Keychron",
+      "category": "desk",
+      "subcategory": "keyboard",
+      "canonicalUrl": "https://example.com/p_062",
+      "imageUrls": [
+        "/seed/p_062.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Keychron",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_062?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 10000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top",
+        "tool"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#2A2A2A",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Keychron",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "top",
+          "tool"
+        ]
+      }
+    },
+    {
+      "id": "p_063",
+      "title": "Ergonomic Wireless Mouse",
+      "brand": "Logitech",
+      "category": "desk",
+      "subcategory": "mouse",
+      "canonicalUrl": "https://example.com/p_063",
+      "imageUrls": [
+        "/seed/p_063.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Logitech",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_063?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 10000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bottom",
+        "tool"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#2E2E2E",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Logitech",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "bottom",
+          "tool"
+        ]
+      }
+    },
+    {
+      "id": "p_064",
+      "title": "Monitor Light Bar",
+      "brand": "BenQ",
+      "category": "desk",
+      "subcategory": "light",
+      "canonicalUrl": "https://example.com/p_064",
+      "imageUrls": [
+        "/seed/p_064.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "BenQ",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_064?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 12000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes",
+        "tool"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#1F1F1F",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "BenQ",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "shoes",
+          "tool"
+        ]
+      }
+    },
+    {
+      "id": "p_065",
+      "title": "Felt + Cork Desk Mat",
+      "brand": "Grovemade",
+      "category": "desk",
+      "subcategory": "mat",
+      "canonicalUrl": "https://example.com/p_065",
+      "imageUrls": [
+        "/seed/p_065.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Grovemade",
+          "priceTier": "premium",
+          "affiliateUrl": "https://go.sovrn.com/p_065?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 9000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "accessory",
+        "accessory-kit"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#6B5B45",
+          "family": "brown",
+          "undertone": "warm",
+          "role": "accent",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Grovemade",
+        "brandTier": 4,
+        "priceTier": "premium",
+        "slotRoles": [
+          "accessory",
+          "accessory-kit"
+        ]
+      }
+    },
+    {
+      "id": "p_066",
+      "title": "Adjustable Dumbbell Pair",
+      "brand": "Bowflex",
+      "category": "fitness",
+      "subcategory": "weights",
+      "canonicalUrl": "https://example.com/p_066",
+      "imageUrls": [
+        "/seed/p_066.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Bowflex",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_066?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 40000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "anchor",
+        "primary-gear"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#1E1E1E",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "statement",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Bowflex",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "anchor",
+          "primary-gear"
+        ]
+      }
+    },
+    {
+      "id": "p_067",
+      "title": "Premium Workout Mat",
+      "brand": "Manduka",
+      "category": "fitness",
+      "subcategory": "mat",
+      "canonicalUrl": "https://example.com/p_067",
+      "imageUrls": [
+        "/seed/p_067.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Manduka",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_067?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 9000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top",
+        "tool"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#2C2C2C",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Manduka",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "top",
+          "tool"
+        ]
+      }
+    },
+    {
+      "id": "p_068",
+      "title": "Resistance Band Set",
+      "brand": "TheraBand",
+      "category": "fitness",
+      "subcategory": "bands",
+      "canonicalUrl": "https://example.com/p_068",
+      "imageUrls": [
+        "/seed/p_068.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "TheraBand",
+          "priceTier": "budget",
+          "affiliateUrl": "https://go.sovrn.com/p_068?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 3000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bottom",
+        "tool"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#3A3A3A",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "TheraBand",
+        "brandTier": 2,
+        "priceTier": "budget",
+        "slotRoles": [
+          "bottom",
+          "tool"
+        ]
+      }
+    },
+    {
+      "id": "p_069",
+      "title": "Cast Iron Kettlebell",
+      "brand": "Rogue",
+      "category": "fitness",
+      "subcategory": "kettlebell",
+      "canonicalUrl": "https://example.com/p_069",
+      "imageUrls": [
+        "/seed/p_069.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Rogue",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_069?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 7500,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes",
+        "primary-gear"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#222222",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Rogue",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "shoes",
+          "primary-gear"
+        ]
+      }
+    },
+    {
+      "id": "p_070",
+      "title": "Foam Roller",
+      "brand": "TriggerPoint",
+      "category": "fitness",
+      "subcategory": "recovery",
+      "canonicalUrl": "https://example.com/p_070",
+      "imageUrls": [
+        "/seed/p_070.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "TriggerPoint",
+          "priceTier": "budget",
+          "affiliateUrl": "https://go.sovrn.com/p_070?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 3600,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "accessory",
+        "tool"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#2A2A2A",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "TriggerPoint",
+        "brandTier": 2,
+        "priceTier": "budget",
+        "slotRoles": [
+          "accessory",
+          "tool"
+        ]
+      }
+    },
+    {
+      "id": "p_071",
+      "title": "Black Crepe Sheath Dress",
+      "brand": "Theory",
+      "category": "dress",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_071",
+      "imageUrls": [
+        "/seed/p_071.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Theory",
+          "priceTier": "premium",
+          "affiliateUrl": "https://go.sovrn.com/p_071?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 29500,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "anchor"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#161616",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "structured",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Theory",
+        "brandTier": 3,
+        "priceTier": "premium",
+        "slotRoles": [
+          "anchor"
+        ]
+      }
+    },
+    {
+      "id": "p_072",
+      "title": "Tailored Black Coat",
+      "brand": "COS",
+      "category": "outerwear",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_072",
+      "imageUrls": [
+        "/seed/p_072.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "COS",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_072?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 22500,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top",
+        "outerwear"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#1A1A1A",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "structured",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "fall",
+          "winter"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "COS",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "top",
+          "outerwear"
+        ]
+      }
+    },
+    {
+      "id": "p_073",
+      "title": "Black Leather Flat",
+      "brand": "Everlane",
+      "category": "shoes",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_073",
+      "imageUrls": [
+        "/seed/p_073.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Everlane",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_073?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 15500,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#161616",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Everlane",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "shoes"
+        ]
+      }
+    },
+    {
+      "id": "p_074",
+      "title": "Structured Black Bag",
+      "brand": "Madewell",
+      "category": "bag",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_074",
+      "imageUrls": [
+        "/seed/p_074.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Madewell",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_074?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 16000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bag"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#1A1A1A",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Madewell",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "bag"
+        ]
+      }
+    },
+    {
+      "id": "p_075",
+      "title": "White Poplin Mini Dress",
+      "brand": "Reformation",
+      "category": "dress",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_075",
+      "imageUrls": [
+        "/seed/p_075.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Reformation",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_075?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 17800,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "anchor"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#F4F2ED",
+          "family": "white",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "relaxed",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "spring",
+          "summer"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Reformation",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "anchor"
+        ]
+      }
+    },
+    {
+      "id": "p_076",
+      "title": "Cream Cropped Blazer",
+      "brand": "Mango",
+      "category": "outerwear",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_076",
+      "imageUrls": [
+        "/seed/p_076.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Mango",
+          "priceTier": "budget",
+          "affiliateUrl": "https://go.sovrn.com/p_076?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 12000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top",
+        "outerwear"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#EDE6D6",
+          "family": "cream",
+          "undertone": "neutral",
+          "role": "statement",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "structured",
+        "volume": "regular",
+        "weight": "statement",
+        "seasons": [
+          "spring"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Mango",
+        "brandTier": 2,
+        "priceTier": "budget",
+        "slotRoles": [
+          "top",
+          "outerwear"
+        ]
+      }
+    },
+    {
+      "id": "p_077",
+      "title": "Nude Block Heel",
+      "brand": "Sam Edelman",
+      "category": "shoes",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_077",
+      "imageUrls": [
+        "/seed/p_077.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Sam Edelman",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_077?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 12000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#D6BBA0",
+          "family": "beige",
+          "undertone": "warm",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Sam Edelman",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "shoes"
+        ]
+      }
+    },
+    {
+      "id": "p_078",
+      "title": "Tan Mini Shoulder Bag",
+      "brand": "Charles & Keith",
+      "category": "bag",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_078",
+      "imageUrls": [
+        "/seed/p_078.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Charles & Keith",
+          "priceTier": "budget",
+          "affiliateUrl": "https://go.sovrn.com/p_078?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 7500,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bag"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#C9A88B",
+          "family": "tan",
+          "undertone": "warm",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Charles & Keith",
+        "brandTier": 2,
+        "priceTier": "budget",
+        "slotRoles": [
+          "bag"
+        ]
+      }
+    },
+    {
+      "id": "p_079",
+      "title": "Suede Trucker Jacket",
+      "brand": "AllSaints",
+      "category": "outerwear",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_079",
+      "imageUrls": [
+        "/seed/p_079.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "AllSaints",
+          "priceTier": "premium",
+          "affiliateUrl": "https://go.sovrn.com/p_079?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 34000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top",
+        "outerwear"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#6E4A2E",
+          "family": "brown",
+          "undertone": "warm",
+          "role": "statement",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "structured",
+        "volume": "regular",
+        "weight": "statement",
+        "seasons": [
+          "fall",
+          "spring"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "AllSaints",
+        "brandTier": 3,
+        "priceTier": "premium",
+        "slotRoles": [
+          "top",
+          "outerwear"
+        ]
+      }
+    },
+    {
+      "id": "p_080",
+      "title": "Fitted Henley",
+      "brand": "Buck Mason",
+      "category": "top",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_080",
+      "imageUrls": [
+        "/seed/p_080.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Buck Mason",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_080?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 4800,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top"
+      ],
+      "styling": {
+        "formality": 2,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#2E2E2E",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "fitted",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Buck Mason",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "top"
+        ]
+      }
+    },
+    {
+      "id": "p_081",
+      "title": "Slim Dark Denim",
+      "brand": "A.P.C.",
+      "category": "bottom",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_081",
+      "imageUrls": [
+        "/seed/p_081.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "A.P.C.",
+          "priceTier": "premium",
+          "affiliateUrl": "https://go.sovrn.com/p_081?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 21500,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bottom"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#2A2E36",
+          "family": "navy",
+          "undertone": "cool",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "fitted",
+        "volume": "slim",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "A.P.C.",
+        "brandTier": 3,
+        "priceTier": "premium",
+        "slotRoles": [
+          "bottom"
+        ]
+      }
+    },
+    {
+      "id": "p_082",
+      "title": "Suede Chukka Boot",
+      "brand": "Clarks",
+      "category": "shoes",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_082",
+      "imageUrls": [
+        "/seed/p_082.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Clarks",
+          "priceTier": "budget",
+          "affiliateUrl": "https://go.sovrn.com/p_082?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 13000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#7A5230",
+          "family": "brown",
+          "undertone": "warm",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Clarks",
+        "brandTier": 1,
+        "priceTier": "budget",
+        "slotRoles": [
+          "shoes"
+        ]
+      }
+    },
+    {
+      "id": "p_083",
+      "title": "Sequin Camisole",
+      "brand": "Whistles",
+      "category": "top",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_083",
+      "imageUrls": [
+        "/seed/p_083.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Whistles",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_083?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 13000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#1F1F1F",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "statement",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "subtle",
+        "texture": [],
+        "silhouette": "fitted",
+        "volume": "regular",
+        "weight": "statement",
+        "seasons": [
+          "winter"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Whistles",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "top"
+        ]
+      }
+    },
+    {
+      "id": "p_084",
+      "title": "Velvet Wide Trouser",
+      "brand": "& Other Stories",
+      "category": "bottom",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_084",
+      "imageUrls": [
+        "/seed/p_084.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "& Other Stories",
+          "priceTier": "mid",
+          "affiliateUrl": "https://go.sovrn.com/p_084?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 12000,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bottom"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#161616",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "relaxed",
+        "volume": "voluminous",
+        "weight": "supporting",
+        "seasons": [
+          "winter"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "& Other Stories",
+        "brandTier": 2,
+        "priceTier": "mid",
+        "slotRoles": [
+          "bottom"
+        ]
+      }
+    },
+    {
+      "id": "p_085",
+      "title": "Black Satin Pump",
+      "brand": "Stuart Weitzman",
+      "category": "shoes",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_085",
+      "imageUrls": [
+        "/seed/p_085.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Stuart Weitzman",
+          "priceTier": "premium",
+          "affiliateUrl": "https://go.sovrn.com/p_085?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 29800,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#1A1A1A",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Stuart Weitzman",
+        "brandTier": 3,
+        "priceTier": "premium",
+        "slotRoles": [
+          "shoes"
+        ]
+      }
+    },
+    {
+      "id": "p_086",
+      "title": "Crystal Clutch",
+      "brand": "Mango",
+      "category": "bag",
+      "subcategory": null,
+      "canonicalUrl": "https://example.com/p_086",
+      "imageUrls": [
+        "/seed/p_086.jpg"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Mango",
+          "priceTier": "budget",
+          "affiliateUrl": "https://go.sovrn.com/p_086?aff=PLACEHOLDER",
+          "inStock": true,
+          "priceSnapshot": 5500,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bag"
+      ],
+      "styling": {
+        "formality": 4,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#2A2A2A",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 50,
+          "chroma": 40
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "basic",
+        "seasons": [
+          "all"
+        ],
+        "weather": [
+          "mild"
+        ],
+        "brand": "Mango",
+        "brandTier": 2,
+        "priceTier": "budget",
+        "slotRoles": [
+          "bag"
+        ]
+      }
+    }
+  ],
+  "bundles": [
+    {
+      "id": "b_001",
+      "slug": "garden-wedding-guest-quiet-luxury",
+      "type": "look",
+      "title": "Garden Wedding Guest — Quiet Luxury",
+      "brief": {
+        "occasion": "wedding-guest",
+        "vibe": "quiet-luxury",
+        "gender": "women",
+        "budgetTier": "mid",
+        "season": "summer",
+        "targetFormality": 4
+      },
+      "heroImage": "/seed/heroes/garden-wedding-guest-quiet-luxury.jpg",
+      "flatLayImage": "/seed/flats/garden-wedding-guest-quiet-luxury.jpg",
+      "curatorNote": "The olive slip anchors a warm, neutral-anchored palette kept tonal throughout. It sits at a polished cocktail register — refined without trying too hard — while gold jewelry and tan accessories lift the warmth for a daytime garden ceremony.",
+      "estPriceLow": 52200,
+      "estPriceHigh": 83500,
+      "coherence": {
+        "score": 100,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 1
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "p_001"
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": true,
+      "items": [
+        {
+          "productId": "p_001",
+          "slotId": "anchor",
+          "role": "anchor",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_002",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_003",
+          "slotId": "bag",
+          "role": "bag",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_004",
+          "slotId": "accessories",
+          "role": "accessories",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_002",
+      "slug": "modern-business-casual-navy-cream",
+      "type": "look",
+      "title": "Modern Business Casual — Navy & Cream",
+      "brief": {
+        "occasion": "work",
+        "vibe": "business-casual",
+        "gender": "women",
+        "budgetTier": "mid",
+        "season": "fall",
+        "targetFormality": 4
+      },
+      "heroImage": "/seed/heroes/modern-business-casual-navy-cream.jpg",
+      "flatLayImage": "/seed/flats/modern-business-casual-navy-cream.jpg",
+      "curatorNote": "A cool navy blazer plays hero over a cream shell and charcoal trouser — a disciplined neutral scheme that stays sharp from desk to dinner. Loafers and a structured tote keep it grounded.",
+      "estPriceLow": 68400,
+      "estPriceHigh": 109400,
+      "coherence": {
+        "score": 85.3,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 0.33333333333333337,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 1
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "p_005"
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": true,
+      "items": [
+        {
+          "productId": "p_005",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_006",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_007",
+          "slotId": "bottom",
+          "role": "bottom",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_008",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_009",
+          "slotId": "bag",
+          "role": "bag",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_003",
+      "slug": "cocktail-party-emerald-one-statement",
+      "type": "look",
+      "title": "Cocktail Party — Emerald, One Statement",
+      "brief": {
+        "occasion": "cocktail",
+        "vibe": "chic",
+        "gender": "women",
+        "budgetTier": "mid",
+        "season": "all",
+        "targetFormality": 4
+      },
+      "heroImage": "/seed/heroes/cocktail-party-emerald-one-statement.jpg",
+      "flatLayImage": "/seed/flats/cocktail-party-emerald-one-statement.jpg",
+      "curatorNote": "One emerald slip does all the talking; black accessories and a single gold cuff stay deliberately quiet so the color reads as intentional, not loud. The whole look holds a precise cocktail formality.",
+      "estPriceLow": 68800,
+      "estPriceHigh": 110100,
+      "coherence": {
+        "score": 100,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 1
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "p_031"
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": true,
+      "items": [
+        {
+          "productId": "p_031",
+          "slotId": "anchor",
+          "role": "anchor",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_032",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_033",
+          "slotId": "bag",
+          "role": "bag",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_034",
+          "slotId": "accessories",
+          "role": "accessories",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_004",
+      "slug": "festival-golden-hour-boho-maxi",
+      "type": "look",
+      "title": "Festival Golden Hour — Boho Maxi",
+      "brief": {
+        "occasion": "festival",
+        "vibe": "boho",
+        "gender": "women",
+        "budgetTier": "mid",
+        "season": "summer",
+        "targetFormality": 2
+      },
+      "heroImage": "/seed/heroes/festival-golden-hour-boho-maxi.jpg",
+      "flatLayImage": "/seed/flats/festival-golden-hour-boho-maxi.jpg",
+      "curatorNote": "A rust tiered maxi leads a head-to-toe warm palette; the felt hat echoes the brown accessories so the whole look glows at golden hour. Relaxed, sun-ready, unmistakably festival.",
+      "estPriceLow": 38700,
+      "estPriceHigh": 61900,
+      "coherence": {
+        "score": 100,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 1
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "p_019"
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": false,
+      "items": [
+        {
+          "productId": "p_019",
+          "slotId": "anchor",
+          "role": "anchor",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_020",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_022",
+          "slotId": "accessories",
+          "role": "accessories",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_005",
+      "slug": "minimalist-date-night-all-black-done-right",
+      "type": "look",
+      "title": "Minimalist Date Night — All Black, Done Right",
+      "brief": {
+        "occasion": "date",
+        "vibe": "minimalist",
+        "gender": "women",
+        "budgetTier": "mid",
+        "season": "fall",
+        "targetFormality": 4
+      },
+      "heroImage": "/seed/heroes/minimalist-date-night-all-black-done-right.jpg",
+      "flatLayImage": "/seed/flats/minimalist-date-night-all-black-done-right.jpg",
+      "curatorNote": "A leather column skirt is the quiet hero of a monochrome look — a fine mock-neck, slingbacks, and a mini top-handle keep proportions lean and the formality dialed for dinner.",
+      "estPriceLow": 43600,
+      "estPriceHigh": 69800,
+      "coherence": {
+        "score": 87.9,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 0.6666666666666667,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 0.6,
+          "R6": 1,
+          "R7": 1,
+          "R8": 1
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "p_024"
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": true,
+      "items": [
+        {
+          "productId": "p_023",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_024",
+          "slotId": "bottom",
+          "role": "bottom",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_025",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_026",
+          "slotId": "bag",
+          "role": "bag",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_006",
+      "slug": "sunday-athleisure-clean-tonal",
+      "type": "look",
+      "title": "Sunday Athleisure — Clean & Tonal",
+      "brief": {
+        "occasion": "casual",
+        "vibe": "sporty",
+        "gender": "women",
+        "budgetTier": "mid",
+        "season": "all",
+        "targetFormality": 1
+      },
+      "heroImage": "/seed/heroes/sunday-athleisure-clean-tonal.jpg",
+      "flatLayImage": "/seed/flats/sunday-athleisure-clean-tonal.jpg",
+      "curatorNote": "Charcoal-on-black with one pair of clean grey runners as the lift — an effortless tonal athleisure set that works for the studio, errands, or a coffee run.",
+      "estPriceLow": 40400,
+      "estPriceHigh": 64600,
+      "coherence": {
+        "score": 100,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 1
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "p_041"
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": false,
+      "items": [
+        {
+          "productId": "p_039",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_040",
+          "slotId": "bottom",
+          "role": "bottom",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_041",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_042",
+          "slotId": "bag",
+          "role": "bag",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_007",
+      "slug": "summer-vacation-linen-straw",
+      "type": "look",
+      "title": "Summer Vacation — Linen & Straw",
+      "brief": {
+        "occasion": "vacation",
+        "vibe": "relaxed",
+        "gender": "women",
+        "budgetTier": "budget",
+        "season": "summer",
+        "targetFormality": 2
+      },
+      "heroImage": "/seed/heroes/summer-vacation-linen-straw.jpg",
+      "flatLayImage": "/seed/flats/summer-vacation-linen-straw.jpg",
+      "curatorNote": "A cream linen shirt-dress keeps things cool and neutral while the straw tote brings the one warm accent. Breezy, easy, and built for heat — packs flat, looks pulled-together off the plane.",
+      "estPriceLow": 36900,
+      "estPriceHigh": 59000,
+      "coherence": {
+        "score": 100,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 1
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "p_045"
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": true,
+      "items": [
+        {
+          "productId": "p_043",
+          "slotId": "anchor",
+          "role": "anchor",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_044",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_045",
+          "slotId": "bag",
+          "role": "bag",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_046",
+          "slotId": "accessories",
+          "role": "accessories",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_008",
+      "slug": "summer-wedding-linen-suited-guest",
+      "type": "look",
+      "title": "Summer Wedding — Linen-Suited Guest",
+      "brief": {
+        "occasion": "wedding-guest",
+        "vibe": "smart-casual",
+        "gender": "men",
+        "budgetTier": "mid",
+        "season": "summer",
+        "targetFormality": 4
+      },
+      "heroImage": "/seed/heroes/summer-wedding-linen-suited-guest.jpg",
+      "flatLayImage": "/seed/flats/summer-wedding-linen-suited-guest.jpg",
+      "curatorNote": "An unstructured olive linen blazer is the statement; a white oxford and tan trouser keep the rest quiet and warm-toned. Suede loafers and a woven belt finish a look built for an outdoor ceremony — formal enough, never stiff.",
+      "estPriceLow": 73200,
+      "estPriceHigh": 117100,
+      "coherence": {
+        "score": 91.7,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 0.6666666666666667,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 0.6666666666666667
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "p_010"
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": true,
+      "items": [
+        {
+          "productId": "p_010",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_011",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_012",
+          "slotId": "bottom",
+          "role": "bottom",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_013",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_014",
+          "slotId": "accessories",
+          "role": "accessories",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_009",
+      "slug": "off-duty-streetwear-tonal-easy",
+      "type": "look",
+      "title": "Off-Duty Streetwear — Tonal & Easy",
+      "brief": {
+        "occasion": "casual",
+        "vibe": "streetwear",
+        "gender": "men",
+        "budgetTier": "mid",
+        "season": "fall",
+        "targetFormality": 2
+      },
+      "heroImage": "/seed/heroes/off-duty-streetwear-tonal-easy.jpg",
+      "flatLayImage": "/seed/flats/off-duty-streetwear-tonal-easy.jpg",
+      "curatorNote": "Grey retro runners are the hero against a charcoal hoodie and olive cargo — a low, casual register held together by a tight neutral-plus-one-accent palette. Modern and genuinely wearable every day.",
+      "estPriceLow": 42800,
+      "estPriceHigh": 68500,
+      "coherence": {
+        "score": 100,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 1
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "p_017"
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": true,
+      "items": [
+        {
+          "productId": "p_015",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_016",
+          "slotId": "bottom",
+          "role": "bottom",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_017",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_018",
+          "slotId": "accessories",
+          "role": "accessories",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_010",
+      "slug": "the-interview-navy-suit-no-mistakes",
+      "type": "look",
+      "title": "The Interview — Navy Suit, No Mistakes",
+      "brief": {
+        "occasion": "interview",
+        "vibe": "business",
+        "gender": "men",
+        "budgetTier": "mid",
+        "season": "all",
+        "targetFormality": 5
+      },
+      "heroImage": "/seed/heroes/the-interview-navy-suit-no-mistakes.jpg",
+      "flatLayImage": "/seed/flats/the-interview-navy-suit-no-mistakes.jpg",
+      "curatorNote": "A navy suit, white shirt, and black cap-toe oxfords — the most reliably correct thing you can wear to an interview. Nothing competes for attention; the formality is uniform and unimpeachable.",
+      "estPriceLow": 96500,
+      "estPriceHigh": 154400,
+      "coherence": {
+        "score": 100,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 1
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "p_027"
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": true,
+      "items": [
+        {
+          "productId": "p_027",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_028",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_029",
+          "slotId": "bottom",
+          "role": "bottom",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_030",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_011",
+      "slug": "weekend-brunch-smart-casual-layers",
+      "type": "look",
+      "title": "Weekend Brunch — Smart Casual Layers",
+      "brief": {
+        "occasion": "brunch",
+        "vibe": "smart-casual",
+        "gender": "men",
+        "budgetTier": "mid",
+        "season": "fall",
+        "targetFormality": 3
+      },
+      "heroImage": "/seed/heroes/weekend-brunch-smart-casual-layers.jpg",
+      "flatLayImage": "/seed/flats/weekend-brunch-smart-casual-layers.jpg",
+      "curatorNote": "A brown corduroy overshirt is the warm hero over a cream tee and olive chino, grounded by minimalist leather sneakers. Easy earthy layering that reads considered without effort.",
+      "estPriceLow": 61500,
+      "estPriceHigh": 98400,
+      "coherence": {
+        "score": 90.7,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 0.6666666666666667,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 0.33333333333333337
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "p_035"
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": false,
+      "items": [
+        {
+          "productId": "p_035",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_036",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_037",
+          "slotId": "bottom",
+          "role": "bottom",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_038",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_012",
+      "slug": "winter-smart-charcoal-overcoat",
+      "type": "look",
+      "title": "Winter Smart — Charcoal Overcoat",
+      "brief": {
+        "occasion": "work",
+        "vibe": "smart-casual",
+        "gender": "men",
+        "budgetTier": "mid",
+        "season": "winter",
+        "targetFormality": 4
+      },
+      "heroImage": "/seed/heroes/winter-smart-charcoal-overcoat.jpg",
+      "flatLayImage": "/seed/flats/winter-smart-charcoal-overcoat.jpg",
+      "curatorNote": "A charcoal overcoat leads a cold-weather palette warmed by one olive merino layer; flannel trousers and chelsea boots keep it sharp and seasonally honest. Built for actual winter, not just the look of it.",
+      "estPriceLow": 66000,
+      "estPriceHigh": 105600,
+      "coherence": {
+        "score": 91.7,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 0.6666666666666667,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 0.6666666666666667
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "p_047"
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": true,
+      "items": [
+        {
+          "productId": "p_047",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_048",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_049",
+          "slotId": "bottom",
+          "role": "bottom",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_050",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_013",
+      "slug": "first-timer-golf-starter-kit",
+      "type": "kit",
+      "title": "First-Timer Golf Starter Kit",
+      "brief": {
+        "activity": "golf",
+        "recipient": "beginner",
+        "budgetTier": "mid",
+        "season": "all"
+      },
+      "heroImage": "/seed/heroes/first-timer-golf-starter-kit.jpg",
+      "flatLayImage": "/seed/flats/first-timer-golf-starter-kit.jpg",
+      "curatorNote": "Everything a new golfer needs in one coherent mid-tier set: a forgiving complete club set as the centerpiece, soft distance balls, a leather glove, spikeless shoes you can wear off the course, and the tees-and-marker odds-and-ends. No gaps, nothing to figure out.",
+      "estPriceLow": 77600,
+      "estPriceHigh": 124200,
+      "coherence": {
+        "score": 99,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 0.6666666666666667
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "p_051"
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": true,
+      "items": [
+        {
+          "productId": "p_051",
+          "slotId": "anchor",
+          "role": "anchor",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_052",
+          "slotId": "bottom",
+          "role": "bottom",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_053",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_054",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_055",
+          "slotId": "accessories",
+          "role": "accessories",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_014",
+      "slug": "home-espresso-bar-the-real-setup",
+      "type": "kit",
+      "title": "Home Espresso Bar — The Real Setup",
+      "brief": {
+        "activity": "coffee",
+        "recipient": "enthusiast",
+        "budgetTier": "premium",
+        "season": "all"
+      },
+      "heroImage": "/seed/heroes/home-espresso-bar-the-real-setup.jpg",
+      "flatLayImage": "/seed/flats/home-espresso-bar-the-real-setup.jpg",
+      "curatorNote": "A proper home café in five pieces: the machine as centerpiece, a real burr grinder (where café-quality actually comes from), a precision scale, stoneware cups, and a fresh-bean subscription so you never run dry. Cohesive, complete, and built to last.",
+      "estPriceLow": 111000,
+      "estPriceHigh": 177600,
+      "coherence": {
+        "score": 100,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 1
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "p_056"
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": true,
+      "items": [
+        {
+          "productId": "p_056",
+          "slotId": "anchor",
+          "role": "anchor",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_057",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_058",
+          "slotId": "bottom",
+          "role": "bottom",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_059",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_060",
+          "slotId": "accessories",
+          "role": "accessories",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_015",
+      "slug": "focused-wfh-desk-setup",
+      "type": "kit",
+      "title": "Focused WFH Desk Setup",
+      "brief": {
+        "activity": "desk-setup",
+        "recipient": "remote-worker",
+        "budgetTier": "mid",
+        "season": "all"
+      },
+      "heroImage": "/seed/heroes/focused-wfh-desk-setup.jpg",
+      "flatLayImage": "/seed/flats/focused-wfh-desk-setup.jpg",
+      "curatorNote": "A clean, dark-themed desk that covers the real needs: a 4K monitor anchor, a low-profile mechanical keyboard, an ergonomic mouse, a glare-free monitor light for evening work, and a felt-and-cork mat that ties the whole surface together.",
+      "estPriceLow": 74000,
+      "estPriceHigh": 118400,
+      "coherence": {
+        "score": 99,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 0.6666666666666667
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "p_061"
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": true,
+      "items": [
+        {
+          "productId": "p_061",
+          "slotId": "anchor",
+          "role": "anchor",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_062",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_063",
+          "slotId": "bottom",
+          "role": "bottom",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_064",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_065",
+          "slotId": "accessories",
+          "role": "accessories",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_016",
+      "slug": "apartment-home-gym-no-excuses",
+      "type": "kit",
+      "title": "Apartment Home Gym — No Excuses",
+      "brief": {
+        "activity": "home-gym",
+        "recipient": "beginner",
+        "budgetTier": "mid",
+        "season": "all"
+      },
+      "heroImage": "/seed/heroes/apartment-home-gym-no-excuses.jpg",
+      "flatLayImage": "/seed/flats/apartment-home-gym-no-excuses.jpg",
+      "curatorNote": "A complete small-space gym: adjustable dumbbells replace a whole rack, plus a premium mat, resistance bands, one kettlebell, and a foam roller for recovery. Everything you need to train at home, nothing you don't.",
+      "estPriceLow": 63100,
+      "estPriceHigh": 101000,
+      "coherence": {
+        "score": 100,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 1
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "p_066"
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": false,
+      "items": [
+        {
+          "productId": "p_066",
+          "slotId": "anchor",
+          "role": "anchor",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_067",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_068",
+          "slotId": "bottom",
+          "role": "bottom",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_069",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_070",
+          "slotId": "accessories",
+          "role": "accessories",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_017",
+      "slug": "funeral-respectful-composed",
+      "type": "look",
+      "title": "Funeral — Respectful & Composed",
+      "brief": {
+        "occasion": "funeral",
+        "vibe": "somber",
+        "gender": "women",
+        "budgetTier": "mid",
+        "season": "fall",
+        "targetFormality": 4
+      },
+      "heroImage": "/seed/heroes/funeral-respectful-composed.jpg",
+      "flatLayImage": "/seed/flats/funeral-respectful-composed.jpg",
+      "curatorNote": "A composed all-black look that asks nothing of anyone's attention: a crepe sheath, a tailored coat, leather flats, and a structured bag. Quiet, correct, and comfortable to stand in for a long day.",
+      "estPriceLow": 83500,
+      "estPriceHigh": 133600,
+      "coherence": {
+        "score": 93.6,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 0.6,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 1
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": null
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": false,
+      "items": [
+        {
+          "productId": "p_071",
+          "slotId": "anchor",
+          "role": "anchor",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_072",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_073",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_074",
+          "slotId": "bag",
+          "role": "bag",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_018",
+      "slug": "graduation-day-fresh-polished",
+      "type": "look",
+      "title": "Graduation Day — Fresh & Polished",
+      "brief": {
+        "occasion": "graduation",
+        "vibe": "chic",
+        "gender": "women",
+        "budgetTier": "mid",
+        "season": "spring",
+        "targetFormality": 4
+      },
+      "heroImage": "/seed/heroes/graduation-day-fresh-polished.jpg",
+      "flatLayImage": "/seed/flats/graduation-day-fresh-polished.jpg",
+      "curatorNote": "A white poplin dress under a cream cropped blazer reads bright and celebratory, while nude and tan accessories keep the warm neutral palette cohesive. Photographs beautifully and works under a gown.",
+      "estPriceLow": 49300,
+      "estPriceHigh": 78900,
+      "coherence": {
+        "score": 89,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 0.5,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 1
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "p_076"
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": true,
+      "items": [
+        {
+          "productId": "p_075",
+          "slotId": "anchor",
+          "role": "anchor",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_076",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_077",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_078",
+          "slotId": "bag",
+          "role": "bag",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_019",
+      "slug": "first-date-casual-cool-earthy",
+      "type": "look",
+      "title": "First Date — Casual-Cool, Earthy",
+      "brief": {
+        "occasion": "date",
+        "vibe": "smart-casual",
+        "gender": "men",
+        "budgetTier": "mid",
+        "season": "fall",
+        "targetFormality": 3
+      },
+      "heroImage": "/seed/heroes/first-date-casual-cool-earthy.jpg",
+      "flatLayImage": "/seed/flats/first-date-casual-cool-earthy.jpg",
+      "curatorNote": "A suede trucker is the warm hero over a charcoal henley and dark denim, finished with suede chukkas that echo the jacket. Relaxed but considered — the rare first-date look that's neither try-hard nor sloppy.",
+      "estPriceLow": 73300,
+      "estPriceHigh": 117300,
+      "coherence": {
+        "score": 91.7,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 0.6666666666666667,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 0.6666666666666667
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "p_079"
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": true,
+      "items": [
+        {
+          "productId": "p_079",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_080",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_081",
+          "slotId": "bottom",
+          "role": "bottom",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_082",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_020",
+      "slug": "holiday-party-a-little-shine",
+      "type": "look",
+      "title": "Holiday Party — A Little Shine",
+      "brief": {
+        "occasion": "holiday-party",
+        "vibe": "glam",
+        "gender": "women",
+        "budgetTier": "mid",
+        "season": "winter",
+        "targetFormality": 4
+      },
+      "heroImage": "/seed/heroes/holiday-party-a-little-shine.jpg",
+      "flatLayImage": "/seed/flats/holiday-party-a-little-shine.jpg",
+      "curatorNote": "One sequin cami brings all the sparkle; velvet wide trousers and black satin accessories keep everything else rich but restrained. Festive, grown-up, and proof that one shiny piece is plenty.",
+      "estPriceLow": 60300,
+      "estPriceHigh": 96500,
+      "coherence": {
+        "score": 100,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 1
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "p_083"
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": true,
+      "items": [
+        {
+          "productId": "p_083",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_084",
+          "slotId": "bottom",
+          "role": "bottom",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_085",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_086",
+          "slotId": "bag",
+          "role": "bag",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_021",
+      "slug": "quiet-luxury-capsule-earth-tones",
+      "type": "collection",
+      "title": "Quiet Luxury Capsule — Earth Tones",
+      "brief": {
+        "vibe": "quiet-luxury",
+        "gender": "women",
+        "budgetTier": "mid",
+        "season": "fall",
+        "targetFormality": 3
+      },
+      "heroImage": "/seed/heroes/quiet-luxury-capsule-earth-tones.jpg",
+      "flatLayImage": "/seed/flats/quiet-luxury-capsule-earth-tones.jpg",
+      "curatorNote": "A pared-back earth-tone capsule built around cream, tan, and brown — the kind of restrained, tonal pieces that mix endlessly and never date. The quiet-luxury formula: few colors, good materials, zero logos.",
+      "estPriceLow": 57900,
+      "estPriceHigh": 92600,
+      "coherence": {
+        "score": 76.4,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 0.33333333333333337,
+          "R2": 1,
+          "R3": 0.6,
+          "R4": 1,
+          "R5": 1,
+          "R6": 0.75,
+          "R7": 1,
+          "R8": 1
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": null
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": true,
+      "items": [
+        {
+          "productId": "p_006",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_012",
+          "slotId": "bottom",
+          "role": "bottom",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_009",
+          "slotId": "bag",
+          "role": "bag",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_044",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_022",
+      "slug": "all-black-minimalist-wardrobe",
+      "type": "collection",
+      "title": "All-Black Minimalist Wardrobe",
+      "brief": {
+        "vibe": "minimalist",
+        "gender": "women",
+        "budgetTier": "mid",
+        "season": "all",
+        "targetFormality": 3
+      },
+      "heroImage": "/seed/heroes/all-black-minimalist-wardrobe.jpg",
+      "flatLayImage": "/seed/flats/all-black-minimalist-wardrobe.jpg",
+      "curatorNote": "A monochrome black foundation that proves restraint reads as polish. Each piece is a basic on its own and a complete look together — the most versatile four things in any minimalist closet.",
+      "estPriceLow": 59400,
+      "estPriceHigh": 95000,
+      "coherence": {
+        "score": 75.5,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 0.33333333333333337,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 0.6,
+          "R6": 0.5,
+          "R7": 1,
+          "R8": 1
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "p_024"
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": false,
+      "items": [
+        {
+          "productId": "p_023",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_024",
+          "slotId": "bottom",
+          "role": "bottom",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_026",
+          "slotId": "bag",
+          "role": "bag",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_032",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_023",
+      "slug": "gift-the-new-golfer-under-700",
+      "type": "gift",
+      "title": "Gift: The New Golfer (Under $700)",
+      "brief": {
+        "recipient": "dad",
+        "occasion": "birthday",
+        "budgetTier": "mid",
+        "season": "all"
+      },
+      "heroImage": "/seed/heroes/gift-the-new-golfer-under-700.jpg",
+      "flatLayImage": "/seed/flats/gift-the-new-golfer-under-700.jpg",
+      "curatorNote": "A no-guesswork gift for someone taking up the game: a forgiving complete club set, a leather glove, and the tees-and-marker kit. Everything to get them to the first tee, nothing they'll have to return.",
+      "estPriceLow": 63600,
+      "estPriceHigh": 101800,
+      "coherence": {
+        "score": 99,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 0.6666666666666667
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "p_051"
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": true,
+      "items": [
+        {
+          "productId": "p_051",
+          "slotId": "anchor",
+          "role": "anchor",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_053",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_055",
+          "slotId": "accessories",
+          "role": "accessories",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_024",
+      "slug": "gift-coffee-lover-upgrade",
+      "type": "gift",
+      "title": "Gift: Coffee Lover Upgrade",
+      "brief": {
+        "recipient": "partner",
+        "occasion": "holiday",
+        "budgetTier": "mid",
+        "season": "all"
+      },
+      "heroImage": "/seed/heroes/gift-coffee-lover-upgrade.jpg",
+      "flatLayImage": "/seed/flats/gift-coffee-lover-upgrade.jpg",
+      "curatorNote": "For the person who already loves coffee but drinks it pre-ground: the single biggest quality jump is a real burr grinder, paired with beautiful stoneware cups and fresh single-origin beans. A genuinely upgrade-y gift under budget.",
+      "estPriceLow": 26000,
+      "estPriceHigh": 41600,
+      "coherence": {
+        "score": 93.6,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 0.6,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 1
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": null
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": false,
+      "items": [
+        {
+          "productId": "p_057",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_059",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_060",
+          "slotId": "accessories",
+          "role": "accessories",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "b_025",
+      "slug": "gift-the-home-office-refresh",
+      "type": "gift",
+      "title": "Gift: The Home Office Refresh",
+      "brief": {
+        "recipient": "friend",
+        "occasion": "housewarming",
+        "budgetTier": "mid",
+        "season": "all"
+      },
+      "heroImage": "/seed/heroes/gift-the-home-office-refresh.jpg",
+      "flatLayImage": "/seed/flats/gift-the-home-office-refresh.jpg",
+      "curatorNote": "A thoughtful desk refresh that's useful from day one: a glare-free monitor light, a premium felt-and-cork mat, and an ergonomic mouse. Practical, design-forward, and welcome on any desk.",
+      "estPriceLow": 31000,
+      "estPriceHigh": 49600,
+      "coherence": {
+        "score": 92.6,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 0.6,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 0.6666666666666667
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": null
+      },
+      "state": "published",
+      "generatedBy": "manual",
+      "featured": false,
+      "items": [
+        {
+          "productId": "p_064",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_065",
+          "slotId": "accessories",
+          "role": "accessories",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "p_063",
+          "slotId": "bottom",
+          "role": "bottom",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "note": "Images are placeholders flagged for human replacement. Offers use PLACEHOLDER affiliate IDs via Sovrn. All published bundles validated through the coherence scorer (threshold 72).",
+    "counts": {
+      "products": 86,
+      "bundles": 25,
+      "byType": {
+        "look": 16,
+        "kit": 4,
+        "collection": 2,
+        "gift": 3
+      }
+    },
+    "generated": "2026-06-15T00:11:22.370Z"
+  }
+}

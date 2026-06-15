@@ -1,0 +1,79 @@
+"use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+
+const LINKS = [
+  { href: "/", label: "Feed" },
+  { href: "/style", label: "Style" },
+  { href: "/looks", label: "Looks" },
+  { href: "/kits", label: "Kits" },
+  { href: "/builder", label: "Build" },
+  { href: "/styleguide", label: "Guide" },
+];
+
+export function Nav() {
+  const pathname = usePathname();
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
+  const [saved, setSaved] = useState(0);
+
+  useEffect(() => {
+    const stored = (localStorage.getItem("curated-theme") as "dark" | "light") || "dark";
+    setTheme(stored);
+    document.documentElement.setAttribute("data-theme", stored);
+    const refresh = () => setSaved(JSON.parse(localStorage.getItem("curated-saved") || "[]").length);
+    refresh();
+    window.addEventListener("curated-saved-change", refresh);
+    return () => window.removeEventListener("curated-saved-change", refresh);
+  }, []);
+
+  const toggle = () => {
+    const next = theme === "dark" ? "light" : "dark";
+    setTheme(next);
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("curated-theme", next);
+  };
+
+  return (
+    <header className="topbar">
+      <Link href="/" className="brand">CURATED</Link>
+      <nav className="topnav" aria-label="Primary">
+        {LINKS.map((l) => {
+          const active = l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
+          return (
+            <Link key={l.href} href={l.href} className={active ? "active" : ""}>
+              {l.label}
+            </Link>
+          );
+        })}
+        <Link href="/saved" className="closet" aria-label={`Closet, ${saved} saved`}>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill={saved ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.8" aria-hidden>
+            <path d="M12 21s-7.5-4.6-10-9.2C.6 9 1.8 5.5 5 5c2-.3 3.4.9 4.2 2 .8 1 1.8 1 2.6 0C12.6 5.9 14 4.7 16 5c3.2.5 4.4 4 3 6.8C19.5 16.4 12 21 12 21z" />
+          </svg>
+          {saved > 0 && <i className="closet-dot" />}
+        </Link>
+        <button className="theme-btn" onClick={toggle} aria-label="Toggle theme">
+          {theme === "dark" ? "☀" : "☾"}
+        </button>
+      </nav>
+      <style>{`
+        .topbar{ position:sticky; top:0; z-index:40; display:flex; justify-content:space-between;
+          align-items:center; padding:14px 22px; background:color-mix(in srgb, var(--bg) 78%, transparent);
+          backdrop-filter:blur(14px); border-bottom:1px solid var(--line); }
+        .brand{ font-family:var(--mono); font-size:13px; letter-spacing:.34em; }
+        .topnav{ display:flex; gap:20px; align-items:center; font-size:13.5px; color:var(--ink-soft); }
+        .topnav a{ cursor:pointer; transition:color .2s; }
+        .topnav a:hover, .topnav a.active{ color:var(--ink); }
+        .topnav a.active{ position:relative; }
+        .topnav a.active::after{ content:""; position:absolute; left:0; right:0; bottom:-18px; height:2px; background:var(--accent); }
+        .closet{ position:relative; color:var(--ink-soft); display:inline-flex; padding:2px; }
+        .closet:hover{ color:var(--ink); }
+        .closet-dot{ position:absolute; top:-1px; right:-1px; width:6px; height:6px; border-radius:50%; background:var(--accent); }
+        .theme-btn{ background:none; border:1px solid var(--line); color:var(--ink-soft); width:30px; height:30px;
+          border-radius:999px; cursor:pointer; font-size:13px; display:grid; place-items:center; }
+        .theme-btn:hover{ color:var(--ink); border-color:var(--ink-mute); }
+        @media (max-width:680px){ .topnav a:nth-child(n+5){ display:none; } }
+      `}</style>
+    </header>
+  );
+}
