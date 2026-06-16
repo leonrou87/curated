@@ -6,11 +6,12 @@ import { useGender, type Gender } from "@/lib/useGender";
 
 const LINKS = [
   { href: "/", label: "Feed" },
+  { href: "/quiz", label: "Quiz" },
   { href: "/style", label: "Style" },
   { href: "/looks", label: "Looks" },
+  { href: "/trends", label: "Trends" },
   { href: "/kits", label: "Kits" },
   { href: "/builder", label: "Build" },
-  { href: "/styleguide", label: "Guide" },
 ];
 
 export function Nav() {

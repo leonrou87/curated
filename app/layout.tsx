@@ -5,6 +5,7 @@ import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { Analytics } from "@/components/Analytics";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://curated.kytepush.com"),
   title: {
     default: "Curated — looks & kits worth wearing",
     template: "%s · Curated",

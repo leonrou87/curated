@@ -5,16 +5,31 @@ import type { EnrichedBundle } from "@/lib/types";
 import { LookCard } from "./LookCard";
 import { FeedMasonry } from "./FeedMasonry";
 import { useGender, genderMatch } from "@/lib/useGender";
+import { useTaste } from "@/lib/useTaste";
+import { aestheticOf } from "@/lib/aesthetics";
 
 export function HomeFeed({ looks, kits }: { looks: EnrichedBundle[]; kits: EnrichedBundle[] }) {
   const { gender } = useGender();
+  const { taste, top } = useTaste();
 
   const filtered = useMemo(() => looks.filter((b) => genderMatch(gender, b.brief.gender)), [looks, gender]);
   const featured = filtered.find((b) => b.featured) ?? filtered[0];
+
+  // personalized rail: looks matching the user's top aesthetics from the quiz
+  const forYou = useMemo(() => {
+    if (!taste.done || !top.length) return [];
+    const rank = new Map(top.map((t, idx) => [t.key, top.length - idx]));
+    return filtered
+      .filter((b) => rank.has(String(b.brief.vibe)))
+      .sort((a, b) => (rank.get(String(b.brief.vibe)) || 0) - (rank.get(String(a.brief.vibe)) || 0))
+      .slice(0, 8);
+  }, [filtered, taste.done, top]);
+
   const thisWeek = filtered.filter((b) => b.slug !== featured?.slug).slice(0, 3);
   const rest = filtered.filter((b) => b.slug !== featured?.slug);
 
   const label = gender === "all" ? "Everyone" : gender === "women" ? "Women" : "Men";
+  const topName = top[0] ? aestheticOf(top[0].key).name : null;
 
   if (!featured) return null;
 
@@ -32,11 +47,27 @@ export function HomeFeed({ looks, kits }: { looks: EnrichedBundle[]; kits: Enric
             validated by the coherence engine. Tell it the occasion and watch a look assemble.
           </p>
           <div className="ch-cta">
-            <Link href="/style" className="btn-fill">Style me →</Link>
+            {taste.done ? (
+              <Link href="/style" className="btn-fill">Style me →</Link>
+            ) : (
+              <Link href="/quiz" className="btn-fill">Take the style quiz →</Link>
+            )}
             <Link href="/looks" className="btn-ghost">Browse looks</Link>
           </div>
         </div>
       </section>
+
+      {forYou.length > 0 && (
+        <section className="strip">
+          <header className="strip-head">
+            <h2 className="serif">For your taste{topName ? ` · ${topName}` : ""}</h2>
+            <Link href="/quiz" className="strip-more">Retake quiz →</Link>
+          </header>
+          <div className="strip-grid">
+            {forYou.slice(0, 4).map((b) => <LookCard key={b.id} bundle={b} />)}
+          </div>
+        </section>
+      )}
 
       <section className="strip">
         <header className="strip-head">

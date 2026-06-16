@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getPublicBundle, getBundlesByType } from "@/lib/data";
 import { LookDetail } from "@/components/LookDetail";
+import { lookOgUrl } from "@/lib/og";
 
 export function generateStaticParams() {
   return getBundlesByType("look").map((b) => ({ slug: b.slug }));
@@ -11,10 +12,12 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const b = getPublicBundle(params.slug, true);
   if (!b) return { title: "Look not found" };
+  const og = lookOgUrl(b);
   return {
     title: b.title,
     description: b.curatorNote,
-    openGraph: { title: b.title, description: b.curatorNote, type: "article" },
+    openGraph: { title: b.title, description: b.curatorNote, type: "article", images: [{ url: og, width: 1200, height: 630 }] },
+    twitter: { card: "summary_large_image", title: b.title, description: b.curatorNote, images: [og] },
   };
 }
 

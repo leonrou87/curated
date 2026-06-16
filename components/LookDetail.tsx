@@ -9,7 +9,10 @@ import { BundleCover } from "./BundleCover";
 import { ShoppablePins } from "./ShoppablePins";
 import { AffiliateCTA } from "./AffiliateCTA";
 import { CoherenceMeter } from "./CoherenceMeter";
+import { ShareButton } from "./ShareButton";
 import { useSaved } from "@/lib/useSaved";
+
+const TYPE_PATH: Record<string, string> = { look: "looks", kit: "kits", collection: "collections", gift: "gifts" };
 
 // The hero page (MILESTONE-2). Assemble-on-screen reveal → shoppable pins → why-it-works →
 // compliant breakdown → coherence transparency → save flight. Reduced-motion → instant.
@@ -115,6 +118,11 @@ export function LookDetail({ bundle }: { bundle: EnrichedBundle }) {
         <button className={"a-save" + (saved ? " on" : "")} onClick={onSave}>
           <Heart filled={saved} /> {saved ? "Saved" : "Save look"}
         </button>
+        <ShareButton
+          title={`${bundle.title} — Curated`}
+          text={bundle.curatorNote}
+          path={`/${TYPE_PATH[bundle.type] ?? "looks"}/${bundle.slug}`}
+        />
         {flight && <span className="flight" />}
       </section>
 
