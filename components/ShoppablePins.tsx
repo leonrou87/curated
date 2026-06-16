@@ -42,7 +42,11 @@ export function ShoppablePins({
             <span className="pin-dot" />
             {open && (
               <span className="pin-card" onClick={(e) => e.stopPropagation()}>
-                <span className="pc-sw" style={{ background: it.swatch }} />
+                <span className="pc-sw" style={{ background: it.swatch }}>
+                  {it.image && /* eslint-disable-next-line @next/next/no-img-element */ (
+                    <img src={it.image} alt="" loading="lazy" />
+                  )}
+                </span>
                 <span className="pc-meta">
                   <span className="eyebrow pc-role">{it.role}</span>
                   <span className="pc-brand">{it.brand}</span>
@@ -77,7 +81,8 @@ export function ShoppablePins({
         @keyframes pop{ from{opacity:0; transform:translateX(-50%) translateY(6px) scale(.96)} to{opacity:1; transform:translateX(-50%) translateY(0) scale(1)} }
         .pin-card::after{ content:""; position:absolute; left:50%; bottom:-6px; width:10px; height:10px;
           transform:translateX(-50%) rotate(45deg); background:var(--surface); border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
-        .pc-sw{ width:42px; height:52px; border-radius:6px; flex:none; }
+        .pc-sw{ width:42px; height:52px; border-radius:6px; flex:none; overflow:hidden; position:relative; }
+        .pc-sw img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
         .pc-meta{ display:flex; flex-direction:column; gap:1px; min-width:0; }
         .pc-role{ font-size:9.5px; }
         .pc-brand{ font-size:12px; color:var(--ink-soft); }

@@ -92,6 +92,9 @@ export function LookDetail({ bundle }: { bundle: EnrichedBundle }) {
               onMouseLeave={() => setActiveId(null)}
             >
               <span className="r-thumb" style={{ background: it.swatch }}>
+                {it.image && /* eslint-disable-next-line @next/next/no-img-element */ (
+                  <img src={it.image} alt={it.title} loading="lazy" />
+                )}
                 {it.isHero && <i className="r-hero" title="Hero piece">★</i>}
               </span>
               <span className="r-main">
@@ -179,6 +182,7 @@ export function LookDetail({ bundle }: { bundle: EnrichedBundle }) {
         .row + .row{ border-top:1px solid var(--line); }
         .row.active, .row.active + .row{ border-color:transparent; }
         .r-thumb{ width:54px; height:66px; border-radius:7px; position:relative; flex:none; }
+        .r-thumb img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; border-radius:7px; }
         .r-hero{ position:absolute; top:-7px; right:-7px; width:20px; height:20px; font-size:11px; font-style:normal;
           display:grid; place-items:center; background:var(--accent); color:var(--accent-ink); border-radius:50%; box-shadow:var(--e-1); }
         .r-main{ display:flex; flex-direction:column; gap:1px; min-width:0; }

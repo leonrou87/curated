@@ -121,6 +121,7 @@ export interface EnrichedItem {
   title: string;
   priceCents: number | null;
   swatch: string;
+  image: string | null; // real product photo (https) when available, else null → swatch fallback
   isHero: boolean;
   pin: { x: number; y: number };
   bestOffer: Offer | null;

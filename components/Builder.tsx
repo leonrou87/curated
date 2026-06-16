@@ -107,7 +107,11 @@ export function Builder({
                   className={"tile" + (activeSlot === slot.slotId ? " on" : "") + (bump === slot.slotId || bump === "all" ? " bump" : "")}
                   onClick={() => setActiveSlot(slot.slotId)}
                 >
-                  <span className="tile-sw" style={{ background: p.styling.color.primaryHex }} />
+                  <span className="tile-sw" style={{ background: p.styling.color.primaryHex }}>
+                    {p.imageUrls?.[0]?.startsWith("http") && /* eslint-disable-next-line @next/next/no-img-element */ (
+                      <img src={p.imageUrls[0]} alt="" loading="lazy" />
+                    )}
+                  </span>
                   <span className="tile-meta">
                     <span className="eyebrow">{titleCase(slot.slotId)}</span>
                     <span className="tile-brand">{p.brand}</span>
@@ -145,7 +149,11 @@ export function Builder({
                 const delta = Math.round((trialScore - result.score) * 10) / 10;
                 return (
                   <button key={p.id} className={"swatch-card" + (p.id === cur.id ? " current" : "")} onClick={() => swap(activeSlot, p.id)}>
-                    <span className="sc-sw" style={{ background: p.styling.color.primaryHex }} />
+                    <span className="sc-sw" style={{ background: p.styling.color.primaryHex }}>
+                      {p.imageUrls?.[0]?.startsWith("http") && /* eslint-disable-next-line @next/next/no-img-element */ (
+                        <img src={p.imageUrls[0]} alt="" loading="lazy" />
+                      )}
+                    </span>
                     <span className="sc-meta">
                       <span className="sc-brand">{p.brand}</span>
                       <span className="sc-title">{p.title}</span>
@@ -167,7 +175,11 @@ export function Builder({
         <ul className="shop-rows">
           {items.map((p, i) => (
             <li key={slots[i].slotId}>
-              <span className="sr-sw" style={{ background: p.styling.color.primaryHex }} />
+              <span className="sr-sw" style={{ background: p.styling.color.primaryHex }}>
+                {p.imageUrls?.[0]?.startsWith("http") && /* eslint-disable-next-line @next/next/no-img-element */ (
+                  <img src={p.imageUrls[0]} alt="" loading="lazy" />
+                )}
+              </span>
               <span className="sr-name">{p.brand} · {p.title}</span>
               <span className="mono sr-price">{fmtCents(resolveBestOffer(p)?.priceSnapshot ?? null)}</span>
               <AffiliateCTA offer={resolveBestOffer(p)} brand={p.brand} productId={p.id} />
@@ -192,7 +204,8 @@ export function Builder({
         .tile.on{ border-color:var(--accent); }
         .tile.bump{ animation:tilebump .42s var(--ease-out); }
         @keyframes tilebump{ 0%{transform:scale(.96)} 60%{transform:scale(1.03)} 100%{transform:scale(1)} }
-        .tile-sw{ width:42px; height:54px; border-radius:7px; flex:none; }
+        .tile-sw{ width:42px; height:54px; border-radius:7px; flex:none; overflow:hidden; position:relative; }
+        .tile-sw img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
         .tile-meta{ display:flex; flex-direction:column; gap:1px; min-width:0; }
         .tile-brand{ font-size:13px; color:var(--ink-soft); }
         .tile-title{ font-size:13px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
@@ -211,7 +224,8 @@ export function Builder({
           background:var(--bg); border:1px solid var(--line); border-radius:var(--r-md); padding:9px; cursor:pointer; text-align:left; transition:.15s; }
         .swatch-card:hover{ border-color:var(--ink-mute); }
         .swatch-card.current{ border-color:var(--accent); }
-        .sc-sw{ width:36px; height:44px; border-radius:6px; }
+        .sc-sw{ width:36px; height:44px; border-radius:6px; flex:none; overflow:hidden; position:relative; }
+        .sc-sw img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
         .sc-meta{ display:flex; flex-direction:column; min-width:0; }
         .sc-brand{ font-size:12.5px; color:var(--ink-soft); }
         .sc-title{ font-size:12.5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
@@ -223,7 +237,8 @@ export function Builder({
         .shop-rows{ list-style:none; margin:0; padding:0; }
         .shop-rows li{ display:grid; grid-template-columns:34px 1fr auto auto; gap:14px; align-items:center; padding:12px 4px; }
         .shop-rows li + li{ border-top:1px solid var(--line); }
-        .sr-sw{ width:34px; height:42px; border-radius:6px; }
+        .sr-sw{ width:34px; height:42px; border-radius:6px; flex:none; overflow:hidden; position:relative; }
+        .sr-sw img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
         .sr-name{ font-size:14px; } .sr-price{ font-size:13.5px; }
         @media (max-width:900px){ .bld-grid{ grid-template-columns:1fr; } .stage-items{ grid-template-columns:1fr; } }
       `}</style>

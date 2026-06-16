@@ -5,6 +5,7 @@
 // wrapped here before they ever reach the browser.
 import "server-only";
 import seed from "@/data/seed-bundles.json";
+import seedReal from "@/data/seed-real.json";
 import affiliateConfigJson from "@/data/affiliate-config.json";
 import offerOverridesJson from "@/data/offer-overrides.json";
 import bundleStateJson from "@/data/bundle-state.json";
@@ -17,8 +18,19 @@ import { applyEnvOverlay } from "./affiliate-config";
 import type { AffiliateConfig, OfferOverride } from "./affiliate-config";
 import type { ScorableItem } from "./coherence";
 
-const rawProducts = seed.products as unknown as Product[];
-const rawBundles = seed.bundles as unknown as RawBundle[];
+// Catalog = REAL Shopify products (with real images, prices, affiliate URLs) + the original seed
+// products (which power the non-fashion kits/collections/gifts). Bundles = real composed looks
+// (published) + original kits/collections/gifts; the original placeholder LOOKS are hidden (draft).
+const rawProducts = [
+  ...(seedReal.products as unknown as Product[]),
+  ...(seed.products as unknown as Product[]),
+];
+const rawBundles: RawBundle[] = [
+  ...(seedReal.bundles as unknown as RawBundle[]),
+  ...(seed.bundles as unknown as RawBundle[]).map((b) =>
+    b.type === "look" ? ({ ...b, state: "archived" } as RawBundle) : (b as RawBundle)
+  ),
+];
 
 // committed JSON (live-edited locally by the admin console) overlaid with env vars (production).
 const CONFIG: AffiliateConfig = applyEnvOverlay(affiliateConfigJson as unknown as AffiliateConfig);
@@ -112,6 +124,7 @@ export function enrichBundle(raw: RawBundle): EnrichedBundle {
       title: product?.title ?? it.productId,
       priceCents: offerPrice(bestOffer),
       swatch: product?.styling?.color?.primaryHex ?? "#555",
+      image: product?.imageUrls?.find((u) => /^https?:\/\//.test(u)) ?? null,
       isHero: product?.id === raw.coherence?.heroItemId || product?.styling?.weight === "statement",
       pin,
       bestOffer,

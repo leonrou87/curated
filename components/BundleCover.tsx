@@ -13,9 +13,10 @@ export function BundleCover({
   withFigure?: boolean;
 }) {
   const swatches = bundle.items.map((i) => i.swatch);
-  const hero = bundle.items.find((i) => i.isHero) ?? bundle.items[0];
+  const hero = bundle.items.find((i) => i.isHero && i.image) ?? bundle.items.find((i) => i.image) ?? bundle.items.find((i) => i.isHero) ?? bundle.items[0];
   const base = hero?.swatch ?? "#6b6256";
   const stops = swatches.slice(0, 4);
+  const heroImg = hero?.image ?? null;
 
   return (
     <div className={"cover-scene " + className} aria-hidden style={{ ["--base" as any]: base }}>
@@ -25,7 +26,11 @@ export function BundleCover({
           background: `radial-gradient(120% 100% at 32% 8%, ${tint(base, 26)} 0%, ${shade(base, 14)} 46%, ${shade(base, 52)} 100%)`,
         }}
       />
-      {bundle.isFashion && withFigure ? (
+      {heroImg ? (
+        // real product photo — the garment is the hero (DESIGN-SYSTEM §0.1)
+        // eslint-disable-next-line @next/next/no-img-element
+        <img className="cs-photo" src={heroImg} alt="" loading="lazy" decoding="async" />
+      ) : bundle.isFashion && withFigure ? (
         <div className="cs-figure" style={{ background: `linear-gradient(165deg, ${tint(base, 22)}, ${base} 48%, ${shade(base, 38)})` }} />
       ) : (
         <div className="cs-grid">
@@ -39,6 +44,7 @@ export function BundleCover({
       <style>{`
         .cover-scene{ position:absolute; inset:0; overflow:hidden; }
         .cs-wash{ position:absolute; inset:0; }
+        .cs-photo{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 30%; }
         .cs-figure{ position:absolute; left:50%; bottom:0; width:36%; height:80%;
           transform:translateX(-50%);
           border-radius:46% 46% 28% 28% / 58% 58% 42% 42%;
