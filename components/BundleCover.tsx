@@ -17,6 +17,9 @@ export function BundleCover({
   const base = hero?.swatch ?? "#6b6256";
   const stops = swatches.slice(0, 4);
   const heroImg = hero?.image ?? null;
+  const itemImages = bundle.items.filter((i) => i.image).map((i) => ({ src: i.image!, sw: i.swatch }));
+  // looks → a single hero garment; kits/non-fashion → a flat-lay grid of the real items
+  const showGrid = !bundle.isFashion && itemImages.length >= 2;
 
   return (
     <div className={"cover-scene " + className} aria-hidden style={{ ["--base" as any]: base }}>
@@ -26,7 +29,16 @@ export function BundleCover({
           background: `radial-gradient(120% 100% at 32% 8%, ${tint(base, 26)} 0%, ${shade(base, 14)} 46%, ${shade(base, 52)} 100%)`,
         }}
       />
-      {heroImg ? (
+      {showGrid ? (
+        <div className={"cs-photogrid n" + Math.min(itemImages.length, 4)}>
+          {itemImages.slice(0, 4).map((it, i) => (
+            <span key={i} style={{ background: it.sw }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={it.src} alt="" loading="lazy" decoding="async" />
+            </span>
+          ))}
+        </div>
+      ) : heroImg ? (
         // real product photo — the garment is the hero (DESIGN-SYSTEM §0.1)
         // eslint-disable-next-line @next/next/no-img-element
         <img className="cs-photo" src={heroImg} alt="" loading="lazy" decoding="async" />
@@ -45,6 +57,12 @@ export function BundleCover({
         .cover-scene{ position:absolute; inset:0; overflow:hidden; }
         .cs-wash{ position:absolute; inset:0; }
         .cs-photo{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 30%; }
+        .cs-photogrid{ position:absolute; inset:0; display:grid; gap:2px; }
+        .cs-photogrid.n2{ grid-template-columns:1fr 1fr; }
+        .cs-photogrid.n3, .cs-photogrid.n4{ grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; }
+        .cs-photogrid.n3 span:first-child{ grid-row:span 2; }
+        .cs-photogrid span{ position:relative; overflow:hidden; }
+        .cs-photogrid img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
         .cs-figure{ position:absolute; left:50%; bottom:0; width:36%; height:80%;
           transform:translateX(-50%);
           border-radius:46% 46% 28% 28% / 58% 58% 42% 42%;

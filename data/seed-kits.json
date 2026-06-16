@@ -1,0 +1,1374 @@
+{
+  "products": [
+    {
+      "id": "k_fellow_8426192404580",
+      "title": "Opus 2 Conical Burr Grinder",
+      "brand": "Fellow",
+      "category": "coffee",
+      "subcategory": null,
+      "canonicalUrl": "https://fellowproducts.com/products/opus-2-conical-burr-grinder",
+      "imageUrls": [
+        "https://cdn.shopify.com/s/files/1/0057/6235/1219/files/PDP_Opus2_Black_Black.png?v=1771549610",
+        "https://cdn.shopify.com/s/files/1/0057/6235/1219/files/PDP_Opus2_White.png?v=1772233177",
+        "https://cdn.shopify.com/s/files/1/0057/6235/1219/files/PDP_Opus2_Malted_Chocolate.png?v=1772233177",
+        "https://cdn.shopify.com/s/files/1/0057/6235/1219/files/PDP_Opus2_CherryRed.png?v=1772233177"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Fellow",
+          "affiliateUrl": "https://fellowproducts.com/products/opus-2-conical-burr-grinder",
+          "rawUrl": "https://fellowproducts.com/products/opus-2-conical-burr-grinder",
+          "priceTier": "mid",
+          "priceSnapshot": 19995,
+          "currency": "USD",
+          "inStock": true,
+          "commissionEst": 0.06,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "anchor"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#1F1F1F",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 40,
+          "chroma": 12
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "statement",
+        "seasons": [
+          "all"
+        ],
+        "weather": [],
+        "brand": "Fellow",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "anchor"
+        ]
+      }
+    },
+    {
+      "id": "k_fellow_6947562717284",
+      "title": "Rebrew Stagg EKG Electric Kettle",
+      "brand": "Fellow",
+      "category": "coffee",
+      "subcategory": null,
+      "canonicalUrl": "https://fellowproducts.com/products/refurbished-stagg-ekg-electric-kettle",
+      "imageUrls": [
+        "https://cdn.shopify.com/s/files/1/0057/6235/1219/files/Web_PDP_ReBrew_Stagg_v1_MB.png?v=1773427094",
+        "https://cdn.shopify.com/s/files/1/0057/6235/1219/products/Stagg-EKG-02-Matte-White-01_e4af8b18-d71a-4bf1-b542-a588ccf29108.png?v=1773427094",
+        "https://cdn.shopify.com/s/files/1/0057/6235/1219/products/Stagg-EKG-01-Matte-Black-01_bd49e642-3ba5-47c5-8c33-e2b5be0ab6c7.png?v=1773427094",
+        "https://cdn.shopify.com/s/files/1/0057/6235/1219/products/Stagg-EKG-05-Stone-Blue-Walnut-01_3f226042-40d8-46be-915d-f40ec54d1635.png?v=1773427094"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Fellow",
+          "affiliateUrl": "https://fellowproducts.com/products/refurbished-stagg-ekg-electric-kettle",
+          "rawUrl": "https://fellowproducts.com/products/refurbished-stagg-ekg-electric-kettle",
+          "priceTier": "mid",
+          "priceSnapshot": 13200,
+          "currency": "USD",
+          "inStock": true,
+          "commissionEst": 0.06,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#3A3A3C",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 40,
+          "chroma": 8
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [],
+        "brand": "Fellow",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "top"
+        ]
+      }
+    },
+    {
+      "id": "k_fellow_8203956519012",
+      "title": "Dezcal Liquid Descaler",
+      "brand": "Fellow",
+      "category": "coffee",
+      "subcategory": null,
+      "canonicalUrl": "https://fellowproducts.com/products/dezcal-liquid-descaler",
+      "imageUrls": [
+        "https://cdn.shopify.com/s/files/1/0057/6235/1219/files/4250015_1000.png?v=1759183732",
+        "https://cdn.shopify.com/s/files/1/0057/6235/1219/files/4250015-info_1000.png?v=1759183671"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Fellow",
+          "affiliateUrl": "https://fellowproducts.com/products/dezcal-liquid-descaler",
+          "rawUrl": "https://fellowproducts.com/products/dezcal-liquid-descaler",
+          "priceTier": "budget",
+          "priceSnapshot": 2599,
+          "currency": "USD",
+          "inStock": true,
+          "commissionEst": 0.06,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bottom"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#3A3A3C",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 40,
+          "chroma": 8
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [],
+        "brand": "Fellow",
+        "brandTier": 3,
+        "priceTier": "budget",
+        "slotRoles": [
+          "bottom"
+        ]
+      }
+    },
+    {
+      "id": "k_fellow_8203553013860",
+      "title": "Pirch Espresso Glasses",
+      "brand": "Fellow",
+      "category": "coffee",
+      "subcategory": null,
+      "canonicalUrl": "https://fellowproducts.com/products/pirch-espresso-glasses",
+      "imageUrls": [
+        "https://cdn.shopify.com/s/files/1/0057/6235/1219/files/Web_PDP_PirchEspressoGlasses_Smoke_1-Espresso.png?v=1773358795",
+        "https://cdn.shopify.com/s/files/1/0057/6235/1219/files/Espresso_Set_of_2_Garnet_PMGA03.png?v=1773358795",
+        "https://cdn.shopify.com/s/files/1/0057/6235/1219/files/Cortado_Set_of_2_Woodland_PMWL04_d85eb394-f0a4-4499-91fa-71ad09dcb852.png?v=1773358795",
+        "https://cdn.shopify.com/s/files/1/0057/6235/1219/files/Espresso_Set_of_2_Smoke_PMCS03.png?v=1773358795"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Fellow",
+          "affiliateUrl": "https://fellowproducts.com/products/pirch-espresso-glasses",
+          "rawUrl": "https://fellowproducts.com/products/pirch-espresso-glasses",
+          "priceTier": "budget",
+          "priceSnapshot": 4495,
+          "currency": "USD",
+          "inStock": true,
+          "commissionEst": 0.06,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#3A3A3C",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 40,
+          "chroma": 8
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [],
+        "brand": "Fellow",
+        "brandTier": 3,
+        "priceTier": "budget",
+        "slotRoles": [
+          "shoes"
+        ]
+      }
+    },
+    {
+      "id": "k_ugmonk_8100586782870",
+      "title": "Magnetic Cable Keepers (Set of 2 - Light Gray)",
+      "brand": "Ugmonk",
+      "category": "desk",
+      "subcategory": null,
+      "canonicalUrl": "https://ugmonk.com/products/cable-keeper-light-gray",
+      "imageUrls": [
+        "https://cdn.shopify.com/s/files/1/0167/4484/files/cable-clips-gray-tan.jpg?v=1715197332",
+        "https://cdn.shopify.com/s/files/1/0167/4484/files/magnet-ls-2.jpg?v=1715286311",
+        "https://cdn.shopify.com/s/files/1/0167/4484/files/cable-clips-gray-tan3.jpg?v=1715286311",
+        "https://cdn.shopify.com/s/files/1/0167/4484/files/cable-clips-gray-tan4.jpg?v=1715286311"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Ugmonk",
+          "affiliateUrl": "https://ugmonk.com/products/cable-keeper-light-gray",
+          "rawUrl": "https://ugmonk.com/products/cable-keeper-light-gray",
+          "priceTier": "budget",
+          "priceSnapshot": 2000,
+          "currency": "USD",
+          "inStock": true,
+          "commissionEst": 0.06,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "anchor"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#8A8A88",
+          "family": "grey",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 40,
+          "chroma": 12
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "statement",
+        "seasons": [
+          "all"
+        ],
+        "weather": [],
+        "brand": "Ugmonk",
+        "brandTier": 3,
+        "priceTier": "budget",
+        "slotRoles": [
+          "anchor"
+        ]
+      }
+    },
+    {
+      "id": "k_ugmonk_8619836801174",
+      "title": "Analog Card Organizer (Black Aluminum)",
+      "brand": "Ugmonk",
+      "category": "desk",
+      "subcategory": null,
+      "canonicalUrl": "https://ugmonk.com/products/card-organizer-black-aluminum",
+      "imageUrls": [
+        "https://cdn.shopify.com/s/files/1/0167/4484/files/organizer-blk-1.jpg?v=1772744431",
+        "https://cdn.shopify.com/s/files/1/0167/4484/files/alum-ls-cropped-9.jpg?v=1773435740",
+        "https://cdn.shopify.com/s/files/1/0167/4484/files/org-blk-details.jpg?v=1773869423",
+        "https://cdn.shopify.com/s/files/1/0167/4484/files/organizer-blk-5.jpg?v=1773932217"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Ugmonk",
+          "affiliateUrl": "https://ugmonk.com/products/card-organizer-black-aluminum",
+          "rawUrl": "https://ugmonk.com/products/card-organizer-black-aluminum",
+          "priceTier": "budget",
+          "priceSnapshot": 3900,
+          "currency": "USD",
+          "inStock": true,
+          "commissionEst": 0.06,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#1F1F1F",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 40,
+          "chroma": 12
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [],
+        "brand": "Ugmonk",
+        "brandTier": 3,
+        "priceTier": "budget",
+        "slotRoles": [
+          "top"
+        ]
+      }
+    },
+    {
+      "id": "k_ugmonk_4167154204809",
+      "title": "Ugmonk Leather Mousepad (Brown)",
+      "brand": "Ugmonk",
+      "category": "desk",
+      "subcategory": null,
+      "canonicalUrl": "https://ugmonk.com/products/ugmonk-leather-mousepad-brown",
+      "imageUrls": [
+        "https://cdn.shopify.com/s/files/1/0167/4484/files/brown-mp-1.jpg?v=1765480215",
+        "https://cdn.shopify.com/s/files/1/0167/4484/files/mp-22.jpg?v=1765481857",
+        "https://cdn.shopify.com/s/files/1/0167/4484/files/mp-23.jpg?v=1765481857",
+        "https://cdn.shopify.com/s/files/1/0167/4484/files/mp-38.jpg?v=1765481899"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Ugmonk",
+          "affiliateUrl": "https://ugmonk.com/products/ugmonk-leather-mousepad-brown",
+          "rawUrl": "https://ugmonk.com/products/ugmonk-leather-mousepad-brown",
+          "priceTier": "budget",
+          "priceSnapshot": 4900,
+          "currency": "USD",
+          "inStock": true,
+          "commissionEst": 0.06,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bottom"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#3A3A3C",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 40,
+          "chroma": 8
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [],
+        "brand": "Ugmonk",
+        "brandTier": 3,
+        "priceTier": "budget",
+        "slotRoles": [
+          "bottom"
+        ]
+      }
+    },
+    {
+      "id": "k_ugmonk_8100989304982",
+      "title": "Magnetic Cable Keepers (Set of 2 - Charcoal)",
+      "brand": "Ugmonk",
+      "category": "desk",
+      "subcategory": null,
+      "canonicalUrl": "https://ugmonk.com/products/magnetic-cable-keepers-set-of-2-charcoal",
+      "imageUrls": [
+        "https://cdn.shopify.com/s/files/1/0167/4484/files/cable-clips-charcoal.jpg?v=1715197614",
+        "https://cdn.shopify.com/s/files/1/0167/4484/files/cable-clips-charcoal2.jpg?v=1715197614",
+        "https://cdn.shopify.com/s/files/1/0167/4484/files/cable-clips-charcoal3.jpg?v=1715197614",
+        "https://cdn.shopify.com/s/files/1/0167/4484/files/magnet-ls-1_a731e256-1d01-4cd8-9516-fffed04d46fc.jpg?v=1715286422"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Ugmonk",
+          "affiliateUrl": "https://ugmonk.com/products/magnetic-cable-keepers-set-of-2-charcoal",
+          "rawUrl": "https://ugmonk.com/products/magnetic-cable-keepers-set-of-2-charcoal",
+          "priceTier": "budget",
+          "priceSnapshot": 2000,
+          "currency": "USD",
+          "inStock": true,
+          "commissionEst": 0.06,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#33343A",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 40,
+          "chroma": 12
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [],
+        "brand": "Ugmonk",
+        "brandTier": 3,
+        "priceTier": "budget",
+        "slotRoles": [
+          "shoes"
+        ]
+      }
+    },
+    {
+      "id": "k_ugmonk_8619819401366",
+      "title": "Analog Multi Pen Tray (Black Aluminum)",
+      "brand": "Ugmonk",
+      "category": "desk",
+      "subcategory": null,
+      "canonicalUrl": "https://ugmonk.com/products/multi-pen-tray-black-aluminum",
+      "imageUrls": [
+        "https://cdn.shopify.com/s/files/1/0167/4484/files/multi-pen-tray-blk-1.jpg?v=1772652037",
+        "https://cdn.shopify.com/s/files/1/0167/4484/files/alum-ls-cropped-84.jpg?v=1773932217",
+        "https://cdn.shopify.com/s/files/1/0167/4484/files/multi-pen-tray-blk-2.jpg?v=1773932217",
+        "https://cdn.shopify.com/s/files/1/0167/4484/files/multi-pen-tray-blk-3.jpg?v=1773932217"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Ugmonk",
+          "affiliateUrl": "https://ugmonk.com/products/multi-pen-tray-black-aluminum",
+          "rawUrl": "https://ugmonk.com/products/multi-pen-tray-black-aluminum",
+          "priceTier": "budget",
+          "priceSnapshot": 4900,
+          "currency": "USD",
+          "inStock": true,
+          "commissionEst": 0.06,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "accessories"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#1F1F1F",
+          "family": "black",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 40,
+          "chroma": 12
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [],
+        "brand": "Ugmonk",
+        "brandTier": 3,
+        "priceTier": "budget",
+        "slotRoles": [
+          "accessories"
+        ]
+      }
+    },
+    {
+      "id": "k_bellsofsteel_7932094447813",
+      "title": "6-12KG Adjustable Kettlebell",
+      "brand": "Bells of Steel",
+      "category": "gym",
+      "subcategory": null,
+      "canonicalUrl": "https://www.bellsofsteel.us/products/6-12kg-adjustable-kettlebell",
+      "imageUrls": [
+        "https://cdn.shopify.com/s/files/1/0654/3346/9125/files/wildman-adj-ktl-gallery202.jpg?v=1770897859",
+        "https://cdn.shopify.com/s/files/1/0654/3346/9125/files/wildman-adj-ktl-gallery_202.jpg?v=1769721637",
+        "https://cdn.shopify.com/s/files/1/0654/3346/9125/files/612-wld-adjkb-01.jpg?v=1764592089",
+        "https://cdn.shopify.com/s/files/1/0654/3346/9125/files/wildman-adj-ktl-gallery_206.jpg?v=1769721637"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Bells of Steel",
+          "affiliateUrl": "https://www.bellsofsteel.us/products/6-12kg-adjustable-kettlebell",
+          "rawUrl": "https://www.bellsofsteel.us/products/6-12kg-adjustable-kettlebell",
+          "priceTier": "mid",
+          "priceSnapshot": 16499,
+          "currency": "USD",
+          "inStock": true,
+          "commissionEst": 0.06,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "anchor"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#3A3A3C",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 40,
+          "chroma": 8
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "statement",
+        "seasons": [
+          "all"
+        ],
+        "weather": [],
+        "brand": "Bells of Steel",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "anchor"
+        ]
+      }
+    },
+    {
+      "id": "k_livingfit_8663810965654",
+      "title": "RXSG - Build Bands",
+      "brand": "Living.Fit",
+      "category": "gym",
+      "subcategory": null,
+      "canonicalUrl": "https://living.fit/products/build-bands",
+      "imageUrls": [
+        "https://cdn.shopify.com/s/files/1/0508/3670/1334/files/RXSGBooty_Bands_Bundle_1.webp?v=1780604539",
+        "https://cdn.shopify.com/s/files/1/0508/3670/1334/files/RXSGBootyBandsBundle6_2a100849-6d05-4a2d-b9b7-b2ffef95cf36.webp?v=1780604540",
+        "https://cdn.shopify.com/s/files/1/0508/3670/1334/files/RXSGBootyBandsBundle3.jpg?v=1780604540",
+        "https://cdn.shopify.com/s/files/1/0508/3670/1334/files/RXSGBootyBandsBundle2.jpg?v=1780604540"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Living.Fit",
+          "affiliateUrl": "https://living.fit/products/build-bands",
+          "rawUrl": "https://living.fit/products/build-bands",
+          "priceTier": "budget",
+          "priceSnapshot": 3500,
+          "currency": "USD",
+          "inStock": true,
+          "commissionEst": 0.06,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#3A3A3C",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 40,
+          "chroma": 8
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [],
+        "brand": "Living.Fit",
+        "brandTier": 3,
+        "priceTier": "budget",
+        "slotRoles": [
+          "top"
+        ]
+      }
+    },
+    {
+      "id": "k_livingfit_8663833870486",
+      "title": "RXSG - ThundrBro RapidFit 2.0 Jump Rope",
+      "brand": "Living.Fit",
+      "category": "gym",
+      "subcategory": null,
+      "canonicalUrl": "https://living.fit/products/thundrbro-rapidfit-2-0-jump-rope",
+      "imageUrls": [
+        "https://cdn.shopify.com/s/files/1/0508/3670/1334/files/Rapid_Fit_2.0_Thundrbro_1.webp?v=1780605688",
+        "https://cdn.shopify.com/s/files/1/0508/3670/1334/files/RXSG_RapidFit_Thundrbro_Jump_Rope.webp?v=1780605689",
+        "https://cdn.shopify.com/s/files/1/0508/3670/1334/files/RxSmartGearRapidFitJumpRope_1.webp?v=1780605688",
+        "https://cdn.shopify.com/s/files/1/0508/3670/1334/files/thunderbros_rapidfit.jpg?v=1780605689"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Living.Fit",
+          "affiliateUrl": "https://living.fit/products/thundrbro-rapidfit-2-0-jump-rope",
+          "rawUrl": "https://living.fit/products/thundrbro-rapidfit-2-0-jump-rope",
+          "priceTier": "budget",
+          "priceSnapshot": 6500,
+          "currency": "USD",
+          "inStock": true,
+          "commissionEst": 0.06,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bottom"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#3A3A3C",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 40,
+          "chroma": 8
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [],
+        "brand": "Living.Fit",
+        "brandTier": 3,
+        "priceTier": "budget",
+        "slotRoles": [
+          "bottom"
+        ]
+      }
+    },
+    {
+      "id": "k_repfitness_14873260228974",
+      "title": "High Density Foam Roller",
+      "brand": "REP Fitness",
+      "category": "gym",
+      "subcategory": null,
+      "canonicalUrl": "https://www.repfitness.com/products/high-density-foam-roller",
+      "imageUrls": [
+        "https://cdn.shopify.com/s/files/1/0574/1215/7598/files/HighDensityFoamRoller-lifestyle-5-_thumbnail.jpg?v=1764798398",
+        "https://cdn.shopify.com/s/files/1/0574/1215/7598/files/High_Density_Foam_Roller_-_lifestyle_-_1.jpg?v=1764798195",
+        "https://cdn.shopify.com/s/files/1/0574/1215/7598/files/High_Density_Foam_Roller_-_lifestyle_-_13.jpg?v=1764798195",
+        "https://cdn.shopify.com/s/files/1/0574/1215/7598/files/High_Density_Foam_Roller_-_lifestyle_-_37.jpg?v=1764798195"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "REP Fitness",
+          "affiliateUrl": "https://www.repfitness.com/products/high-density-foam-roller",
+          "rawUrl": "https://www.repfitness.com/products/high-density-foam-roller",
+          "priceTier": "budget",
+          "priceSnapshot": 3299,
+          "currency": "USD",
+          "inStock": true,
+          "commissionEst": 0.06,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#3A3A3C",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 40,
+          "chroma": 8
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [],
+        "brand": "REP Fitness",
+        "brandTier": 3,
+        "priceTier": "budget",
+        "slotRoles": [
+          "shoes"
+        ]
+      }
+    },
+    {
+      "id": "k_bellsofsteel_8345342935237",
+      "title": "Rubber Flooring Gym Mat 24\" x 24\" (Set of 2)",
+      "brand": "Bells of Steel",
+      "category": "gym",
+      "subcategory": null,
+      "canonicalUrl": "https://www.bellsofsteel.us/products/rubber-flooring-24",
+      "imageUrls": [
+        "https://cdn.shopify.com/s/files/1/0654/3346/9125/files/2-24-mat1-01.jpg?v=1764593933",
+        "https://cdn.shopify.com/s/files/1/0654/3346/9125/files/2-24-mat1-02.jpg?v=1764593933",
+        "https://cdn.shopify.com/s/files/1/0654/3346/9125/files/2-24-mat1-03.jpg?v=1764593933",
+        "https://cdn.shopify.com/s/files/1/0654/3346/9125/files/2-24-mat1-04.jpg?v=1764593933"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Bells of Steel",
+          "affiliateUrl": "https://www.bellsofsteel.us/products/rubber-flooring-24",
+          "rawUrl": "https://www.bellsofsteel.us/products/rubber-flooring-24",
+          "priceTier": "mid",
+          "priceSnapshot": 8999,
+          "currency": "USD",
+          "inStock": true,
+          "commissionEst": 0.06,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "accessories"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#3A3A3C",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 40,
+          "chroma": 8
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [],
+        "brand": "Bells of Steel",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "accessories"
+        ]
+      }
+    },
+    {
+      "id": "k_stix_7701475229762",
+      "title": "Compete Wedge Set",
+      "brand": "Stix",
+      "category": "golf",
+      "subcategory": null,
+      "canonicalUrl": "https://stix.golf/products/compete-wedge-set",
+      "imageUrls": [
+        "https://cdn.shopify.com/s/files/1/0257/9729/6194/files/stix-golf-co-clubs-right-stiff-standard-compete-wedge-set-1225724003.jpg?v=1772730310",
+        "https://cdn.shopify.com/s/files/1/0257/9729/6194/files/stix-golf-co-clubs-p02-perform-12-club-set-1218001907.jpg?v=1772745446",
+        "https://cdn.shopify.com/s/files/1/0257/9729/6194/files/stix-golf-co-clubs-compete-wedge-set-1225754806.jpg?v=1772752090",
+        "https://cdn.shopify.com/s/files/1/0257/9729/6194/files/stix-golf-co-clubs-p02-perform-12-club-set-1217992336.jpg?v=1772745446"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Stix",
+          "affiliateUrl": "https://stix.golf/products/compete-wedge-set",
+          "rawUrl": "https://stix.golf/products/compete-wedge-set",
+          "priceTier": "premium",
+          "priceSnapshot": 29900,
+          "currency": "USD",
+          "inStock": true,
+          "commissionEst": 0.06,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "anchor"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#B69468",
+          "family": "tan",
+          "undertone": "warm",
+          "role": "neutral",
+          "value": 40,
+          "chroma": 12
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "statement",
+        "seasons": [
+          "all"
+        ],
+        "weather": [],
+        "brand": "Stix",
+        "brandTier": 3,
+        "priceTier": "premium",
+        "slotRoles": [
+          "anchor"
+        ]
+      }
+    },
+    {
+      "id": "k_sundaygolf_9161557180628",
+      "title": "Loma | Friars Brown Par 3 Bag",
+      "brand": "Sunday Golf",
+      "category": "golf",
+      "subcategory": null,
+      "canonicalUrl": "https://sundaygolf.com/products/loma-friars-brown-par-3-bag",
+      "imageUrls": [
+        "https://cdn.shopify.com/s/files/1/0267/2646/5578/files/Loma_Bag_Padres_a1_WEB.png?v=1778174616",
+        "https://cdn.shopify.com/s/files/1/0267/2646/5578/files/Loma_FeatureCallouts_PDP_FriarsBrown_ec0ed78b-751f-4818-a468-c3d0417f07b8.jpg?v=1743018481",
+        "https://cdn.shopify.com/s/files/1/0267/2646/5578/files/Loma_Bag_Padres_a2_WEB.png?v=1778174616",
+        "https://cdn.shopify.com/s/files/1/0267/2646/5578/files/Loma_Bag_Padres_a3_WEB.png?v=1778174617"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Sunday Golf",
+          "affiliateUrl": "https://sundaygolf.com/products/loma-friars-brown-par-3-bag",
+          "rawUrl": "https://sundaygolf.com/products/loma-friars-brown-par-3-bag",
+          "priceTier": "mid",
+          "priceSnapshot": 12999,
+          "currency": "USD",
+          "inStock": true,
+          "commissionEst": 0.06,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "top"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#3A3A3C",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 40,
+          "chroma": 8
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [],
+        "brand": "Sunday Golf",
+        "brandTier": 3,
+        "priceTier": "mid",
+        "slotRoles": [
+          "top"
+        ]
+      }
+    },
+    {
+      "id": "k_sundaygolf_8845948354772",
+      "title": "GameDay Golf Glove",
+      "brand": "Sunday Golf",
+      "category": "golf",
+      "subcategory": null,
+      "canonicalUrl": "https://sundaygolf.com/products/gameday-golf-glove",
+      "imageUrls": [
+        "https://cdn.shopify.com/s/files/1/0267/2646/5578/files/Glove_Toasted_Almond_a1_WEB.png?v=1745869487",
+        "https://cdn.shopify.com/s/files/1/0267/2646/5578/files/Glove_Toasted_Almond_a2_WEB.png?v=1749246851",
+        "https://cdn.shopify.com/s/files/1/0267/2646/5578/files/Glove_Teal_a1_WEB.png?v=1749489884",
+        "https://cdn.shopify.com/s/files/1/0267/2646/5578/files/Glove_Teal_a2_WEB.png?v=1750186722"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Sunday Golf",
+          "affiliateUrl": "https://sundaygolf.com/products/gameday-golf-glove",
+          "rawUrl": "https://sundaygolf.com/products/gameday-golf-glove",
+          "priceTier": "budget",
+          "priceSnapshot": 2500,
+          "currency": "USD",
+          "inStock": true,
+          "commissionEst": 0.06,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "bottom"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#3A3A3C",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 40,
+          "chroma": 8
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [],
+        "brand": "Sunday Golf",
+        "brandTier": 3,
+        "priceTier": "budget",
+        "slotRoles": [
+          "bottom"
+        ]
+      }
+    },
+    {
+      "id": "k_stix_7457822376002",
+      "title": "Nicklaus™ Golf Towel",
+      "brand": "Stix",
+      "category": "golf",
+      "subcategory": null,
+      "canonicalUrl": "https://stix.golf/products/nicklaus-golf-towel",
+      "imageUrls": [
+        "https://cdn.shopify.com/s/files/1/0257/9729/6194/files/stix-golf-accessories-nicklaus-golf-towel-1152062081.jpg?v=1748028774",
+        "https://cdn.shopify.com/s/files/1/0257/9729/6194/files/stix-golf-accessories-nicklaus-golf-towel-1152062082.jpg?v=1743178135",
+        "https://cdn.shopify.com/s/files/1/0257/9729/6194/files/stix-golf-accessories-nicklaus-golf-towel-1152062080.jpg?v=1748028774",
+        "https://cdn.shopify.com/s/files/1/0257/9729/6194/files/stix-golf-accessories-nicklaus-golf-towel-1152062077.jpg?v=1743029869"
+      ],
+      "inStock": true,
+      "offers": [
+        {
+          "network": "sovrn",
+          "merchant": "Stix",
+          "affiliateUrl": "https://stix.golf/products/nicklaus-golf-towel",
+          "rawUrl": "https://stix.golf/products/nicklaus-golf-towel",
+          "priceTier": "budget",
+          "priceSnapshot": 3000,
+          "currency": "USD",
+          "inStock": true,
+          "commissionEst": 0.06,
+          "status": "active"
+        }
+      ],
+      "slotRoles": [
+        "shoes"
+      ],
+      "styling": {
+        "formality": 3,
+        "dressCodes": [],
+        "color": {
+          "primaryHex": "#3A3A3C",
+          "family": "charcoal",
+          "undertone": "neutral",
+          "role": "neutral",
+          "value": 40,
+          "chroma": 8
+        },
+        "pattern": "solid",
+        "texture": [],
+        "silhouette": "regular",
+        "volume": "regular",
+        "weight": "supporting",
+        "seasons": [
+          "all"
+        ],
+        "weather": [],
+        "brand": "Stix",
+        "brandTier": 3,
+        "priceTier": "budget",
+        "slotRoles": [
+          "shoes"
+        ]
+      }
+    }
+  ],
+  "bundles": [
+    {
+      "id": "kb_1",
+      "slug": "coffee-kit-real",
+      "type": "kit",
+      "title": "Home Espresso Bar — The Real Setup",
+      "brief": {
+        "occasion": "home-espresso",
+        "activity": "coffee",
+        "budgetTier": "mid",
+        "season": "all"
+      },
+      "heroImage": "https://cdn.shopify.com/s/files/1/0057/6235/1219/files/PDP_Opus2_Black_Black.png?v=1771549610",
+      "flatLayImage": null,
+      "curatorNote": "A complete pour-over setup that actually works together — a precise grinder leads, a gooseneck kettle and brewer follow, and a scale keeps every cup repeatable.",
+      "estPriceLow": 36260,
+      "estPriceHigh": 44318,
+      "coherence": {
+        "score": 100,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 1
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "k_fellow_8426192404580"
+      },
+      "state": "published",
+      "generatedBy": "assisted",
+      "featured": false,
+      "items": [
+        {
+          "productId": "k_fellow_8426192404580",
+          "slotId": "anchor",
+          "role": "anchor",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "k_fellow_6947562717284",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "k_fellow_8203956519012",
+          "slotId": "bottom",
+          "role": "bottom",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "k_fellow_8203553013860",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "kb_2",
+      "slug": "desk-kit-real",
+      "type": "kit",
+      "title": "Focused WFH Desk Setup",
+      "brief": {
+        "occasion": "wfh-desk",
+        "activity": "desk",
+        "budgetTier": "mid",
+        "season": "all"
+      },
+      "heroImage": "https://cdn.shopify.com/s/files/1/0167/4484/files/cable-clips-gray-tan.jpg?v=1715197332",
+      "flatLayImage": null,
+      "curatorNote": "A calm, tactile desk built around a laptop stand at eye level — an organizer and desk pad anchor the surface, with a few daily tools to finish it.",
+      "estPriceLow": 15930,
+      "estPriceHigh": 19470,
+      "coherence": {
+        "score": 100,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 1
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "k_ugmonk_8100586782870"
+      },
+      "state": "published",
+      "generatedBy": "assisted",
+      "featured": false,
+      "items": [
+        {
+          "productId": "k_ugmonk_8100586782870",
+          "slotId": "anchor",
+          "role": "anchor",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "k_ugmonk_8619836801174",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "k_ugmonk_4167154204809",
+          "slotId": "bottom",
+          "role": "bottom",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "k_ugmonk_8100989304982",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "k_ugmonk_8619819401366",
+          "slotId": "accessories",
+          "role": "accessories",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "kb_3",
+      "slug": "gym-kit-real",
+      "type": "kit",
+      "title": "Apartment Home Gym — No Excuses",
+      "brief": {
+        "occasion": "home-gym",
+        "activity": "gym",
+        "budgetTier": "mid",
+        "season": "all"
+      },
+      "heroImage": "https://cdn.shopify.com/s/files/1/0654/3346/9125/files/wildman-adj-ktl-gallery202.jpg?v=1770897859",
+      "flatLayImage": null,
+      "curatorNote": "A small-space strength kit that covers the basics — an adjustable kettlebell for load, resistance bands and a jump rope for conditioning, plus a mat and roller for floor work and recovery.",
+      "estPriceLow": 34917,
+      "estPriceHigh": 42677,
+      "coherence": {
+        "score": 100,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 1
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "k_bellsofsteel_7932094447813"
+      },
+      "state": "published",
+      "generatedBy": "assisted",
+      "featured": false,
+      "items": [
+        {
+          "productId": "k_bellsofsteel_7932094447813",
+          "slotId": "anchor",
+          "role": "anchor",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "k_livingfit_8663810965654",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "k_livingfit_8663833870486",
+          "slotId": "bottom",
+          "role": "bottom",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "k_repfitness_14873260228974",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "k_bellsofsteel_8345342935237",
+          "slotId": "accessories",
+          "role": "accessories",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    },
+    {
+      "id": "kb_4",
+      "slug": "golf-kit-real",
+      "type": "kit",
+      "title": "First-Timer Golf Starter Kit",
+      "brief": {
+        "occasion": "golf-starter",
+        "activity": "golf",
+        "budgetTier": "mid",
+        "season": "all"
+      },
+      "heroImage": "https://cdn.shopify.com/s/files/1/0257/9729/6194/files/stix-golf-co-clubs-right-stiff-standard-compete-wedge-set-1225724003.jpg?v=1772730310",
+      "flatLayImage": null,
+      "curatorNote": "Everything a new golfer needs to step onto the course with confidence — a forgiving set leads, with a bag, balls, a glove, and the small accessories that make a round smooth.",
+      "estPriceLow": 43559,
+      "estPriceHigh": 53239,
+      "coherence": {
+        "score": 100,
+        "passed": true,
+        "hardViolations": [],
+        "ruleScores": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1,
+          "R7": 1,
+          "R8": 1
+        },
+        "scheme": "neutral-anchored",
+        "heroItemId": "k_stix_7701475229762"
+      },
+      "state": "published",
+      "generatedBy": "assisted",
+      "featured": false,
+      "items": [
+        {
+          "productId": "k_stix_7701475229762",
+          "slotId": "anchor",
+          "role": "anchor",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "k_sundaygolf_9161557180628",
+          "slotId": "top",
+          "role": "top",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "k_sundaygolf_8845948354772",
+          "slotId": "bottom",
+          "role": "bottom",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        },
+        {
+          "productId": "k_stix_7457822376002",
+          "slotId": "shoes",
+          "role": "shoes",
+          "note": null,
+          "variant": "core",
+          "swapAlternates": []
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "source": "real brand Shopify feeds (Fellow/Ugmonk/Branch/REP/Stix/Sunday)",
+    "generated": "build-time",
+    "counts": {
+      "products": 18,
+      "bundles": 4
+    }
+  }
+}

@@ -6,6 +6,7 @@
 import "server-only";
 import seed from "@/data/seed-bundles.json";
 import seedReal from "@/data/seed-real.json";
+import seedKits from "@/data/seed-kits.json";
 import affiliateConfigJson from "@/data/affiliate-config.json";
 import offerOverridesJson from "@/data/offer-overrides.json";
 import bundleStateJson from "@/data/bundle-state.json";
@@ -23,13 +24,14 @@ import type { ScorableItem } from "./coherence";
 // (published) + original kits/collections/gifts; the original placeholder LOOKS are hidden (draft).
 const rawProducts = [
   ...(seedReal.products as unknown as Product[]),
+  ...(seedKits.products as unknown as Product[]),
   ...(seed.products as unknown as Product[]),
 ];
 const rawBundles: RawBundle[] = [
-  ...(seedReal.bundles as unknown as RawBundle[]),
-  ...(seed.bundles as unknown as RawBundle[]).map((b) =>
-    b.type === "look" ? ({ ...b, state: "archived" } as RawBundle) : (b as RawBundle)
-  ),
+  ...(seedReal.bundles as unknown as RawBundle[]), // real composed looks
+  ...(seedKits.bundles as unknown as RawBundle[]), // real kits (coffee/desk/gym/golf)
+  // original seed bundles were placeholder imagery — archive them all (superseded by real data)
+  ...(seed.bundles as unknown as RawBundle[]).map((b) => ({ ...b, state: "archived" } as RawBundle)),
 ];
 
 // committed JSON (live-edited locally by the admin console) overlaid with env vars (production).
