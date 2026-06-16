@@ -11,7 +11,7 @@ const TYPE_PATH: Record<string, string> = {
 // small-caps occasion eyebrow. NOT a boxed product card.
 export function LookCard({ bundle, size = "md" }: { bundle: EnrichedBundle; size?: "md" | "tall" | "wide" }) {
   const href = `${TYPE_PATH[bundle.type] ?? "/looks"}/${bundle.slug}`;
-  const eyebrow = [bundle.brief.occasion, bundle.brief.vibe, bundle.brief.activity]
+  const eyebrow = [bundle.brief.gender, bundle.brief.vibe || bundle.brief.occasion, bundle.brief.activity]
     .filter(Boolean)
     .map((s) => titleCase(String(s)))
     .slice(0, 2)

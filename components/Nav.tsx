@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useGender, type Gender } from "@/lib/useGender";
 
 const LINKS = [
   { href: "/", label: "Feed" },
@@ -16,6 +17,7 @@ export function Nav() {
   const pathname = usePathname();
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [saved, setSaved] = useState(0);
+  const { gender, setGender } = useGender();
 
   useEffect(() => {
     const stored = (localStorage.getItem("curated-theme") as "dark" | "light") || "dark";
@@ -37,6 +39,13 @@ export function Nav() {
   return (
     <header className="topbar">
       <Link href="/" className="brand">CURATED</Link>
+      <div className="gender-seg" role="group" aria-label="Shop by gender">
+        {(["women", "men", "all"] as Gender[]).map((g) => (
+          <button key={g} className={gender === g ? "on" : ""} onClick={() => setGender(g)} aria-pressed={gender === g}>
+            {g === "all" ? "All" : g === "women" ? "Women" : "Men"}
+          </button>
+        ))}
+      </div>
       <nav className="topnav" aria-label="Primary">
         {LINKS.map((l) => {
           const active = l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
@@ -61,6 +70,11 @@ export function Nav() {
           align-items:center; padding:14px 22px; background:color-mix(in srgb, var(--bg) 78%, transparent);
           backdrop-filter:blur(14px); border-bottom:1px solid var(--line); }
         .brand{ font-family:var(--mono); font-size:13px; letter-spacing:.34em; }
+        .gender-seg{ display:inline-flex; gap:1px; background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:2px; margin-left:18px; }
+        .gender-seg button{ font-family:var(--sans); font-size:12px; color:var(--ink-soft); background:none; border:none; padding:5px 13px; border-radius:999px; cursor:pointer; transition:.18s; letter-spacing:.02em; }
+        .gender-seg button:hover{ color:var(--ink); }
+        .gender-seg button.on{ background:var(--ink); color:var(--bg); }
+        @media (max-width:680px){ .gender-seg{ margin-left:8px; } .gender-seg button{ padding:5px 10px; } }
         .topnav{ display:flex; gap:20px; align-items:center; font-size:13.5px; color:var(--ink-soft); }
         .topnav a{ cursor:pointer; transition:color .2s; }
         .topnav a:hover, .topnav a.active{ color:var(--ink); }

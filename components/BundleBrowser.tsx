@@ -3,24 +3,29 @@ import { useMemo, useState } from "react";
 import type { EnrichedBundle } from "@/lib/types";
 import { LookCard } from "./LookCard";
 import { titleCase } from "@/lib/format";
+import { useGender, genderMatch } from "@/lib/useGender";
 
-type Facet = "occasion" | "vibe" | "gender" | "budgetTier" | "season";
-const FACETS: Facet[] = ["occasion", "vibe", "gender", "season", "budgetTier"];
+// gender is controlled by the top-level nav switch, so it's not a facet here.
+type Facet = "vibe" | "occasion" | "budgetTier" | "season";
+const FACETS: Facet[] = ["vibe", "occasion", "season", "budgetTier"];
 
 // Faceted browser — filters are data-driven from each bundle's brief (no per-category code).
 export function BundleBrowser({ bundles, title, blurb }: { bundles: EnrichedBundle[]; title: string; blurb: string }) {
   const [active, setActive] = useState<Partial<Record<Facet, string>>>({});
+  const { gender } = useGender();
+
+  const genderScoped = useMemo(() => bundles.filter((b) => genderMatch(gender, b.brief.gender)), [bundles, gender]);
 
   const options = useMemo(() => {
-    const map: Record<Facet, Set<string>> = { occasion: new Set(), vibe: new Set(), gender: new Set(), budgetTier: new Set(), season: new Set() };
-    for (const b of bundles) for (const f of FACETS) {
+    const map: Record<Facet, Set<string>> = { occasion: new Set(), vibe: new Set(), budgetTier: new Set(), season: new Set() };
+    for (const b of genderScoped) for (const f of FACETS) {
       const v = (b.brief as any)[f];
       if (v) map[f].add(String(v));
     }
     return map;
-  }, [bundles]);
+  }, [genderScoped]);
 
-  const filtered = bundles.filter((b) =>
+  const filtered = genderScoped.filter((b) =>
     FACETS.every((f) => !active[f] || String((b.brief as any)[f]) === active[f])
   );
 
@@ -38,7 +43,7 @@ export function BundleBrowser({ bundles, title, blurb }: { bundles: EnrichedBund
         {FACETS.map((f) =>
           options[f].size > 1 ? (
             <div className="facet" key={f}>
-              <span className="eyebrow">{titleCase(f === "budgetTier" ? "budget" : f)}</span>
+              <span className="eyebrow">{f === "budgetTier" ? "Budget" : f === "vibe" ? "Aesthetic" : titleCase(f)}</span>
               <div className="chips">
                 {[...options[f]].sort().map((v) => (
                   <button key={v} className={"chip" + (active[f] === v ? " on" : "")} onClick={() => toggle(f, v)}>
