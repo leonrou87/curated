@@ -2,30 +2,28 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import type { EnrichedBundle } from "@/lib/types";
-import { fmtCents, fmtRange, titleCase } from "@/lib/format";
+import { fmtCents, titleCase } from "@/lib/format";
 import { RULE_LABELS } from "@/lib/coherence";
 import { FTC_DISCLOSURE } from "@/lib/offers";
 import { BundleCover } from "./BundleCover";
-import { ShoppablePins } from "./ShoppablePins";
-import { AffiliateCTA } from "./AffiliateCTA";
+import { ProductLink } from "./ProductLink";
 import { CoherenceMeter } from "./CoherenceMeter";
 import { ShareButton } from "./ShareButton";
 import { useSaved } from "@/lib/useSaved";
 
 const TYPE_PATH: Record<string, string> = { look: "looks", kit: "kits", collection: "collections", gift: "gifts" };
 
-// The hero page (MILESTONE-2). Assemble-on-screen reveal → shoppable pins → why-it-works →
-// compliant breakdown → coherence transparency → save flight. Reduced-motion → instant.
+// The hero page. Outfit collage → why-it-works → a big, obviously clickable "Shop the look" grid
+// (every product card is a compliant affiliate link) → coherence transparency. No fiddly pins.
 export function LookDetail({ bundle }: { bundle: EnrichedBundle }) {
   const [revealed, setRevealed] = useState(false);
   const [stage, setStage] = useState(0);
-  const [activeId, setActiveId] = useState<string | null>(null);
   const [flight, setFlight] = useState(false);
   const reduce = useRef(false);
   const { saved, toggle } = useSaved(bundle.slug);
 
   const total = bundle.items.reduce((s, i) => s + (i.priceCents ?? 0), 0);
-  const eyebrow = [bundle.brief.occasion, bundle.brief.vibe, bundle.brief.gender]
+  const eyebrow = [bundle.brief.gender, bundle.brief.vibe || bundle.brief.occasion]
     .filter(Boolean).map((s) => titleCase(String(s))).join(" · ");
 
   useEffect(() => {
@@ -34,41 +32,32 @@ export function LookDetail({ bundle }: { bundle: EnrichedBundle }) {
       window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
     if (reduce.current) { setRevealed(true); setStage(9); return; }
     const t: ReturnType<typeof setTimeout>[] = [];
-    t.push(setTimeout(() => setRevealed(true), 80));
-    t.push(setTimeout(() => setStage(1), 300)); // pins
-    t.push(setTimeout(() => setStage(2), 640)); // title
-    t.push(setTimeout(() => setStage(3), 820)); // note
+    t.push(setTimeout(() => setRevealed(true), 60));
+    t.push(setTimeout(() => setStage(2), 380));
+    t.push(setTimeout(() => setStage(3), 620));
     return () => t.forEach(clearTimeout);
   }, []);
 
   const onSave = () => {
     toggle();
-    if (!saved && !reduce.current) {
-      setFlight(true);
-      setTimeout(() => setFlight(false), 720);
-    }
+    if (!saved && !reduce.current) { setFlight(true); setTimeout(() => setFlight(false), 720); }
   };
 
   return (
     <div className="ld">
-      {/* ── cover ── */}
+      {/* ── cover: the outfit collage ── */}
       <section className="cover">
         <div className={"cover-img" + (revealed ? " in" : "")}>
           <BundleCover bundle={bundle} />
-          <ShoppablePins
-            items={bundle.items}
-            visible={stage >= 1}
-            activeId={activeId}
-            setActiveId={setActiveId}
-            reduced={reduce.current}
-          />
           <div className="cover-meta">
             <div className={"cm-eyebrow" + (stage >= 2 ? " in" : "")}>{eyebrow}</div>
             <h1 className={"serif cm-title" + (stage >= 2 ? " in" : "")}>
               <span className="cm-title-mask">{bundle.title}</span>
             </h1>
             <div className={"cm-row" + (stage >= 2 ? " in" : "")}>
-              <span className="mono cm-price">{fmtCents(total)}<i> total look</i></span>
+              <span className="mono cm-price">{fmtCents(total)}<i> the look</i></span>
+              <span className="cm-dot">·</span>
+              <span className="cm-count">{bundle.items.length} pieces</span>
               <span className="cm-dot">·</span>
               <span className="cm-coh"><i className="coh-tick" /> Coherence {bundle.coherence.score.toFixed(0)}</span>
             </div>
@@ -80,49 +69,52 @@ export function LookDetail({ bundle }: { bundle: EnrichedBundle }) {
       <section className={"why" + (stage >= 3 ? " in" : "")}>
         <span className="eyebrow why-label">Why it works</span>
         <p className="serif why-note">{bundle.curatorNote}</p>
-        <span className="mono why-scheme">Palette — {bundle.coherence.scheme}</span>
       </section>
 
-      {/* ── breakdown (compliant) ── */}
-      <section className="breakdown">
+      {/* ── SHOP THE LOOK — big clickable product cards ── */}
+      <section className="shop">
+        <header className="shop-head">
+          <h2 className="serif">Shop the look</h2>
+          <span className="eyebrow">Tap any piece to shop it</span>
+        </header>
         <p className="disclosure">{FTC_DISCLOSURE}</p>
-        <ul className="rows">
+        <div className="prod-grid">
           {bundle.items.map((it) => (
-            <li
+            <ProductLink
               key={it.productId}
-              className={"row" + (activeId === it.productId ? " active" : "")}
-              onMouseEnter={() => setActiveId(it.productId)}
-              onMouseLeave={() => setActiveId(null)}
+              offer={it.bestOffer}
+              productId={it.productId}
+              merchant={it.brand}
+              className="prod-card"
+              ariaLabel={`Shop ${it.brand} ${it.title}, ${fmtCents(it.priceCents)} (opens in a new tab)`}
             >
-              <span className="r-thumb" style={{ background: it.swatch }}>
+              <span className="pc-img" style={{ background: it.swatch }}>
                 {it.image && /* eslint-disable-next-line @next/next/no-img-element */ (
                   <img src={it.image} alt={it.title} loading="lazy" />
                 )}
-                {it.isHero && <i className="r-hero" title="Hero piece">★</i>}
+                {it.isHero && <span className="pc-hero">★ Hero</span>}
+                <span className="pc-role">{titleCase(it.role)}</span>
               </span>
-              <span className="r-main">
-                <span className="eyebrow r-role">{titleCase(it.role)}</span>
-                <span className="r-brand">{it.brand}</span>
-                <span className="r-title">{it.title}</span>
+              <span className="pc-body">
+                <span className="pc-brand">{it.brand}</span>
+                <span className="pc-title">{it.title}</span>
+                <span className="pc-foot">
+                  <span className="mono pc-price">{fmtCents(it.priceCents)}</span>
+                  <span className="pc-cta">Shop {it.brand.split(" ")[0]} <b aria-hidden>↗</b></span>
+                </span>
               </span>
-              <span className="mono r-price">{fmtCents(it.priceCents)}</span>
-              <AffiliateCTA offer={it.bestOffer} brand={it.brand} productId={it.productId} />
-            </li>
+            </ProductLink>
           ))}
-        </ul>
+        </div>
       </section>
 
       {/* ── actions ── */}
       <section className="actions">
-        <Link href={`/builder?from=${bundle.slug}`} className="a-primary">Style this look →</Link>
+        <Link href={`/builder?from=${bundle.slug}`} className="a-primary">Make it yours →</Link>
         <button className={"a-save" + (saved ? " on" : "")} onClick={onSave}>
           <Heart filled={saved} /> {saved ? "Saved" : "Save look"}
         </button>
-        <ShareButton
-          title={`${bundle.title} — Curated`}
-          text={bundle.curatorNote}
-          path={`/${TYPE_PATH[bundle.type] ?? "looks"}/${bundle.slug}`}
-        />
+        <ShareButton title={`${bundle.title} — Curated`} text={bundle.curatorNote} path={`/${TYPE_PATH[bundle.type] ?? "looks"}/${bundle.slug}`} />
         {flight && <span className="flight" />}
       </section>
 
@@ -149,68 +141,68 @@ export function LookDetail({ bundle }: { bundle: EnrichedBundle }) {
         </div>
       </section>
 
-      <Styles />
       <style>{`
+        .ld{ padding-bottom:60px; }
         .cover{ padding:18px 18px 0; }
         .cover-img{ position:relative; width:100%; max-width:1180px; margin:0 auto; aspect-ratio:16/10;
-          border-radius:4px; overflow:hidden; opacity:0; transform:scale(1.035);
-          transition:opacity .5s ease, transform .9s var(--ease-out); }
+          border-radius:6px; overflow:hidden; opacity:0; transform:scale(1.02);
+          transition:opacity .5s ease, transform .8s var(--ease-out); }
         .cover-img.in{ opacity:1; transform:scale(1); }
-        @media (max-width:680px){ .cover-img{ aspect-ratio:4/5; } }
-        .cover-meta{ position:absolute; left:0; bottom:0; padding:26px 30px; z-index:6; }
+        @media (max-width:680px){ .cover-img{ aspect-ratio:1/1; } }
+        .cover-meta{ position:absolute; left:0; right:0; bottom:0; padding:26px 30px; z-index:6; }
         .cm-eyebrow{ font-size:11.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-soft);
           opacity:0; transform:translateY(8px); transition:.5s var(--ease-out); }
         .cm-eyebrow.in{ opacity:1; transform:none; }
-        .cm-title{ font-weight:400; line-height:.96; letter-spacing:-.02em;
-          font-size:clamp(2.6rem,7vw,5.4rem); margin:6px 0 12px; overflow:hidden; }
+        .cm-title{ font-weight:400; line-height:.98; letter-spacing:-.02em;
+          font-size:clamp(2.4rem,6vw,4.6rem); margin:6px 0 12px; overflow:hidden; }
         .cm-title-mask{ display:inline-block; transform:translateY(105%); transition:transform .7s var(--ease-out); }
         .cm-title.in .cm-title-mask{ transform:none; }
-        .cm-row{ display:flex; align-items:center; gap:12px; opacity:0; transform:translateY(8px);
-          transition:.5s var(--ease-out) .08s; }
+        .cm-row{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; opacity:0; transform:translateY(8px); transition:.5s var(--ease-out) .08s; }
         .cm-row.in{ opacity:1; transform:none; }
-        .cm-price{ font-size:15px; } .cm-price i{ font-style:normal; color:var(--ink-mute); font-size:12px; margin-left:5px; }
+        .cm-price{ font-size:15px; } .cm-price i{ font-style:normal; color:var(--ink-soft); font-size:12px; margin-left:5px; }
+        .cm-count{ font-size:13px; color:var(--ink-soft); }
         .cm-dot{ color:var(--ink-mute); }
         .cm-coh{ display:inline-flex; align-items:center; gap:6px; font-size:12.5px; color:var(--ink-soft); }
         .coh-tick{ width:7px; height:7px; border-radius:50%; background:var(--positive); }
 
-        .why{ max-width:760px; margin:46px auto 8px; padding:0 30px; text-align:center;
-          opacity:0; transform:translateY(10px); transition:.6s var(--ease-out); }
+        .why{ max-width:760px; margin:42px auto 0; padding:0 30px; text-align:center; opacity:0; transform:translateY(10px); transition:.6s var(--ease-out); }
         .why.in{ opacity:1; transform:none; }
-        .why-label{ display:block; margin-bottom:16px; }
-        .why-note{ font-size:clamp(1.25rem,2.4vw,1.7rem); line-height:1.45; font-weight:300; letter-spacing:-.01em; margin:0; }
-        .why-scheme{ display:inline-block; margin-top:18px; font-size:12px; color:var(--ink-mute); }
+        .why-label{ display:block; margin-bottom:14px; }
+        .why-note{ font-size:clamp(1.2rem,2.3vw,1.6rem); line-height:1.45; font-weight:300; letter-spacing:-.01em; margin:0; }
 
-        .breakdown{ max-width:760px; margin:40px auto 0; padding:0 24px; }
-        .disclosure{ font-size:12px; color:var(--ink-mute); line-height:1.5; padding:12px 14px;
-          border:1px solid var(--line); border-radius:10px; margin:0 0 14px; background:color-mix(in srgb, var(--ink) 1.5%, transparent); }
-        .rows{ list-style:none; margin:0; padding:0; }
-        .row{ display:grid; grid-template-columns:54px 1fr auto auto; gap:16px; align-items:center;
-          padding:14px; border-radius:12px; transition:background .25s; }
-        .row.active{ background:var(--surface); }
-        .row + .row{ border-top:1px solid var(--line); }
-        .row.active, .row.active + .row{ border-color:transparent; }
-        .r-thumb{ width:54px; height:66px; border-radius:7px; position:relative; flex:none; }
-        .r-thumb img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; border-radius:7px; }
-        .r-hero{ position:absolute; top:-7px; right:-7px; width:20px; height:20px; font-size:11px; font-style:normal;
-          display:grid; place-items:center; background:var(--accent); color:var(--accent-ink); border-radius:50%; box-shadow:var(--e-1); }
-        .r-main{ display:flex; flex-direction:column; gap:1px; min-width:0; }
-        .r-role{ font-size:10px; } .r-brand{ font-size:13.5px; color:var(--ink-soft); } .r-title{ font-size:14.5px; }
-        .r-price{ font-size:14px; }
-        @media (max-width:560px){ .row{ grid-template-columns:48px 1fr auto; } .row .acta{ grid-column:2 / -1; justify-self:start; margin-top:4px; } }
+        .shop{ max-width:1100px; margin:56px auto 0; padding:0 24px; }
+        .shop-head{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom:14px; }
+        .shop-head h2{ font-weight:400; font-size:clamp(1.5rem,2.4vw,2.1rem); letter-spacing:-.01em; }
+        .disclosure{ font-size:12px; color:var(--ink-mute); line-height:1.5; padding:11px 14px; border:1px solid var(--line); border-radius:10px; margin:0 0 20px; }
+        .prod-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:18px; }
+        .prod-card{ display:flex; flex-direction:column; background:var(--surface); border:1px solid var(--line); border-radius:14px; overflow:hidden; transition:.2s; }
+        .prod-card:hover{ border-color:var(--accent); transform:translateY(-3px); box-shadow:var(--e-2); }
+        .pc-img{ position:relative; display:block; aspect-ratio:3/4; overflow:hidden; }
+        .pc-img img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .4s var(--ease-out); }
+        .prod-card:hover .pc-img img{ transform:scale(1.05); }
+        .pc-role{ position:absolute; left:10px; bottom:10px; font-size:10px; letter-spacing:.12em; text-transform:uppercase;
+          color:var(--ink); background:color-mix(in srgb, var(--bg) 60%, transparent); backdrop-filter:blur(6px); padding:4px 9px; border-radius:999px; }
+        .pc-hero{ position:absolute; right:10px; top:10px; font-size:10px; color:var(--accent-ink); background:var(--accent); padding:4px 9px; border-radius:999px; }
+        .pc-body{ display:flex; flex-direction:column; gap:3px; padding:13px 14px 15px; }
+        .pc-brand{ font-size:12.5px; color:var(--ink-soft); }
+        .pc-title{ font-size:14px; line-height:1.3; min-height:2.6em; }
+        .pc-foot{ display:flex; align-items:center; justify-content:space-between; margin-top:8px; }
+        .pc-price{ font-size:14px; }
+        .pc-cta{ font-size:12.5px; color:var(--accent-soft); display:inline-flex; align-items:center; gap:5px; }
+        .pc-cta b{ font-weight:400; transition:transform .2s; }
+        .prod-card:hover .pc-cta b{ transform:translate(2px,-2px); }
 
-        .actions{ position:relative; max-width:760px; margin:34px auto 0; padding:0 24px; display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+        .actions{ position:relative; max-width:1100px; margin:34px auto 0; padding:0 24px; display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
         .a-primary{ font-size:14.5px; background:var(--accent); color:var(--accent-ink); padding:14px 26px; border-radius:999px; font-weight:500; transition:.2s; }
         .a-primary:hover{ background:var(--accent-soft); transform:translateY(-1px); }
-        .a-save{ font-size:14px; background:none; color:var(--ink-soft); border:1px solid var(--line);
-          padding:13px 20px; border-radius:999px; cursor:pointer; display:inline-flex; align-items:center; gap:8px; transition:.2s; }
+        .a-save{ font-size:14px; background:none; color:var(--ink-soft); border:1px solid var(--line); padding:13px 20px; border-radius:999px; cursor:pointer; display:inline-flex; align-items:center; gap:8px; transition:.2s; }
         .a-save:hover{ color:var(--ink); border-color:var(--ink-mute); }
         .a-save.on{ color:var(--accent-soft); border-color:var(--accent); }
-        .flight{ position:absolute; right:80px; top:8px; width:16px; height:16px; border-radius:50%; background:var(--accent);
-          animation:fly .7s cubic-bezier(.5,0,.2,1) forwards; }
+        .flight{ position:absolute; right:80px; top:8px; width:16px; height:16px; border-radius:50%; background:var(--accent); animation:fly .7s cubic-bezier(.5,0,.2,1) forwards; }
         @keyframes fly{ 0%{transform:translate(0,0) scale(1); opacity:1;} 100%{transform:translate(60px,-560px) scale(.3); opacity:0;} }
 
-        .coh-panel{ max-width:760px; margin:60px auto 0; padding:0 24px; }
-        .coh-grid{ display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-top:16px; align-items:start; }
+        .coh-panel{ max-width:1100px; margin:60px auto 0; padding:0 24px; }
+        .coh-grid{ display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-top:16px; align-items:start; max-width:760px; }
         .coh-explain{ font-size:13px; color:var(--ink-soft); line-height:1.6; margin:16px 0 0; }
         .rules{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:9px; }
         .rules li{ display:grid; grid-template-columns:1fr 90px 28px; gap:10px; align-items:center; font-size:12.5px; color:var(--ink-soft); }
@@ -229,8 +221,4 @@ function Heart({ filled }: { filled: boolean }) {
       <path d="M12 21s-7.5-4.6-10-9.2C.6 9 1.8 5.5 5 5c2-.3 3.4.9 4.2 2 .8 1 1.8 1 2.6 0C12.6 5.9 14 4.7 16 5c3.2.5 4.4 4 3 6.8C19.5 16.4 12 21 12 21z" />
     </svg>
   );
-}
-
-function Styles() {
-  return <style>{`.ld{ padding-bottom:40px; }`}</style>;
 }

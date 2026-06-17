@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useGender, type Gender } from "@/lib/useGender";
 
@@ -19,6 +19,8 @@ export function Nav() {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [saved, setSaved] = useState(0);
   const { gender, setGender } = useGender();
+  const router = useRouter();
+  const [q, setQ] = useState("");
 
   useEffect(() => {
     const stored = (localStorage.getItem("curated-theme") as "dark" | "light") || "dark";
@@ -47,6 +49,13 @@ export function Nav() {
           </button>
         ))}
       </div>
+      <form
+        className="nav-search"
+        onSubmit={(e) => { e.preventDefault(); router.push(`/search${q.trim() ? `?q=${encodeURIComponent(q.trim())}` : ""}`); }}
+      >
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg>
+        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search" aria-label="Search" />
+      </form>
       <nav className="topnav" aria-label="Primary">
         {LINKS.map((l) => {
           const active = l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
@@ -56,6 +65,9 @@ export function Nav() {
             </Link>
           );
         })}
+        <Link href="/search" className="nav-search-m" aria-label="Search">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg>
+        </Link>
         <Link href="/saved" className="closet" aria-label={`Closet, ${saved} saved`}>
           <svg width="17" height="17" viewBox="0 0 24 24" fill={saved ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.8" aria-hidden>
             <path d="M12 21s-7.5-4.6-10-9.2C.6 9 1.8 5.5 5 5c2-.3 3.4.9 4.2 2 .8 1 1.8 1 2.6 0C12.6 5.9 14 4.7 16 5c3.2.5 4.4 4 3 6.8C19.5 16.4 12 21 12 21z" />
@@ -67,20 +79,30 @@ export function Nav() {
         </button>
       </nav>
       <style>{`
-        .topbar{ position:sticky; top:0; z-index:40; display:flex; justify-content:space-between;
-          align-items:center; padding:14px 22px; background:color-mix(in srgb, var(--bg) 78%, transparent);
+        .topbar{ position:sticky; top:0; z-index:40; display:flex; gap:8px;
+          align-items:center; padding:12px 22px; background:color-mix(in srgb, var(--bg) 82%, transparent);
           backdrop-filter:blur(14px); border-bottom:1px solid var(--line); }
-        .brand{ font-family:var(--mono); font-size:13px; letter-spacing:.34em; }
+        .brand{ font-family:var(--mono); font-size:13px; letter-spacing:.34em; flex:none; }
+        .nav-search{ display:flex; align-items:center; gap:8px; background:var(--surface); border:1px solid var(--line);
+          border-radius:999px; padding:7px 14px; color:var(--ink-mute); width:200px; margin-left:8px; }
+        .nav-search:focus-within{ border-color:var(--accent); }
+        .nav-search input{ flex:1; min-width:0; background:none; border:none; outline:none; color:var(--ink); font-size:13px; font-family:var(--sans); }
+        .nav-search input::placeholder{ color:var(--ink-mute); }
+        @media (max-width:980px){ .nav-search{ width:130px; } }
+        @media (max-width:680px){ .nav-search{ display:none; } }
         .gender-seg{ display:inline-flex; gap:1px; background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:2px; margin-left:18px; }
         .gender-seg button{ font-family:var(--sans); font-size:12px; color:var(--ink-soft); background:none; border:none; padding:5px 13px; border-radius:999px; cursor:pointer; transition:.18s; letter-spacing:.02em; }
         .gender-seg button:hover{ color:var(--ink); }
         .gender-seg button.on{ background:var(--ink); color:var(--bg); }
         @media (max-width:680px){ .gender-seg{ margin-left:8px; } .gender-seg button{ padding:5px 10px; } }
-        .topnav{ display:flex; gap:20px; align-items:center; font-size:13.5px; color:var(--ink-soft); }
+        .topnav{ display:flex; gap:18px; align-items:center; font-size:13.5px; color:var(--ink-soft); margin-left:auto; }
         .topnav a{ cursor:pointer; transition:color .2s; }
         .topnav a:hover, .topnav a.active{ color:var(--ink); }
         .topnav a.active{ position:relative; }
         .topnav a.active::after{ content:""; position:absolute; left:0; right:0; bottom:-18px; height:2px; background:var(--accent); }
+        .nav-search-m{ display:none; color:var(--ink-soft); padding:2px; }
+        .nav-search-m:hover{ color:var(--ink); }
+        @media (max-width:680px){ .nav-search-m{ display:inline-flex; } }
         .closet{ position:relative; color:var(--ink-soft); display:inline-flex; padding:2px; }
         .closet:hover{ color:var(--ink); }
         .closet-dot{ position:absolute; top:-1px; right:-1px; width:6px; height:6px; border-radius:50%; background:var(--accent); }

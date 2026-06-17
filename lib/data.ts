@@ -212,6 +212,26 @@ export function getAllProducts(): Product[] {
   return products;
 }
 
+// Slim, client-friendly product index for search (real, in-stock, image-bearing products only).
+export interface SearchProduct {
+  id: string; brand: string; title: string; category: string; gender: string;
+  image: string; priceCents: number | null; url: string;
+}
+export function getSearchProducts(): SearchProduct[] {
+  const out: SearchProduct[] = [];
+  for (const p of products) {
+    const img = p.imageUrls?.find((u) => /^https?:\/\//.test(u));
+    if (!img || !p.inStock) continue;
+    const o = resolveBestOffer(p);
+    out.push({
+      id: p.id, brand: p.brand, title: p.title, category: p.category,
+      gender: (p as any).gender || "unisex", image: img,
+      priceCents: o?.priceSnapshot ?? null, url: o?.affiliateUrl ?? p.canonicalUrl,
+    });
+  }
+  return out;
+}
+
 export function getProduct(id: string): Product | undefined {
   return PRODUCTS_BY_ID.get(id);
 }
