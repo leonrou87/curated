@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getBundlesByType } from "@/lib/data";
+import { getBundlesByType, toClientBundles } from "@/lib/data";
 import { StyleQuiz } from "@/components/StyleQuiz";
 
 export const metadata: Metadata = {
@@ -10,16 +10,14 @@ export const metadata: Metadata = {
 
 export default function QuizPage() {
   const looks = getBundlesByType("look");
-  // a diverse deck: spread across aesthetics + both genders, with real imagery
   const seen = new Set<string>();
   const deck: typeof looks = [];
   for (const b of looks) {
     const key = `${b.brief.gender}:${b.brief.vibe}`;
-    if (seen.has(key)) continue;
-    if (!b.items.some((i) => i.image)) continue;
-    seen.add(key);
-    deck.push(b);
+    if (seen.has(key) || !b.items.some((i) => i.image)) continue;
+    seen.add(key); deck.push(b);
     if (deck.length >= 16) break;
   }
-  return <StyleQuiz deck={deck} recommendable={looks} />;
+  // a capped, diverse pool for the "picked for you" recommendations
+  return <StyleQuiz deck={toClientBundles(deck)} recommendable={toClientBundles(looks.slice(0, 300))} />;
 }

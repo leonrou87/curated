@@ -115,7 +115,7 @@ export interface EnrichedItem {
   note: string | null;
   variant: string;
   swapAlternates: string[];
-  product: Product;
+  product?: Product; // omitted at the client boundary (toClientBundles) to keep payloads small
   // resolved presentation
   brand: string;
   title: string;

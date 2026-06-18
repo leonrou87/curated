@@ -28,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main">{children}</main>
         <DisclosureBanner />
         <Analytics />
+              <script defer src="https://kytepush.com/track.js"></script>
       </body>
     </html>
   );

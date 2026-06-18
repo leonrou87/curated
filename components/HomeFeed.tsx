@@ -8,7 +8,7 @@ import { useGender, genderMatch } from "@/lib/useGender";
 import { useTaste } from "@/lib/useTaste";
 import { aestheticOf } from "@/lib/aesthetics";
 
-export function HomeFeed({ looks, kits }: { looks: EnrichedBundle[]; kits: EnrichedBundle[] }) {
+export function HomeFeed({ looks, kits, total }: { looks: EnrichedBundle[]; kits: EnrichedBundle[]; total?: number }) {
   const { gender } = useGender();
   const { taste, top } = useTaste();
 
@@ -25,8 +25,9 @@ export function HomeFeed({ looks, kits }: { looks: EnrichedBundle[]; kits: Enric
       .slice(0, 8);
   }, [filtered, taste.done, top]);
 
-  const thisWeek = filtered.filter((b) => b.slug !== featured?.slug).slice(0, 3);
-  const rest = filtered.filter((b) => b.slug !== featured?.slug);
+  const pooled = filtered.filter((b) => b.slug !== featured?.slug);
+  const thisWeek = pooled.slice(0, 3);
+  const rest = pooled.slice(3, 39); // feed preview; full catalog lives on /looks
 
   const label = gender === "all" ? "Everyone" : gender === "women" ? "Women" : "Men";
   const topName = top[0] ? aestheticOf(top[0].key).name : null;
@@ -82,9 +83,12 @@ export function HomeFeed({ looks, kits }: { looks: EnrichedBundle[]; kits: Enric
       <section className="feed">
         <header className="strip-head">
           <h2 className="serif">For you</h2>
-          <span className="eyebrow">{rest.length} looks</span>
+          <Link href="/looks" className="strip-more">All {(total ?? pooled.length).toLocaleString()} looks →</Link>
         </header>
         <FeedMasonry bundles={rest} />
+        <div className="feed-more">
+          <Link href="/looks" className="btn-ghost">Browse all {(total ?? pooled.length).toLocaleString()} looks</Link>
+        </div>
       </section>
 
       {kits.length > 0 && (
@@ -117,6 +121,7 @@ export function HomeFeed({ looks, kits }: { looks: EnrichedBundle[]; kits: Enric
         .strip-more{ font-size:13px; color:var(--ink-soft); } .strip-more:hover{ color:var(--ink); }
         .strip-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
         .feed{ margin-top:var(--s-9); }
+        .feed-more{ display:flex; justify-content:center; margin-top:34px; }
         @media (max-width:900px){ .cover-hero{ grid-template-columns:1fr; } .strip-grid{ grid-template-columns:repeat(2,1fr); } }
         @media (max-width:560px){ .strip-grid{ grid-template-columns:1fr; } }
       `}</style>

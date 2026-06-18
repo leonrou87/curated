@@ -6,6 +6,7 @@ import { LookCard } from "@/components/LookCard";
 import { ShareButton } from "@/components/ShareButton";
 import { AESTHETICS, aestheticOf } from "@/lib/aesthetics";
 
+export const dynamicParams = true;
 export function generateStaticParams() {
   const vibes = new Set(getBundlesByType("look").map((b) => String(b.brief.vibe || "")));
   return [...vibes].filter(Boolean).map((slug) => ({ slug }));
@@ -26,8 +27,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 
 export default function TrendPage({ params }: { params: { slug: string } }) {
   const a = AESTHETICS[params.slug];
-  const looks = getBundlesByType("look").filter((b) => String(b.brief.vibe) === params.slug);
-  if (!a && !looks.length) notFound();
+  const all = getBundlesByType("look").filter((b) => String(b.brief.vibe) === params.slug);
+  const looks = all.slice(0, 60);
+  if (!a && !all.length) notFound();
   const aes = a || aestheticOf(params.slug);
 
   return (
@@ -39,7 +41,7 @@ export default function TrendPage({ params }: { params: { slug: string } }) {
         <p className="tp-tag">{aes.tagline}</p>
         <p className="tp-blurb">{aes.blurb}</p>
         <div className="tp-actions">
-          <span className="eyebrow">{looks.length} looks</span>
+          <span className="eyebrow">{all.length} looks</span>
           <ShareButton title={`${aes.name} — Curated`} text={aes.blurb} path={`/trends/${aes.key}`} variant="chip" />
         </div>
       </header>

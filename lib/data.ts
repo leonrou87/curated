@@ -152,10 +152,14 @@ function mode(arr: string[]): string {
 }
 
 // ---------- public accessors ----------
+// Memoized — enriching 1000+ bundles is done once per process (config/state are build-time static).
+let _allCache: EnrichedBundle[] | null = null;
 export function getAllBundles(): EnrichedBundle[] {
-  return rawBundles
+  if (_allCache) return _allCache;
+  _allCache = rawBundles
     .filter((b) => effectiveState(b) === "published")
     .map(enrichBundle);
+  return _allCache;
 }
 
 // Admin view — every bundle with its effective state + computed quality-gate flags.
@@ -193,6 +197,19 @@ export function getAdminBundles(): AdminBundleRow[] {
 
 export function getBundlesByType(type: RawBundle["type"]): EnrichedBundle[] {
   return getAllBundles().filter((b) => b.type === type);
+}
+
+// Strip the heavy per-item `product` before handing bundles to client components (the UI only needs
+// image/swatch/brand/title/price/etc.). Keeps the client payload small at 1000+ looks.
+export function toClientBundles(bs: EnrichedBundle[]): EnrichedBundle[] {
+  return bs.map((b) => ({
+    ...b,
+    items: b.items.map(({ product, ...rest }) => rest),
+  }));
+}
+
+export function getLooksForBrowse(): EnrichedBundle[] {
+  return toClientBundles(getBundlesByType("look"));
 }
 
 export function getBundleBySlug(slug: string): EnrichedBundle | null {

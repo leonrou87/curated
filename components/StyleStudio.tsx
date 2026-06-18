@@ -1,29 +1,35 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { EnrichedBundle } from "@/lib/types";
-import { matchBundles } from "@/lib/match";
+import { rankLooks, rememberPrompt, recentPrompts } from "@/lib/match";
 import { LookDetail } from "./LookDetail";
 import { LookCard } from "./LookCard";
+import { useTaste } from "@/lib/useTaste";
+import { aestheticOf } from "@/lib/aesthetics";
 
 const SUGGESTIONS = [
-  "fall outdoor wedding, size 14, no yellow",
+  "fall outdoor wedding, quiet luxury",
   "minimalist date night, all black",
   "first day at a new office, navy",
-  "set up a home espresso bar",
-  "golf starter kit under $700",
+  "men's smart casual for a dinner",
+  "affordable weekend brunch, summer",
 ];
 
-// NL styling → the assemble reveal. Deterministic zero-key matcher; re-mounts LookDetail by key
-// so the reveal replays on each new prompt.
+// NL styling → the assemble reveal. Intent-aware + taste-personalized ranking over the full catalog.
 export function StyleStudio({ bundles }: { bundles: EnrichedBundle[] }) {
   const [query, setQuery] = useState("");
   const [submitted, setSubmitted] = useState<string | null>(null);
   const [results, setResults] = useState<EnrichedBundle[]>([]);
+  const [recent, setRecent] = useState<string[]>([]);
+  const { taste, top } = useTaste();
+
+  useEffect(() => { setRecent(recentPrompts()); }, []);
 
   const run = (q: string) => {
-    const found = matchBundles(q, bundles);
-    setResults(found);
+    setResults(rankLooks(q, bundles, taste));
     setSubmitted(q);
+    rememberPrompt(q);
+    setRecent(recentPrompts());
   };
 
   const onSubmit = (e: React.FormEvent) => {
@@ -32,7 +38,8 @@ export function StyleStudio({ bundles }: { bundles: EnrichedBundle[] }) {
   };
 
   const hero = results[0];
-  const more = results.slice(1, 5);
+  const more = results.slice(1, 9);
+  const tasteName = top[0] ? aestheticOf(top[0].key).name : null;
 
   return (
     <div className="studio">
@@ -50,17 +57,20 @@ export function StyleStudio({ bundles }: { bundles: EnrichedBundle[] }) {
           <button type="submit" aria-label="Assemble a look">Assemble →</button>
         </form>
         <div className="suggest">
-          {SUGGESTIONS.map((s) => (
+          {(recent.length ? recent : SUGGESTIONS).map((s) => (
             <button key={s} className="sug" onClick={() => { setQuery(s); run(s); }}>{s}</button>
           ))}
         </div>
+        {tasteName && (
+          <p className="taste-hint">✦ Personalizing to your taste — <b>{tasteName}</b>. <a href="/quiz">Retake the quiz</a> to refine.</p>
+        )}
       </section>
 
       {submitted && (
         hero ? (
           <section className="result">
             <p className="result-note">
-              For “<b>{submitted}</b>” — here’s the most coherent match.
+              For “<b>{submitted}</b>” — your best match{tasteName ? ", tuned to your taste" : ""}.
             </p>
             <LookDetail key={hero.slug + submitted} bundle={hero} />
             {more.length > 0 && (
@@ -89,6 +99,7 @@ export function StyleStudio({ bundles }: { bundles: EnrichedBundle[] }) {
         .prompt-bar button{ background:var(--accent); color:var(--accent-ink); border:none; border-radius:999px;
           padding:12px 22px; font-size:14px; font-weight:500; cursor:pointer; white-space:nowrap; transition:.2s; }
         .prompt-bar button:hover{ background:var(--accent-soft); }
+        .taste-hint{ font-size:13px; color:var(--ink-soft); margin-top:16px; } .taste-hint a{ color:var(--accent-soft); }
         .suggest{ display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:18px; }
         .sug{ font-size:12.5px; color:var(--ink-soft); background:none; border:1px solid var(--line);
           padding:7px 14px; border-radius:999px; cursor:pointer; transition:.2s; }

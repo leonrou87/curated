@@ -5,8 +5,10 @@ import { getPublicBundle, getBundlesByType } from "@/lib/data";
 import { LookDetail } from "@/components/LookDetail";
 import { lookOgUrl } from "@/lib/og";
 
+// 1000+ looks → render on demand and cache, rather than prebuilding every page at build time.
+export const dynamicParams = true;
 export function generateStaticParams() {
-  return getBundlesByType("look").map((b) => ({ slug: b.slug }));
+  return getBundlesByType("look").filter((b) => b.featured).map((b) => ({ slug: b.slug }));
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {

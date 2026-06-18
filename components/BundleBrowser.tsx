@@ -12,6 +12,8 @@ const FACETS: Facet[] = ["vibe", "occasion", "season", "budgetTier"];
 // Faceted browser — filters are data-driven from each bundle's brief (no per-category code).
 export function BundleBrowser({ bundles, title, blurb }: { bundles: EnrichedBundle[]; title: string; blurb: string }) {
   const [active, setActive] = useState<Partial<Record<Facet, string>>>({});
+  const [sort, setSort] = useState<"featured" | "price-asc" | "price-desc" | "coherence">("featured");
+  const [limit, setLimit] = useState(48);
   const { gender } = useGender();
 
   const genderScoped = useMemo(() => bundles.filter((b) => genderMatch(gender, b.brief.gender)), [bundles, gender]);
@@ -25,12 +27,18 @@ export function BundleBrowser({ bundles, title, blurb }: { bundles: EnrichedBund
     return map;
   }, [genderScoped]);
 
-  const filtered = genderScoped.filter((b) =>
-    FACETS.every((f) => !active[f] || String((b.brief as any)[f]) === active[f])
-  );
+  const filtered = useMemo(() => {
+    const list = genderScoped.filter((b) => FACETS.every((f) => !active[f] || String((b.brief as any)[f]) === active[f]));
+    const s = [...list];
+    if (sort === "price-asc") s.sort((a, b) => a.totalLowCents - b.totalLowCents);
+    else if (sort === "price-desc") s.sort((a, b) => b.totalLowCents - a.totalLowCents);
+    else if (sort === "coherence") s.sort((a, b) => b.coherence.score - a.coherence.score);
+    else s.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
+    return s;
+  }, [genderScoped, active, sort]);
 
-  const toggle = (f: Facet, v: string) =>
-    setActive((a) => ({ ...a, [f]: a[f] === v ? undefined : v }));
+  const toggle = (f: Facet, v: string) => { setLimit(48); setActive((a) => ({ ...a, [f]: a[f] === v ? undefined : v })); };
+  const shown = filtered.slice(0, limit);
 
   return (
     <div className="browser">
@@ -56,10 +64,26 @@ export function BundleBrowser({ bundles, title, blurb }: { bundles: EnrichedBund
         )}
       </div>
 
-      <div className="b-count eyebrow">{filtered.length} result{filtered.length === 1 ? "" : "s"}</div>
-      <div className="b-grid">
-        {filtered.map((b) => <LookCard key={b.id} bundle={b} />)}
+      <div className="b-toolbar">
+        <span className="b-count eyebrow">{filtered.length} look{filtered.length === 1 ? "" : "s"}</span>
+        <label className="b-sort">
+          <span className="eyebrow">Sort</span>
+          <select value={sort} onChange={(e) => { setLimit(48); setSort(e.target.value as any); }}>
+            <option value="featured">Featured</option>
+            <option value="coherence">Most coherent</option>
+            <option value="price-asc">Price: low to high</option>
+            <option value="price-desc">Price: high to low</option>
+          </select>
+        </label>
       </div>
+      <div className="b-grid">
+        {shown.map((b) => <LookCard key={b.id} bundle={b} />)}
+      </div>
+      {limit < filtered.length && (
+        <div className="b-more">
+          <button onClick={() => setLimit((l) => l + 48)}>Show more — {filtered.length - limit} left</button>
+        </div>
+      )}
 
       <style>{`
         .browser{ max-width:1240px; margin:0 auto; padding:36px 24px 0; }
@@ -72,7 +96,12 @@ export function BundleBrowser({ bundles, title, blurb }: { bundles: EnrichedBund
           padding:6px 13px; border-radius:999px; cursor:pointer; transition:.2s; }
         .chip:hover{ color:var(--ink); border-color:var(--ink-mute); }
         .chip.on{ background:var(--ink); color:var(--bg); border-color:var(--ink); }
-        .b-count{ margin:18px 0; }
+        .b-toolbar{ display:flex; justify-content:space-between; align-items:center; margin:18px 0; }
+        .b-sort{ display:flex; align-items:center; gap:8px; }
+        .b-sort select{ background:var(--surface); border:1px solid var(--line); color:var(--ink); border-radius:999px; padding:7px 12px; font-size:13px; font-family:var(--sans); cursor:pointer; }
+        .b-more{ display:flex; justify-content:center; margin:32px 0 0; }
+        .b-more button{ background:var(--surface); border:1px solid var(--line); color:var(--ink); padding:13px 28px; border-radius:999px; font-size:14px; cursor:pointer; transition:.2s; }
+        .b-more button:hover{ border-color:var(--accent); color:var(--accent-soft); }
         .b-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
         @media (max-width:1000px){ .b-grid{ grid-template-columns:repeat(3,1fr); } }
         @media (max-width:760px){ .b-grid{ grid-template-columns:repeat(2,1fr); } }
