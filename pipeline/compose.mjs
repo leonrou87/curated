@@ -54,8 +54,24 @@ function aestheticFor(items, g, formality, season, idx) {
   return pick("minimalist", "off-duty", "clean-girl");
 }
 const OCCASION = { 4: ["evening", "event", "wedding-guest", "work"], 3: ["everyday", "work", "brunch", "dinner"], 2: ["weekend", "vacation", "everyday"], 1: ["weekend", "lounge"] };
-const GARMENT = { dress: "Dress", top: "Top", knitwear: "Knit", outerwear: "Jacket", bottom: "Trousers", shoes: "Shoes", bag: "Bag", jewelry: "Set", accessories: "Set" };
 const cap = (s) => s.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+
+// Editorial, magazine-style look names — varied by mood + color + index (deterministic).
+const NAME_BANKS = {
+  evening: ["{C}, After Dark", "The {C} Hour", "After Hours in {C}", "{C} & Candlelight", "Nightfall in {C}"],
+  elevated: ["Quiet in {C}", "Notes in {C}", "{C} & Restraint", "A Study in {C}", "The {C} Edit"],
+  summer: ["{C} & Salt Air", "Holiday in {C}", "{C} by the Sea", "Long Days in {C}", "Sun-Bleached {C}"],
+  casual: ["Sunday {C}", "Off-Duty {C}", "{C}, Unhurried", "Weekend in {C}", "{C} on Repeat"],
+  work: ["{C}, On the Clock", "The {C} Brief", "Desk to Dinner in {C}", "{C} Means Business"],
+};
+function lookName(aesthetic, heroColor, formality, season, idx) {
+  let bank = "casual";
+  if (["mob-wife", "all-black"].includes(aesthetic) || formality >= 4) bank = "evening";
+  else if (["quiet-luxury", "old-money", "minimalist", "office-siren", "clean-girl"].includes(aesthetic)) bank = formality >= 4 ? "work" : "elevated";
+  else if (season === "summer" || ["coastal", "tomato-girl", "boho"].includes(aesthetic)) bank = "summer";
+  const arr = NAME_BANKS[bank];
+  return arr[idx % arr.length].replace("{C}", cap(heroColor));
+}
 
 function seasonOf(items) {
   const ss = items.flatMap((i) => byId[i.productId].styling.seasons);
@@ -117,7 +133,7 @@ function emit(coreItems, g, offset) {
   counter++;
   bundles.push({
     id: `rb_${counter}`, slug: `${aesthetic}-${g}-${counter}`, type: "look",
-    title: `${cap(hero.styling.color.family)} ${GARMENT[hero.category] || "Look"}`,
+    title: lookName(aesthetic, hero.styling.color.family, formality, season, counter),
     brief: { occasion: occ, vibe: aesthetic, gender: g, budgetTier: budget, season, targetFormality: formality },
     heroImage: hero.imageUrls[0], flatLayImage: null,
     curatorNote: `${TREND_NOTE[aesthetic] || "A coherent, considered take."} The ${hero.styling.color.family} ${hero.category} leads a ${res.scheme.replace(/-/g, " ")} palette; ${support} keep it cohesive for ${occ.replace(/-/g, " ")}.`,

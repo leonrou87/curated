@@ -3,117 +3,136 @@
 @tailwind utilities;
 
 /* ───────────────────────────────────────────────────────────────────────────
-   tokens.css — all design tokens from DESIGN-SYSTEM.md, both themes.
-   Fonts: Fraunces (display serif), Inter (UI sans), Geist Mono — swappable via
-   --serif / --sans / --mono so a human can drop in licensed faces (Canela/Suisse).
+   CURATED — editorial print-magazine system.
+   Display: Fraunces (high-contrast serif, dramatic). Body: Newsreader (editorial
+   text serif). Specs/credits/labels: Geist Mono. No Inter, no system sans —
+   serif + mono only, like a print quarterly.
 ─────────────────────────────────────────────────────────────────────────── */
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=Geist+Mono:wght@400;500&display=swap");
 
 :root {
-  /* ---- Dark (default) ---- */
-  --bg: #0e0e0f;
-  --surface: #161617;
-  --surface-2: #1f1f21;
-  --line: #2a2a2d;
-  --ink: #f4f2ee;
-  --ink-soft: #b9b6af;
-  --ink-mute: #7e7b75;
+  /* ---- Dark gallery (default) — warm near-black ---- */
+  --bg: #100f0d;
+  --bg-2: #15130f;
+  --surface: #1a1815;
+  --surface-2: #232019;
+  --line: #2e2a23;
+  --line-soft: #221f1a;
+  --ink: #f3ede1;
+  --ink-soft: #b8b0a0;
+  --ink-mute: #7d7565;
 
-  --accent: #c8612f;
-  --accent-soft: #e08a5a;
-  --accent-ink: #0e0e0f;
+  --accent: #d2622e;       /* terracotta */
+  --accent-soft: #e89262;
+  --accent-ink: #100f0d;
+  --gold: #c8a951;
 
-  --positive: #5b8c6e;
+  --positive: #6e9a78;
   --warning: #c9a14a;
   --danger: #b4544a;
 
-  --overlay-grad: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.72) 100%);
-
-  /* fonts (swap these two vars to drop in licensed faces) */
-  --serif: "Fraunces", Georgia, serif;
-  --sans: "Inter", system-ui, sans-serif;
+  /* fonts */
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: "Newsreader", Georgia, serif;     /* editorial body + UI */
   --mono: "Geist Mono", ui-monospace, monospace;
 
-  /* type scale */
-  --t-display: clamp(2.5rem, 6vw, 5rem);
-  --t-h1: clamp(2rem, 4vw, 3.25rem);
-  --t-h2: clamp(1.5rem, 2.6vw, 2.25rem);
-  --t-h3: 1.5rem;
-  --t-body: 1.0625rem;
+  /* fluid editorial type scale (big, dramatic) */
+  --t-masthead: clamp(3rem, 11vw, 10rem);
+  --t-display: clamp(2.6rem, 7vw, 6rem);
+  --t-h1: clamp(2rem, 4.4vw, 3.6rem);
+  --t-h2: clamp(1.5rem, 2.8vw, 2.4rem);
+  --t-body: 1.075rem;
   --t-small: 0.9375rem;
-  --t-caption: 0.8125rem;
-  --tracking-caps: 0.08em;
+  --t-caption: 0.78rem;
+  --tracking-caps: 0.22em;
 
-  /* space / radius / elevation */
   --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px;
   --s-6: 32px; --s-7: 48px; --s-8: 64px; --s-9: 96px; --s-10: 128px;
-  --r-sm: 6px; --r-md: 12px; --r-lg: 20px; --r-xl: 28px; --r-pill: 999px;
-  --e-1: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --e-2: 0 6px 24px rgba(0, 0, 0, 0.34);
-  --e-3: 0 18px 60px rgba(0, 0, 0, 0.45);
+  --r-sm: 2px; --r-md: 4px; --r-lg: 8px; --r-xl: 14px; --r-pill: 999px;
+  --e-1: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --e-2: 0 10px 34px rgba(0, 0, 0, 0.4);
+  --e-3: 0 24px 70px rgba(0, 0, 0, 0.55);
 
-  /* motion */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
-  --dur-fast: 140ms; --dur-base: 240ms; --dur-slow: 420ms; --dur-reveal: 900ms;
+  --dur-base: 240ms; --dur-slow: 480ms;
+  --max: 1320px;
 }
 
 [data-theme="light"] {
-  --bg: #f6f3ee;
-  --surface: #ffffff;
-  --surface-2: #efeae2;
-  --line: #e0d9ce;
-  --ink: #17150f;
-  --ink-soft: #4a463d;
-  --ink-mute: #847e70;
-  --accent: #b4501f;
-  --accent-soft: #d06e3c;
-  --accent-ink: #ffffff;
+  --bg: #f3ece0;          /* warm paper */
+  --bg-2: #ece3d4;
+  --surface: #fbf6ec;
+  --surface-2: #ece3d4;
+  --line: #d8ccb8;
+  --line-soft: #e3d9c8;
+  --ink: #1c1812;
+  --ink-soft: #534b3d;
+  --ink-mute: #8a7f6b;
+  --accent: #b8501f;
+  --accent-soft: #cc6b38;
+  --accent-ink: #fbf6ec;
+  --gold: #9c7d2e;
 }
 
 * { box-sizing: border-box; }
 html, body { padding: 0; margin: 0; }
+html { scroll-behavior: smooth; }
 
 body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--sans);
   font-size: var(--t-body);
-  line-height: 1.55;
+  line-height: 1.62;
+  font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
-::selection { background: var(--accent); color: var(--accent-ink); }
-
-a { color: inherit; text-decoration: none; }
-
-/* focus ring — accent, 2px, offset (a11y) */
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-  border-radius: 3px;
+/* paper grain over everything — print texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
 }
 
-/* shared editorial primitives */
+::selection { background: var(--accent); color: var(--accent-ink); }
+a { color: inherit; text-decoration: none; }
+
+:focus-visible {
+  outline: 1.5px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ---- editorial primitives ---- */
+.serif { font-family: var(--serif); }
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
 .eyebrow {
+  font-family: var(--mono);
   font-size: var(--t-caption);
   letter-spacing: var(--tracking-caps);
   text-transform: uppercase;
   color: var(--ink-mute);
+  font-weight: 400;
 }
-.serif { font-family: var(--serif); }
-.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+/* hairline rule with optional centered label */
+.rule { height: 1px; background: var(--line); border: 0; }
+
+/* magazine index number */
+.index { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.1em; color: var(--accent); }
 
 .skip-link {
-  position: absolute;
-  left: -9999px;
-  top: 0;
-  background: var(--accent);
-  color: var(--accent-ink);
-  padding: 10px 16px;
-  z-index: 100;
-  border-radius: 0 0 var(--r-md) 0;
+  position: absolute; left: -9999px; top: 0;
+  background: var(--accent); color: var(--accent-ink);
+  padding: 10px 16px; z-index: 100;
 }
 .skip-link:focus { left: 0; }
 

@@ -79,10 +79,10 @@ export function Nav() {
         </button>
       </nav>
       <style>{`
-        .topbar{ position:sticky; top:0; z-index:40; display:flex; gap:8px;
-          align-items:center; padding:12px 22px; background:color-mix(in srgb, var(--bg) 82%, transparent);
-          backdrop-filter:blur(14px); border-bottom:1px solid var(--line); }
-        .brand{ font-family:var(--mono); font-size:13px; letter-spacing:.34em; flex:none; }
+        .topbar{ position:sticky; top:0; z-index:40; display:flex; gap:10px;
+          align-items:center; padding:13px 26px; background:color-mix(in srgb, var(--bg) 86%, transparent);
+          backdrop-filter:blur(16px) saturate(1.2); border-bottom:1px solid var(--line); }
+        .brand{ font-family:var(--mono); font-size:13px; letter-spacing:.42em; flex:none; padding-right:4px; }
         .nav-search{ display:flex; align-items:center; gap:8px; background:var(--surface); border:1px solid var(--line);
           border-radius:999px; padding:7px 14px; color:var(--ink-mute); width:200px; margin-left:8px; }
         .nav-search:focus-within{ border-color:var(--accent); }
@@ -95,11 +95,11 @@ export function Nav() {
         .gender-seg button:hover{ color:var(--ink); }
         .gender-seg button.on{ background:var(--ink); color:var(--bg); }
         @media (max-width:680px){ .gender-seg{ margin-left:8px; } .gender-seg button{ padding:5px 10px; } }
-        .topnav{ display:flex; gap:18px; align-items:center; font-size:13.5px; color:var(--ink-soft); margin-left:auto; }
-        .topnav a{ cursor:pointer; transition:color .2s; }
+        .topnav{ display:flex; gap:20px; align-items:center; margin-left:auto;
+          font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft); }
+        .topnav a{ cursor:pointer; transition:color .2s; position:relative; }
         .topnav a:hover, .topnav a.active{ color:var(--ink); }
-        .topnav a.active{ position:relative; }
-        .topnav a.active::after{ content:""; position:absolute; left:0; right:0; bottom:-18px; height:2px; background:var(--accent); }
+        .topnav a.active::after{ content:""; position:absolute; left:0; right:0; bottom:-17px; height:2px; background:var(--accent); }
         .nav-search-m{ display:none; color:var(--ink-soft); padding:2px; }
         .nav-search-m:hover{ color:var(--ink); }
         @media (max-width:680px){ .nav-search-m{ display:inline-flex; } }
