@@ -146,9 +146,9 @@ function emit(coreItems, g, offset) {
 }
 
 // ——— generate ———
-// 1) women dress-anchored looks (multiple supporting variants per dress)
+// 1) women dress-anchored looks (a couple supporting variants per dress — avoid over-cloning)
 for (const d of POOLS.women.anchor) {
-  for (let v = 0; v < 4 && bundles.length < TARGET; v++) emit([{ productId: d.id, slotId: "anchor", role: "dress" }], "women", v * 3 + 1);
+  for (let v = 0; v < 2 && bundles.length < TARGET; v++) emit([{ productId: d.id, slotId: "anchor", role: "dress" }], "women", v * 4 + 1);
 }
 // 2) women separates (top × several bottoms)
 const wTops = POOLS.women.top.filter((p) => p.styling.weight !== "statement");
@@ -169,9 +169,13 @@ for (let ti = 0; ti < mTops.length && bundles.length < TARGET; ti++) {
   }
 }
 
-// feature a couple
-const fw = bundles.find((b) => b.brief.gender === "women"); if (fw) fw.featured = true;
-const fm = bundles.find((b) => b.brief.gender === "men"); if (fm) fm.featured = true;
+// interleave so the same anchor/brand never clusters in the grid (deterministic scatter)
+const hash = (s) => { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; };
+bundles.sort((a, b) => hash(a.slug) - hash(b.slug));
+
+// feature a strong women + men look up front
+const fw = bundles.find((b) => b.brief.gender === "women" && b.items.length >= 4); if (fw) fw.featured = true;
+const fm = bundles.find((b) => b.brief.gender === "men" && b.items.length >= 4); if (fm) fm.featured = true;
 
 const byG = bundles.reduce((a, b) => ((a[b.brief.gender] = (a[b.brief.gender] || 0) + 1), a), {});
 const byAes = bundles.reduce((a, b) => ((a[b.brief.vibe] = (a[b.brief.vibe] || 0) + 1), a), {});
