@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "compliance": "node scripts/compliance-lint.mjs"
+    "compliance": "node scripts/compliance-lint.mjs",
+    "refresh": "node pipeline/ingest.mjs && node pipeline/extract-colors.mjs && node pipeline/compose.mjs"
   },
   "dependencies": {
     "next": "14.2.5",

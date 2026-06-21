@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "A personalized, editorial feed of complete looks and kits. Describe what you need and watch a coherent look assemble — every piece shoppable.",
   openGraph: {
     title: "Curated",
-    description: "Editorial looks & kits, assembled by a real coherence engine.",
+    description: "Editorial looks & kits — complete outfits, real pieces, every aesthetic.",
     type: "website",
   },
 };

@@ -21,8 +21,19 @@ const BRANDS = [
   // —— MEN ——
   { base: "https://www.taylorstitch.com", brand: "Taylor Stitch", gender: "men", keep: ["top", "bottom", "outerwear", "shoes", "bag", "accessories"] },
   { base: "https://waxlondon.com", brand: "Wax London", gender: "men", keep: ["top", "bottom", "outerwear", "shoes"] },
+  // —— MORE WOMEN ——
+  { base: "https://faithfullthebrand.com", brand: "Faithfull the Brand", gender: "women", keep: ["dress", "top", "bottom"] },
+  { base: "https://tradlands.com", brand: "Tradlands", gender: "women", keep: ["dress", "top", "bottom"] },
+  { base: "https://us.princesspolly.com", brand: "Princess Polly", gender: "women", keep: ["dress", "top", "bottom"] },
+  { base: "https://lisasaysgah.com", brand: "Lisa Says Gah", gender: "women", keep: ["dress", "top", "bottom"] },
+  { base: "https://birdies.com", brand: "Birdies", gender: "women", keep: ["shoes"] },
+  // —— MORE MEN ——
+  { base: "https://www.saturdaysnyc.com", brand: "Saturdays NYC", gender: "men", keep: ["top", "bottom", "outerwear"] },
+  { base: "https://www.percivalclo.com", brand: "Percival", gender: "men", keep: ["top", "bottom", "outerwear", "accessories"] },
   // —— UNISEX ——
   { base: "https://www.allbirds.com", brand: "Allbirds", gender: "auto", keep: ["shoes"] },
+  { base: "https://nisolo.com", brand: "Nisolo", gender: "auto", keep: ["shoes", "bag"] },
+  { base: "https://www.outerknown.com", brand: "Outerknown", gender: "auto", keep: ["top", "bottom", "outerwear"] },
 ];
 
 const COLOR_LUT = {

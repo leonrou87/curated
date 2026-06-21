@@ -6,11 +6,10 @@ export default function AboutPage() {
   return (
     <article className="legal">
       <span className="eyebrow">About</span>
-      <h1 className="serif">A magazine you can shop, a game you can play.</h1>
-      <p className="lead">Curated gives you a personalized, editorial feed of complete looks and kits — each a curated bundle whose pieces link out to retailers.</p>
-      <p>Describe what you need in plain language and watch a coherent look assemble on screen. Mix and match in a tactile builder with live “does this work together” feedback. Save, publish, remix.</p>
-      <p>Underneath the taste is a real coherence engine: a deterministic scorer that checks formality, color, proportion, season and more, so every look that ships actually makes sense. The same engine runs in the live builder and in batch generation — one brain, two surfaces.</p>
-      <p>Affiliate revenue is invisible infrastructure beneath a product about taste, personalization and interactivity. It should never feel like an affiliate site.</p>
+      <h1 className="serif">A magazine you can shop.</h1>
+      <p className="lead">Curated is an editorial feed of complete looks — real outfits from real brands, each one ready to wear and ready to shop.</p>
+      <p>No endless product grids. Every look is a finished outfit: a dress or a top-and-bottom, the shoes, the bag, the jewelry — chosen to actually go together. Tell us the occasion and a look comes together on screen. Take your taste quiz and your feed learns what you love.</p>
+      <p>Tap any piece to shop it at the retailer. We earn a small commission when you buy — at no extra cost to you — which is what keeps the magazine free.</p>
       <style>{`
         .legal{ max-width:720px; margin:0 auto; padding:50px 24px 0; }
         .legal h1{ font-weight:400; font-size:clamp(2rem,4vw,3rem); letter-spacing:-.02em; margin:8px 0 20px; line-height:1.05; }

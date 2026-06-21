@@ -212,6 +212,25 @@ export function getLooksForBrowse(): EnrichedBundle[] {
   return toClientBundles(getBundlesByType("look"));
 }
 
+// "You might also like" — same aesthetic + gender first, then same gender, then anything.
+export function getRelatedLooks(slug: string, vibe?: string, gender?: string, n = 4): EnrichedBundle[] {
+  const all = getBundlesByType("look").filter((b) => b.slug !== slug);
+  const seenHero = new Set<string>();
+  const pickDistinct = (list: EnrichedBundle[], out: EnrichedBundle[]) => {
+    for (const b of list) {
+      if (out.length >= n) break;
+      const h = b.coherence.heroItemId || b.items[0]?.productId || b.slug;
+      if (seenHero.has(h) || out.includes(b)) continue;
+      seenHero.add(h); out.push(b);
+    }
+  };
+  const out: EnrichedBundle[] = [];
+  pickDistinct(all.filter((b) => b.brief.vibe === vibe && b.brief.gender === gender), out);
+  pickDistinct(all.filter((b) => b.brief.gender === gender), out);
+  pickDistinct(all, out);
+  return toClientBundles(out.slice(0, n));
+}
+
 export function getBundleBySlug(slug: string): EnrichedBundle | null {
   const raw = rawBundles.find((b) => b.slug === slug);
   return raw ? enrichBundle(raw) : null;

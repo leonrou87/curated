@@ -1,0 +1,55 @@
+name: Refresh catalog
+
+# Auto-fetch fresh products from the brand feeds, re-derive colors, recompose looks, and commit.
+# Pushing the updated data triggers a Vercel production deploy. Runs weekly + on demand.
+on:
+  schedule:
+    - cron: "0 9 * * 1" # Mondays 09:00 UTC
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Number of looks to compose"
+        required: false
+        default: "1800"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-catalog
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci
+      - name: Pull products + recompose looks
+        env:
+          TARGET: ${{ github.event.inputs.target || '1800' }}
+        run: |
+          node pipeline/ingest.mjs
+          node pipeline/extract-colors.mjs
+          node pipeline/compose.mjs
+      - name: Verify (build + compliance + coherence parity)
+        run: |
+          npm run compliance
+          node scripts/test-coherence.mjs || true
+          npm run build
+      - name: Commit refreshed catalog
+        run: |
+          git config user.name "curated-bot"
+          git config user.email "bot@kytepush.com"
+          git add data/catalog-real.json data/seed-real.json data/seed-kits.json
+          if git diff --cached --quiet; then
+            echo "No catalog changes."
+          else
+            git commit -m "chore(data): weekly catalog refresh [skip ci]"
+            git push
+          fi

@@ -3,19 +3,20 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import type { EnrichedBundle } from "@/lib/types";
 import { fmtCents, titleCase } from "@/lib/format";
-import { RULE_LABELS } from "@/lib/coherence";
 import { FTC_DISCLOSURE } from "@/lib/offers";
+import { aestheticOf } from "@/lib/aesthetics";
 import { BundleCover } from "./BundleCover";
 import { ProductLink } from "./ProductLink";
-import { CoherenceMeter } from "./CoherenceMeter";
 import { ShareButton } from "./ShareButton";
+import { LookCard } from "./LookCard";
 import { useSaved } from "@/lib/useSaved";
 
 const TYPE_PATH: Record<string, string> = { look: "looks", kit: "kits", collection: "collections", gift: "gifts" };
 
-// The hero page. Outfit collage → why-it-works → a big, obviously clickable "Shop the look" grid
-// (every product card is a compliant affiliate link) → coherence transparency. No fiddly pins.
-export function LookDetail({ bundle }: { bundle: EnrichedBundle }) {
+// The hero page. Outfit collage → the note → a big, obviously clickable "Shop the look" grid
+// (every product card is a compliant affiliate link) → more like this.
+export function LookDetail({ bundle, related = [] }: { bundle: EnrichedBundle; related?: EnrichedBundle[] }) {
+  const aesName = aestheticOf(String(bundle.brief.vibe)).name;
   const [revealed, setRevealed] = useState(false);
   const [stage, setStage] = useState(0);
   const [flight, setFlight] = useState(false);
@@ -58,8 +59,6 @@ export function LookDetail({ bundle }: { bundle: EnrichedBundle }) {
               <span className="mono cm-price">{fmtCents(total)}<i> the look</i></span>
               <span className="cm-dot">·</span>
               <span className="cm-count">{bundle.items.length} pieces</span>
-              <span className="cm-dot">·</span>
-              <span className="cm-coh"><i className="coh-tick" /> Coherence {bundle.coherence.score.toFixed(0)}</span>
             </div>
           </div>
         </div>
@@ -69,7 +68,6 @@ export function LookDetail({ bundle }: { bundle: EnrichedBundle }) {
       <section className={"why" + (stage >= 3 ? " in" : "")}>
         <span className="eyebrow why-label">The Note</span>
         <p className="serif why-note">{bundle.curatorNote}</p>
-        <span className="eyebrow why-credit">Palette — {bundle.coherence.scheme.replace(/-/g, " ")} · Coherence {bundle.coherence.score.toFixed(0)}/100</span>
       </section>
 
       {/* ── SHOP THE LOOK — big clickable product cards ── */}
@@ -122,28 +120,20 @@ export function LookDetail({ bundle }: { bundle: EnrichedBundle }) {
         {flight && <span className="flight" />}
       </section>
 
-      {/* ── coherence transparency ── */}
-      <section className="coh-panel">
-        <span className="eyebrow why-label">The score, in the open</span>
-        <div className="coh-grid">
-          <div className="coh-meter">
-            <CoherenceMeter score={bundle.coherence.score} />
-            <p className="coh-explain">
-              Every published look clears the engine’s threshold (72). This one scored{" "}
-              <b>{bundle.coherence.score.toFixed(0)}</b> as a <b>{bundle.coherence.scheme}</b> palette.
-            </p>
+      {/* ── you might also like ── */}
+      {related.length > 0 && (
+        <section className="related">
+          <header className="shop-head">
+            <span className="index">More</span>
+            <h2 className="serif">You Might Also Like</h2>
+            <span className="eyebrow">{aesName}</span>
+          </header>
+          <hr className="rule shop-rule" />
+          <div className="rel-grid">
+            {related.map((b) => <LookCard key={b.id} bundle={b} />)}
           </div>
-          <ul className="rules">
-            {Object.entries(bundle.coherence.ruleScores).map(([k, v]) => (
-              <li key={k}>
-                <span className="rule-label">{RULE_LABELS[k] ?? k}</span>
-                <span className="rule-bar"><i style={{ width: `${(v as number) * 100}%` }} /></span>
-                <span className="mono rule-val">{Math.round((v as number) * 100)}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+        </section>
+      )}
 
       <style>{`
         .ld{ padding-bottom:80px; }
@@ -212,15 +202,9 @@ export function LookDetail({ bundle }: { bundle: EnrichedBundle }) {
         .flight{ position:absolute; right:80px; top:8px; width:16px; height:16px; border-radius:50%; background:var(--accent); animation:fly .7s cubic-bezier(.5,0,.2,1) forwards; }
         @keyframes fly{ 0%{transform:translate(0,0) scale(1); opacity:1;} 100%{transform:translate(60px,-560px) scale(.3); opacity:0;} }
 
-        .coh-panel{ max-width:var(--max); margin:var(--s-9) auto 0; padding:0 24px; }
-        .coh-grid{ display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-top:16px; align-items:start; max-width:760px; }
-        .coh-explain{ font-size:13px; color:var(--ink-soft); line-height:1.6; margin:16px 0 0; }
-        .rules{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:9px; }
-        .rules li{ display:grid; grid-template-columns:1fr 90px 28px; gap:10px; align-items:center; font-size:12.5px; color:var(--ink-soft); }
-        .rule-bar{ height:5px; border-radius:999px; background:var(--surface-2); overflow:hidden; }
-        .rule-bar i{ display:block; height:100%; background:var(--positive); border-radius:999px; }
-        .rule-val{ font-size:12px; text-align:right; color:var(--ink-mute); }
-        @media (max-width:640px){ .coh-grid{ grid-template-columns:1fr; } }
+        .related{ max-width:var(--max); margin:var(--s-9) auto 0; padding:0 24px; }
+        .rel-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+        @media (max-width:900px){ .rel-grid{ grid-template-columns:repeat(2,1fr); } }
       `}</style>
     </div>
   );

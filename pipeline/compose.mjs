@@ -10,7 +10,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const require = createRequire(import.meta.url);
 const { scoreComposition, THRESHOLD } = require("../scripts/scorer.reference.js");
 
-const TARGET = 1000;
+const TARGET = Number(process.env.TARGET) || 1800;
 const catalog = JSON.parse(readFileSync(path.join(__dirname, "..", "data", "catalog-real.json"), "utf8")).products;
 const byId = Object.fromEntries(catalog.map((p) => [p.id, p]));
 const ok = (p) => p.inStock && p.imageUrls?.[0]?.startsWith("http");
@@ -145,24 +145,26 @@ function emit(coreItems, g, offset) {
   return true;
 }
 
-// ——— generate ———
+// ——— generate (allocate a women/men share so both genders are well represented) ———
+const WOMEN_CAP = Math.floor(TARGET * 0.6);
 // 1) women dress-anchored looks (a couple supporting variants per dress — avoid over-cloning)
 for (const d of POOLS.women.anchor) {
-  for (let v = 0; v < 2 && bundles.length < TARGET; v++) emit([{ productId: d.id, slotId: "anchor", role: "dress" }], "women", v * 4 + 1);
+  for (let v = 0; v < 2 && bundles.length < WOMEN_CAP; v++) emit([{ productId: d.id, slotId: "anchor", role: "dress" }], "women", v * 4 + 1);
 }
 // 2) women separates (top × several bottoms)
 const wTops = POOLS.women.top.filter((p) => p.styling.weight !== "statement");
-for (let ti = 0; ti < wTops.length && bundles.length < TARGET; ti++) {
-  for (let k = 0; k < 5 && bundles.length < TARGET; k++) {
+for (let ti = 0; ti < wTops.length && bundles.length < WOMEN_CAP; ti++) {
+  for (let k = 0; k < 5 && bundles.length < WOMEN_CAP; k++) {
     const b = POOLS.women.bottom[(ti * 7 + k * 13) % POOLS.women.bottom.length];
     if (!b) continue;
     emit([{ productId: wTops[ti].id, slotId: "top", role: "top" }, { productId: b.id, slotId: "bottom", role: "bottom" }], "women", k * 2);
   }
 }
-// 3) men separates (top × several bottoms)
+// 3) men separates (top × several bottoms) — fill the rest
 const mTops = POOLS.men.top.filter((p) => p.styling.weight !== "statement");
-for (let ti = 0; ti < mTops.length && bundles.length < TARGET; ti++) {
-  for (let k = 0; k < 4 && bundles.length < TARGET; k++) {
+for (let pass = 0; pass < 6 && bundles.length < TARGET; pass++) {
+  for (let ti = 0; ti < mTops.length && bundles.length < TARGET; ti++) {
+    const k = pass;
     const b = POOLS.men.bottom[(ti * 5 + k * 17) % POOLS.men.bottom.length];
     if (!b) continue;
     emit([{ productId: mTops[ti].id, slotId: "top", role: "top" }, { productId: b.id, slotId: "bottom", role: "bottom" }], "men", k * 3);

@@ -74,8 +74,8 @@ export async function GET(req: Request) {
         </div>
         <div style={{ display: "flex", alignItems: "center", color: SOFT, fontSize: 30 }}>
           {price && <div style={{ display: "flex" }}>{price}</div>}
-          {price && coh && <div style={{ display: "flex", margin: "0 18px", color: MUTE }}>·</div>}
-          {coh && <div style={{ display: "flex", color: "#5B8C6E" }}>Coherence {coh}</div>}
+          {price && <div style={{ display: "flex", margin: "0 18px", color: MUTE }}>·</div>}
+          <div style={{ display: "flex", color: SOFT }}>Shop the look ↗</div>
         </div>
       </div>,
       a.accent

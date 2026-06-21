@@ -87,8 +87,8 @@ export function HomeFeed({ looks, kits, total }: { looks: EnrichedBundle[]; kits
       {/* ── statement / pull-quote ── */}
       <section className="statement">
         <span className="index">★</span>
-        <p className="serif">Every look here was assembled by a coherence engine, not a mood board — then checked against eight rules of taste before it earned a page.</p>
-        <Link href="/about" className="st-link">How it works ↗</Link>
+        <p className="serif">Complete outfits, not endless products. Every look is ready to wear and ready to shop — pick a piece, or take the whole thing.</p>
+        <Link href="/quiz" className="st-link">Find your aesthetic ↗</Link>
       </section>
 
       {/* ── the feed ── */}
