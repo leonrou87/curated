@@ -6,17 +6,23 @@ import { FTC_DISCLOSURE } from "@/lib/offers";
 // Editorial magazine footer — newsletter capture (growth), link columns, disclosure.
 export function DisclosureBanner() {
   const [email, setEmail] = useState("");
+  const [hp, setHp] = useState("");
   const [done, setDone] = useState(false);
+  const [busy, setBusy] = useState(false);
 
-  const subscribe = (e: React.FormEvent) => {
+  const subscribe = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return;
+    setBusy(true);
     try {
-      const prev = JSON.parse(localStorage.getItem("curated-subscribers") || "[]");
-      localStorage.setItem("curated-subscribers", JSON.stringify([...new Set([...prev, email])]));
+      await fetch("/api/subscribe", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email, source: "footer", hp }) });
       (window as any).dataLayer?.push?.({ event: "newsletter_signup" });
-    } catch {}
-    setDone(true);
+      setDone(true);
+    } catch {
+      setDone(true); // don't block the user on a network hiccup
+    } finally {
+      setBusy(false);
+    }
   };
 
   return (
@@ -32,7 +38,8 @@ export function DisclosureBanner() {
         ) : (
           <form className="fn-form" onSubmit={subscribe}>
             <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="your@email.com" aria-label="Email" required />
-            <button type="submit">Subscribe</button>
+            <input className="fn-hp" tabIndex={-1} autoComplete="off" value={hp} onChange={(e) => setHp(e.target.value)} aria-hidden />
+            <button type="submit" disabled={busy}>{busy ? "…" : "Subscribe"}</button>
           </form>
         )}
       </section>
@@ -60,8 +67,8 @@ export function DisclosureBanner() {
         <nav className="foot-col">
           <span className="eyebrow">About</span>
           <Link href="/about">About</Link>
+          <Link href="/contact">Contact</Link>
           <Link href="/disclosure">Disclosure</Link>
-          <Link href="/styleguide">Styleguide</Link>
         </nav>
       </div>
 
@@ -79,7 +86,8 @@ export function DisclosureBanner() {
         .fn-form input{ flex:1; background:var(--surface); border:1px solid var(--line); padding:14px 18px; color:var(--ink); font-family:var(--sans); font-size:15px; }
         .fn-form input:focus{ outline:none; border-color:var(--accent); }
         .fn-form button{ background:var(--accent); color:var(--accent-ink); border:none; padding:14px 24px; font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; cursor:pointer; }
-        .fn-form button:hover{ background:var(--accent-soft); }
+        .fn-form button:hover{ background:var(--accent-soft); } .fn-form button:disabled{ opacity:.6; }
+        .fn-hp{ position:absolute; left:-9999px; width:1px; height:1px; opacity:0; }
         .fn-done{ color:var(--positive); font-family:var(--mono); font-size:13px; }
         .foot-grid{ display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:32px; padding:44px 0; }
         .foot-brand{ font-family:var(--mono); letter-spacing:.34em; font-size:13px; }
