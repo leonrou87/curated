@@ -9,7 +9,9 @@ import { BundleCover } from "./BundleCover";
 import { ProductLink } from "./ProductLink";
 import { ShareButton } from "./ShareButton";
 import { LookCard } from "./LookCard";
+import { AddToCartButton } from "./AddToCartButton";
 import { useSaved } from "@/lib/useSaved";
+import { useCart } from "@/lib/useCart";
 
 const TYPE_PATH: Record<string, string> = { look: "looks", kit: "kits", collection: "collections", gift: "gifts" };
 
@@ -22,6 +24,10 @@ export function LookDetail({ bundle, related = [] }: { bundle: EnrichedBundle; r
   const [flight, setFlight] = useState(false);
   const reduce = useRef(false);
   const { saved, toggle } = useSaved(bundle.slug);
+  const { addMany, items: cartItems } = useCart();
+  const allInBag = bundle.items.length > 0 && bundle.items.every((it) => cartItems.some((c) => c.id === it.productId));
+  const addLookToBag = () =>
+    addMany(bundle.items.map((it) => ({ id: it.productId, brand: it.brand, title: it.title, image: it.image, priceCents: it.priceCents, url: it.bestOffer?.affiliateUrl || "#" })));
 
   const total = bundle.items.reduce((s, i) => s + (i.priceCents ?? 0), 0);
   const eyebrow = [bundle.brief.gender, bundle.brief.vibe || bundle.brief.occasion]
@@ -81,38 +87,43 @@ export function LookDetail({ bundle, related = [] }: { bundle: EnrichedBundle; r
         <p className="disclosure">{FTC_DISCLOSURE}</p>
         <div className="prod-grid">
           {bundle.items.map((it, i) => (
-            <ProductLink
-              key={it.productId}
-              offer={it.bestOffer}
-              productId={it.productId}
-              merchant={it.brand}
-              className="prod-card"
-              ariaLabel={`Shop ${it.brand} ${it.title}, ${fmtCents(it.priceCents)} (opens in a new tab)`}
-            >
-              <span className="pc-img" style={{ background: it.swatch }}>
-                {it.image && /* eslint-disable-next-line @next/next/no-img-element */ (
-                  <img src={it.image} alt={it.title} loading="lazy" />
-                )}
-                <span className="index pc-idx">N°{String(i + 1).padStart(2, "0")}</span>
-                {it.isHero && <span className="pc-hero">★ Hero</span>}
-                <span className="pc-role">{titleCase(it.role)}</span>
-              </span>
-              <span className="pc-body">
-                <span className="pc-brand">{it.brand}</span>
-                <span className="pc-title">{it.title}</span>
-                <span className="pc-foot">
-                  <span className="mono pc-price">{fmtCents(it.priceCents)}</span>
-                  <span className="pc-cta">Shop {it.brand.split(" ")[0]} <b aria-hidden>↗</b></span>
+            <div className="prod-card" key={it.productId}>
+              <ProductLink
+                offer={it.bestOffer}
+                productId={it.productId}
+                merchant={it.brand}
+                className="pc-link"
+                ariaLabel={`Shop ${it.brand} ${it.title}, ${fmtCents(it.priceCents)} (opens in a new tab)`}
+              >
+                <span className="pc-img" style={{ background: it.swatch }}>
+                  {it.image && /* eslint-disable-next-line @next/next/no-img-element */ (
+                    <img src={it.image} alt={it.title} loading="lazy" />
+                  )}
+                  <span className="index pc-idx">N°{String(i + 1).padStart(2, "0")}</span>
+                  {it.isHero && <span className="pc-hero">★ Hero</span>}
+                  <span className="pc-role">{titleCase(it.role)}</span>
                 </span>
-              </span>
-            </ProductLink>
+                <span className="pc-body">
+                  <span className="pc-brand">{it.brand}</span>
+                  <span className="pc-title">{it.title}</span>
+                  <span className="pc-foot">
+                    <span className="mono pc-price">{fmtCents(it.priceCents)}</span>
+                    <span className="pc-cta">Shop {it.brand.split(" ")[0]} <b aria-hidden>↗</b></span>
+                  </span>
+                </span>
+              </ProductLink>
+              <AddToCartButton item={{ id: it.productId, brand: it.brand, title: it.title, image: it.image, priceCents: it.priceCents, url: it.bestOffer?.affiliateUrl || "#" }} />
+            </div>
           ))}
         </div>
       </section>
 
       {/* ── actions ── */}
       <section className="actions">
-        <Link href={`/builder?from=${bundle.slug}`} className="a-primary">Make it yours →</Link>
+        <button className="a-primary" onClick={addLookToBag} disabled={allInBag}>
+          {allInBag ? "✓ Look in bag" : `Add look to bag · ${bundle.items.length}`}
+        </button>
+        <Link href={`/builder?from=${bundle.slug}`} className="a-save">Make it yours →</Link>
         <button className={"a-save" + (saved ? " on" : "")} onClick={onSave}>
           <Heart filled={saved} /> {saved ? "Saved" : "Save look"}
         </button>
@@ -175,15 +186,16 @@ export function LookDetail({ bundle, related = [] }: { bundle: EnrichedBundle; r
         .shop-rule{ margin:16px 0 18px; }
         .disclosure{ font-family:var(--mono); font-size:11px; color:var(--ink-mute); line-height:1.6; padding:12px 16px; border:1px solid var(--line); margin:0 0 22px; }
         .prod-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); }
-        .prod-card{ display:flex; flex-direction:column; background:var(--surface); overflow:hidden; transition:.25s; }
+        .prod-card{ position:relative; background:var(--surface); transition:.25s; }
         .prod-card:hover{ background:var(--surface-2); }
+        .pc-link{ display:flex; flex-direction:column; height:100%; }
         .pc-img{ position:relative; display:block; aspect-ratio:3/4; overflow:hidden; background:var(--bg); }
         .pc-img img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .5s var(--ease-out); }
         .prod-card:hover .pc-img img{ transform:scale(1.06); }
         .pc-idx{ position:absolute; top:12px; left:12px; mix-blend-mode:difference; color:#fff; }
         .pc-role{ position:absolute; left:12px; bottom:12px; font-family:var(--mono); font-size:9.5px; letter-spacing:.14em; text-transform:uppercase;
           color:var(--ink); background:color-mix(in srgb, var(--bg) 62%, transparent); backdrop-filter:blur(6px); padding:4px 9px; }
-        .pc-hero{ position:absolute; right:12px; top:12px; font-family:var(--mono); font-size:9.5px; color:var(--accent-ink); background:var(--accent); padding:4px 9px; }
+        .pc-hero{ position:absolute; right:12px; bottom:12px; font-family:var(--mono); font-size:9.5px; color:var(--accent-ink); background:var(--accent); padding:4px 9px; }
         .pc-body{ display:flex; flex-direction:column; gap:4px; padding:15px 16px 17px; }
         .pc-brand{ font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-mute); }
         .pc-title{ font-size:15px; line-height:1.3; min-height:2.6em; }

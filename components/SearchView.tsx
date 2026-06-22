@@ -5,6 +5,7 @@ import type { EnrichedBundle } from "@/lib/types";
 import type { SearchProduct } from "@/lib/data";
 import { LookCard } from "./LookCard";
 import { ProductLink } from "./ProductLink";
+import { AddToCartButton } from "./AddToCartButton";
 import { useGender, genderMatch } from "@/lib/useGender";
 import { aestheticOf } from "@/lib/aesthetics";
 import { fmtCents } from "@/lib/format";
@@ -65,14 +66,17 @@ export function SearchView({ looks, products }: { looks: EnrichedBundle[]; produ
           <h2 className="serif">Pieces <i>{matchedProducts.length}</i></h2>
           <div className="s-prods">
             {matchedProducts.map((p) => (
-              <ProductLink key={p.id} offer={{ affiliateUrl: p.url } as any} productId={p.id} merchant={p.brand} className="sp-card" ariaLabel={`Shop ${p.brand} ${p.title}`}>
-                <span className="sp-img"><img src={p.image} alt={p.title} loading="lazy" /></span>
-                <span className="sp-body">
-                  <span className="sp-brand">{p.brand}</span>
-                  <span className="sp-title">{p.title}</span>
-                  <span className="sp-foot"><span className="mono">{fmtCents(p.priceCents)}</span><span className="sp-cta">Shop ↗</span></span>
-                </span>
-              </ProductLink>
+              <div className="sp-card" key={p.id}>
+                <ProductLink offer={{ affiliateUrl: p.url } as any} productId={p.id} merchant={p.brand} className="sp-link" ariaLabel={`Shop ${p.brand} ${p.title}`}>
+                  <span className="sp-img"><img src={p.image} alt={p.title} loading="lazy" /></span>
+                  <span className="sp-body">
+                    <span className="sp-brand">{p.brand}</span>
+                    <span className="sp-title">{p.title}</span>
+                    <span className="sp-foot"><span className="mono">{fmtCents(p.priceCents)}</span><span className="sp-cta">Shop ↗</span></span>
+                  </span>
+                </ProductLink>
+                <AddToCartButton item={{ id: p.id, brand: p.brand, title: p.title, image: p.image, priceCents: p.priceCents, url: p.url }} />
+              </div>
             ))}
           </div>
         </section>
@@ -97,7 +101,8 @@ export function SearchView({ looks, products }: { looks: EnrichedBundle[]; produ
         .s-section h2 i{ font-style:normal; font-size:13px; color:var(--ink-mute); }
         .s-looks{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
         .s-prods{ display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:16px; }
-        .sp-card{ display:flex; flex-direction:column; background:var(--surface); border:1px solid var(--line); border-radius:12px; overflow:hidden; transition:.2s; }
+        .sp-card{ position:relative; background:var(--surface); border:1px solid var(--line); border-radius:12px; overflow:hidden; transition:.2s; }
+        .sp-link{ display:flex; flex-direction:column; }
         .sp-card:hover{ border-color:var(--accent); transform:translateY(-3px); }
         .sp-img{ position:relative; aspect-ratio:3/4; background:var(--surface-2); overflow:hidden; }
         .sp-img img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .4s var(--ease-out); }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useGender, type Gender } from "@/lib/useGender";
+import { useCart } from "@/lib/useCart";
 
 const LINKS = [
   { href: "/", label: "Feed" },
@@ -23,6 +24,7 @@ export function Nav() {
   const [q, setQ] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => { setMenuOpen(false); }, [pathname]);
+  const { items: cart } = useCart();
 
   useEffect(() => {
     const stored = (localStorage.getItem("curated-theme") as "dark" | "light") || "dark";
@@ -76,6 +78,12 @@ export function Nav() {
           </svg>
           {saved > 0 && <i className="closet-dot" />}
         </Link>
+        <Link href="/cart" className="cart" aria-label={`Bag, ${cart.length} items`}>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden>
+            <path d="M6 7h12l-1 13H7L6 7z" /><path d="M9 7a3 3 0 0 1 6 0" />
+          </svg>
+          {cart.length > 0 && <span className="cart-badge">{cart.length}</span>}
+        </Link>
         <button className="theme-btn" onClick={toggle} aria-label="Toggle theme">{theme === "dark" ? "☀" : "☾"}</button>
         <button className="menu-btn" onClick={() => setMenuOpen((v) => !v)} aria-label="Menu" aria-expanded={menuOpen}>
           {menuOpen ? "✕" : "☰"}
@@ -126,6 +134,10 @@ export function Nav() {
         .closet{ position:relative; color:var(--ink-soft); display:inline-flex; padding:2px; }
         .closet:hover{ color:var(--ink); }
         .closet-dot{ position:absolute; top:-1px; right:-1px; width:6px; height:6px; border-radius:50%; background:var(--accent); }
+        .cart{ position:relative; color:var(--ink-soft); display:inline-flex; padding:2px; }
+        .cart:hover{ color:var(--ink); }
+        .cart-badge{ position:absolute; top:-7px; right:-9px; min-width:15px; height:15px; padding:0 4px; border-radius:999px;
+          background:var(--accent); color:var(--accent-ink); font-family:var(--mono); font-size:9px; display:grid; place-items:center; }
         .theme-btn{ background:none; border:1px solid var(--line); color:var(--ink-soft); width:30px; height:30px;
           border-radius:999px; cursor:pointer; font-size:13px; display:grid; place-items:center; }
         .theme-btn:hover{ color:var(--ink); border-color:var(--ink-mute); }
