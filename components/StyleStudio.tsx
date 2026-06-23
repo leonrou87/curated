@@ -113,7 +113,7 @@ export function StyleStudio({ bundles }: { bundles: EnrichedBundle[] }) {
         )
       )}
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .studio{ max-width:1180px; margin:0 auto; padding:40px 24px 0; }
         .prompt-wrap{ text-align:center; padding:30px 0 10px; }
         .prompt-h1{ font-weight:400; font-size:clamp(2.2rem,5vw,4rem); letter-spacing:-.02em; margin:8px 0 26px; }
@@ -144,7 +144,7 @@ export function StyleStudio({ bundles }: { bundles: EnrichedBundle[] }) {
           border:1px solid var(--line); padding:9px 16px; border-radius:999px; cursor:pointer; transition:.18s; }
         .ex-chip:hover{ color:var(--ink); border-color:var(--accent); background:var(--surface-2); }
         @media (max-width:760px){ .alts-grid{ grid-template-columns:repeat(2,1fr); } }
-      `}</style>
+      ` }} />
     </div>
   );
 }

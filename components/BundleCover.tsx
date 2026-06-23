@@ -1,4 +1,5 @@
 import type { EnrichedBundle } from "@/lib/types";
+import { SafeImg } from "./SafeImg";
 
 // Seed hero/flat-lay images are flagged placeholders (data/_meta). Until a human drops in
 // licensed/PA-API imagery, we render a curated CSS cover built from the bundle's REAL product
@@ -35,14 +36,12 @@ export function BundleCover({
         <div className={"cs-collage n" + n}>
           {itemImages.map((it, i) => (
             <span key={i} style={{ background: shade(it.sw, 10) }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={it.src} alt="" loading="lazy" decoding="async" />
+              <SafeImg src={it.src} alt="" loading="lazy" decoding="async" />
             </span>
           ))}
         </div>
       ) : n === 1 ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img className="cs-photo" src={itemImages[0].src} alt="" loading="lazy" decoding="async" />
+        <SafeImg className="cs-photo" src={itemImages[0].src} alt="" loading="lazy" decoding="async" />
       ) : bundle.isFashion && withFigure ? (
         <div className="cs-figure" style={{ background: `linear-gradient(165deg, ${tint(base, 22)}, ${base} 48%, ${shade(base, 38)})` }} />
       ) : (
@@ -54,7 +53,7 @@ export function BundleCover({
       )}
       <div className="cs-grain" />
       <div className="cs-scrim" />
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .cover-scene{ position:absolute; inset:0; overflow:hidden; }
         .cs-wash{ position:absolute; inset:0; }
         .cs-photo{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 28%; }
@@ -76,7 +75,7 @@ export function BundleCover({
         .cs-grain{ position:absolute; inset:0; opacity:.05; mix-blend-mode:overlay;
           background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>"); }
         .cs-scrim{ position:absolute; inset:0; background:linear-gradient(180deg, transparent 38%, rgba(0,0,0,.66) 100%); }
-      `}</style>
+      ` }} />
     </div>
   );
 }

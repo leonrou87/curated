@@ -40,7 +40,7 @@ export default function TrendsPage() {
           </Link>
         ))}
       </div>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .trends{ max-width:1240px; margin:0 auto; padding:36px 24px 0; }
         .t-head h1{ font-weight:400; font-size:clamp(2rem,3.6vw,3.2rem); letter-spacing:-.02em; margin:8px 0 0; }
         .t-blurb{ color:var(--ink-soft); max-width:60ch; margin:10px 0 0; }
@@ -55,7 +55,7 @@ export default function TrendsPage() {
         .t-count{ display:block; margin-top:8px; color:var(--ink-mute); }
         @media (max-width:860px){ .t-grid{ grid-template-columns:repeat(2,1fr); } }
         @media (max-width:520px){ .t-grid{ grid-template-columns:1fr; } }
-      `}</style>
+      ` }} />
     </div>
   );
 }

@@ -102,7 +102,7 @@ export function LinkManager({ rows, initialOverrides }: { rows: LinkRow[]; initi
         })}
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .lm-head{ display:flex; justify-content:space-between; align-items:flex-start; gap:20px; }
         .lm-head h1{ font-weight:400; font-size:clamp(1.6rem,2.6vw,2.2rem); margin:6px 0 0; }
         .lm-sub{ color:var(--ink-soft); max-width:62ch; margin:10px 0 0; font-size:14px; }
@@ -127,7 +127,7 @@ export function LinkManager({ rows, initialOverrides }: { rows: LinkRow[]; initi
         .lm-stock{ font-size:11px; color:var(--ink-mute); display:flex; align-items:center; gap:6px; }
         select{ background:var(--bg); border:1px solid var(--line); border-radius:var(--r-sm); padding:7px 8px; color:var(--ink); font-size:12px; }
         @media (max-width:760px){ .lm-row{ grid-template-columns:1fr; } .lm-url{ display:none; } }
-      `}</style>
+      ` }} />
     </div>
   );
 }

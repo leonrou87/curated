@@ -64,7 +64,7 @@ export function LinkHealth({ targets }: { targets: Target[] }) {
         })}
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .lh-head{ display:flex; justify-content:space-between; align-items:flex-start; gap:20px; }
         .lh-head h1{ font-weight:400; font-size:clamp(1.6rem,2.6vw,2.2rem); margin:6px 0 0; }
         .lh-sub{ color:var(--ink-soft); max-width:64ch; margin:10px 0 0; font-size:14px; }
@@ -83,7 +83,7 @@ export function LinkHealth({ targets }: { targets: Target[] }) {
         .lh-status{ font-family:var(--mono); font-size:12px; text-align:right; }
         .lh-status.active{ color:var(--positive); } .lh-status.stale{ color:var(--warning); } .lh-status.dead{ color:var(--danger); } .lh-status.idle{ color:var(--ink-mute); }
         @media (max-width:640px){ .lh-row{ grid-template-columns:1fr auto; } .lh-url{ display:none; } }
-      `}</style>
+      ` }} />
     </div>
   );
 }

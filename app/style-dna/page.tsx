@@ -66,7 +66,7 @@ export default function StyleDnaPage({ searchParams }: { searchParams: Record<st
         </section>
       )}
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .dna{ max-width:760px; margin:0 auto; padding:46px 24px 0; text-align:center; }
         .dna-title{ font-weight:400; font-size:clamp(2.6rem,7vw,4.4rem); letter-spacing:-.02em; margin:10px 0 10px; }
         .dna-tag{ color:var(--ink-soft); max-width:54ch; margin:0 auto 26px; line-height:1.6; }
@@ -80,7 +80,7 @@ export default function StyleDnaPage({ searchParams }: { searchParams: Record<st
         .dna-recs{ margin-top:64px; }
         .dna-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:14px; }
         @media (max-width:640px){ .dna-grid{ grid-template-columns:repeat(2,1fr); } }
-      `}</style>
+      ` }} />
     </div>
   );
 }

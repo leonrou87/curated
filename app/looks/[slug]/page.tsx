@@ -55,8 +55,8 @@ export default function LookPage({ params, searchParams }: { params: { slug: str
         <Link href="/looks">Looks</Link> <span>/</span> <span>{bundle.title}</span>
       </nav>
       <LookDetail bundle={bundle} related={getRelatedLooks(bundle.slug, String(bundle.brief.vibe), String(bundle.brief.gender), 4)} />
-      <style>{`.crumb{ max-width:1180px; margin:18px auto 0; padding:0 30px; font-size:12.5px; color:var(--ink-mute); display:flex; gap:8px; }
-        .crumb a:hover{ color:var(--ink); } .crumb span:last-child{ color:var(--ink-soft); }`}</style>
+      <style dangerouslySetInnerHTML={{ __html: `.crumb{ max-width:1180px; margin:18px auto 0; padding:0 30px; font-size:12.5px; color:var(--ink-mute); display:flex; gap:8px; }
+        .crumb a:hover{ color:var(--ink); } .crumb span:last-child{ color:var(--ink-soft); }` }} />
     </>
   );
 }

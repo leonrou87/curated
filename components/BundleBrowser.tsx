@@ -85,7 +85,7 @@ export function BundleBrowser({ bundles, title, blurb }: { bundles: EnrichedBund
         </div>
       )}
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .browser{ max-width:1240px; margin:0 auto; padding:36px 24px 0; }
         .b-head h1{ font-weight:400; font-size:clamp(2rem,3.6vw,3.2rem); letter-spacing:-.02em; margin:0; }
         .b-blurb{ color:var(--ink-soft); max-width:60ch; margin:10px 0 0; font-size:15px; }
@@ -106,7 +106,7 @@ export function BundleBrowser({ bundles, title, blurb }: { bundles: EnrichedBund
         @media (max-width:1000px){ .b-grid{ grid-template-columns:repeat(3,1fr); } }
         @media (max-width:760px){ .b-grid{ grid-template-columns:repeat(2,1fr); } }
         @media (max-width:480px){ .b-grid{ grid-template-columns:1fr; } }
-      `}</style>
+      ` }} />
     </div>
   );
 }

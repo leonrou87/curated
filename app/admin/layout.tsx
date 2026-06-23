@@ -12,7 +12,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         <Link href="/" className="admin-back">← Back to site</Link>
       </aside>
       <div className="admin-main">{children}</div>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .admin-shell{ display:grid; grid-template-columns:230px 1fr; min-height:calc(100vh - 56px); }
         .admin-side{ border-right:1px solid var(--line); padding:24px 18px; display:flex; flex-direction:column; gap:6px;
           position:sticky; top:56px; align-self:start; height:calc(100vh - 56px); }
@@ -22,7 +22,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         .admin-back:hover{ color:var(--ink); }
         .admin-main{ padding:30px 34px 60px; max-width:1100px; }
         @media (max-width:760px){ .admin-shell{ grid-template-columns:1fr; } .admin-side{ position:static; height:auto; flex-direction:row; flex-wrap:wrap; align-items:center; } .admin-back{ margin:0; } }
-      `}</style>
+      ` }} />
     </div>
   );
 }

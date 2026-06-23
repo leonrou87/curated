@@ -9,6 +9,7 @@ import { BundleCover } from "./BundleCover";
 import { useGender, genderMatch } from "@/lib/useGender";
 import { useTaste } from "@/lib/useTaste";
 import { aestheticOf } from "@/lib/aesthetics";
+import { fmtNum } from "@/lib/format";
 
 const HOME_PROMPTS = ["wedding guest", "first date", "job interview", "quiet luxury", "all black", "beach vacation", "men's smart casual", "office siren", "coastal grandmother", "under $300"];
 
@@ -60,7 +61,7 @@ export function HomeFeed({ looks, kits, total }: { looks: EnrichedBundle[]; kits
           <div className="cover-top">
             <span className="eyebrow">Vol. 01</span>
             <span className="eyebrow">The Style Edit — {label}</span>
-            <span className="eyebrow">{(total ?? pooled.length).toLocaleString()} Looks</span>
+            <span className="eyebrow">{fmtNum(total ?? pooled.length)} Looks</span>
           </div>
           <h1 className="serif masthead">Curated</h1>
           <div className="cover-bottom">
@@ -111,9 +112,9 @@ export function HomeFeed({ looks, kits, total }: { looks: EnrichedBundle[]; kits
       </section>
 
       {/* ── the feed ── */}
-      <Section idx="02" kicker={`${(total ?? pooled.length).toLocaleString()} looks, every aesthetic`} title="The Index" href="/looks" cta={`All ${(total ?? pooled.length).toLocaleString()}`}>
+      <Section idx="02" kicker={`${fmtNum(total ?? pooled.length)} looks, every aesthetic`} title="The Index" href="/looks" cta={`All ${fmtNum(total ?? pooled.length)}`}>
         <FeedMasonry bundles={rest} />
-        <div className="feed-more"><Link href="/looks" className="btn-line">Browse all {(total ?? pooled.length).toLocaleString()} looks</Link></div>
+        <div className="feed-more"><Link href="/looks" className="btn-line">Browse all {fmtNum(total ?? pooled.length)} looks</Link></div>
       </Section>
 
       {/* ── kits ── */}
@@ -123,7 +124,7 @@ export function HomeFeed({ looks, kits, total }: { looks: EnrichedBundle[]; kits
         </Section>
       )}
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .home{ }
         .cover{ position:relative; height:min(92vh,880px); overflow:hidden; border-bottom:1px solid var(--line); }
         .cover-link{ position:absolute; inset:0; z-index:2; }
@@ -172,7 +173,7 @@ export function HomeFeed({ looks, kits, total }: { looks: EnrichedBundle[]; kits
         .feed-more{ display:flex; justify-content:center; margin-top:40px; }
         @media (max-width:900px){ .row4{ grid-template-columns:repeat(2,1fr); } .row3{ grid-template-columns:repeat(2,1fr); } .cover-feature{ max-width:100%; } }
         @media (max-width:560px){ .row4, .row3{ grid-template-columns:1fr 1fr; } }
-      `}</style>
+      ` }} />
     </div>
   );
 }
@@ -191,7 +192,7 @@ function Section({ idx, kicker, title, href, cta, children }: { idx: string; kic
       </header>
       <hr className="rule sec-rule" />
       {children}
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .sec{ max-width:var(--max); margin:var(--s-9) auto 0; padding:0 24px; }
         .sec-head{ display:grid; grid-template-columns:1fr auto 1fr; align-items:baseline; gap:16px; }
         .sec-left{ display:flex; align-items:baseline; gap:12px; }
@@ -200,7 +201,7 @@ function Section({ idx, kicker, title, href, cta, children }: { idx: string; kic
         .sec-cta:hover{ color:var(--ink); }
         .sec-rule{ margin:16px 0 26px; }
         @media (max-width:640px){ .sec-head{ grid-template-columns:1fr auto; } .sec-title{ grid-column:1 / -1; grid-row:2; text-align:left; } .sec-cta{ display:none; } }
-      `}</style>
+      ` }} />
     </section>
   );
 }

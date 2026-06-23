@@ -19,7 +19,7 @@ export default function DisclosurePage() {
       </ul>
       <h2 className="serif">As an Amazon Associate</h2>
       <p>Curated is a participant in affiliate programs including the Amazon Associates Program. As an Amazon Associate we earn from qualifying purchases.</p>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .legal{ max-width:720px; margin:0 auto; padding:50px 24px 0; }
         .legal h1{ font-weight:400; font-size:clamp(2rem,4vw,3rem); letter-spacing:-.02em; margin:8px 0 20px; }
         .legal h2{ font-weight:400; font-size:1.5rem; margin:34px 0 10px; }
@@ -27,7 +27,7 @@ export default function DisclosurePage() {
         .legal p{ color:var(--ink-soft); line-height:1.7; }
         .legal ul{ color:var(--ink-soft); line-height:1.8; padding-left:20px; }
         .legal code{ font-family:var(--mono); font-size:13px; background:var(--surface); padding:2px 6px; border-radius:5px; }
-      `}</style>
+      ` }} />
     </article>
   );
 }

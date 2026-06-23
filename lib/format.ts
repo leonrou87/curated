@@ -1,6 +1,11 @@
 // presentation helpers
+// Deterministic thousands separator — toLocaleString() differs between Node (SSR) and the browser,
+// which causes hydration mismatches. This is identical on both.
+export const fmtNum = (n: number): string =>
+  Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
 export const fmtCents = (c: number | null | undefined): string =>
-  c == null ? "—" : "$" + Math.round(c / 100).toLocaleString();
+  c == null ? "—" : "$" + fmtNum(Math.round(c / 100));
 
 export const fmtRange = (lo: number, hi: number): string =>
   lo === hi ? fmtCents(lo) : `${fmtCents(lo)}–${fmtCents(hi)}`;

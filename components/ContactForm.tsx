@@ -26,7 +26,7 @@ export function ContactForm() {
         <span className="index">✓</span>
         <h2 className="serif">Message sent.</h2>
         <p>Thanks — we’ll reply to <b>{form.email}</b> within a day or two. Check your inbox for a confirmation.</p>
-        <style>{doneCss}</style>
+        <style dangerouslySetInnerHTML={{ __html: doneCss }} />
       </div>
     );
   }
@@ -51,7 +51,7 @@ export function ContactForm() {
       <input className="cf-hp" tabIndex={-1} autoComplete="off" value={form.hp} onChange={(e) => set("hp", e.target.value)} aria-hidden />
       {err && <p className="cf-err">{err}</p>}
       <button type="submit" disabled={state === "sending"}>{state === "sending" ? "Sending…" : "Send message"}</button>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .cf{ display:flex; flex-direction:column; gap:18px; }
         .cf-row{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
         .cf-field{ display:flex; flex-direction:column; gap:8px; }
@@ -63,7 +63,7 @@ export function ContactForm() {
         .cf button{ align-self:flex-start; background:var(--accent); color:var(--accent-ink); border:none; padding:15px 30px; font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; cursor:pointer; }
         .cf button:hover{ background:var(--accent-soft); } .cf button:disabled{ opacity:.6; cursor:default; }
         @media (max-width:560px){ .cf-row{ grid-template-columns:1fr; } }
-      `}</style>
+      ` }} />
     </form>
   );
 }

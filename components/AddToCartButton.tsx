@@ -16,7 +16,7 @@ export function AddToCartButton({ item, variant = "overlay" }: { item: CartItem;
     >
       {inBag ? "✓" : "＋"}
       {variant === "inline" && <span>{inBag ? "In bag" : "Add to bag"}</span>}
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .atc{ cursor:pointer; font-family:var(--mono); transition:.18s; display:inline-flex; align-items:center; gap:7px; }
         .atc.overlay{ position:absolute; top:12px; right:12px; z-index:6; width:32px; height:32px; justify-content:center;
           border-radius:999px; border:none; font-size:15px; line-height:1;
@@ -27,7 +27,7 @@ export function AddToCartButton({ item, variant = "overlay" }: { item: CartItem;
           border:1px solid var(--line); background:none; padding:10px 16px; }
         .atc.inline:hover{ color:var(--ink); border-color:var(--ink-mute); }
         .atc.inline.on{ color:var(--accent-soft); border-color:var(--accent); }
-      `}</style>
+      ` }} />
     </button>
   );
 }

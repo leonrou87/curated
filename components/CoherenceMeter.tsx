@@ -26,7 +26,7 @@ export function CoherenceMeter({
         <div className="meter-threshold" title="Publish threshold: 72" />
       </div>
       {tip && !compact && <p className="meter-tip">{tip}</p>}
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .meter{ width:100%; }
         .meter-head{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom:7px; }
         .meter-score{ font-size:18px; font-weight:500; }
@@ -37,7 +37,7 @@ export function CoherenceMeter({
           transition:width .5s var(--ease-out), background .4s ease; }
         .meter-threshold{ position:absolute; left:72%; top:-2px; bottom:-2px; width:1px; background:var(--ink-mute); opacity:.5; }
         .meter-tip{ margin:9px 0 0; font-size:12.5px; color:var(--ink-soft); line-height:1.45; }
-      `}</style>
+      ` }} />
     </div>
   );
 }

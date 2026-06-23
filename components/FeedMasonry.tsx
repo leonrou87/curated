@@ -14,12 +14,12 @@ export function FeedMasonry({ bundles }: { bundles: EnrichedBundle[] }) {
           </div>
         );
       })}
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .masonry{ columns: 3 280px; column-gap:18px; }
         .masonry-item{ break-inside:avoid; margin-bottom:18px; }
         @media (max-width:900px){ .masonry{ columns:2 240px; } }
         @media (max-width:560px){ .masonry{ columns:1; } }
-      `}</style>
+      ` }} />
     </div>
   );
 }

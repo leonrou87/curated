@@ -94,7 +94,7 @@ export function Nav() {
           {LINKS.map((l) => <Link key={l.href} href={l.href}>{l.label}</Link>)}
         </nav>
       )}
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .topbar{ position:sticky; top:0; z-index:40; display:flex; gap:10px;
           align-items:center; padding:13px 26px; background:color-mix(in srgb, var(--bg) 86%, transparent);
           backdrop-filter:blur(16px) saturate(1.2); border-bottom:1px solid var(--line); }
@@ -141,7 +141,7 @@ export function Nav() {
         .theme-btn{ background:none; border:1px solid var(--line); color:var(--ink-soft); width:30px; height:30px;
           border-radius:999px; cursor:pointer; font-size:13px; display:grid; place-items:center; }
         .theme-btn:hover{ color:var(--ink); border-color:var(--ink-mute); }
-      `}</style>
+      ` }} />
     </header>
   );
 }

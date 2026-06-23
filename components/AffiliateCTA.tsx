@@ -38,7 +38,7 @@ export function AffiliateCTA({
       aria-label={`Shop ${brand}${isAmazon(offer) ? " on Amazon" : ""} (opens in a new tab)`}
     >
       Shop {brand.split(" ")[0]} <b aria-hidden>↗</b>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .acta{ font-size:12.5px; white-space:nowrap; display:inline-flex; align-items:center; gap:6px;
           border-radius:999px; transition:.2s; cursor:pointer; }
         .acta.pill{ color:var(--ink); border:1px solid var(--line); padding:8px 14px; }
@@ -47,7 +47,7 @@ export function AffiliateCTA({
         .acta.fill:hover{ background:var(--accent-soft); }
         .acta b{ font-weight:400; display:inline-block; transition:transform .2s; }
         .acta:hover b{ transform:translateX(2px); }
-      `}</style>
+      ` }} />
     </a>
   );
 }

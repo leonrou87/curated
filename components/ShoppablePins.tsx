@@ -61,7 +61,7 @@ export function ShoppablePins({
           </button>
         );
       })}
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .pins{ position:absolute; inset:0; opacity:0; transition:opacity .5s ease; pointer-events:none; }
         .pins.show{ opacity:1; pointer-events:auto; }
         .pin{ position:absolute; transform:translate(-50%,-50%) scale(.4); opacity:0;
@@ -89,7 +89,7 @@ export function ShoppablePins({
         .pc-title{ font-size:12.5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:120px; }
         .pc-price{ font-size:12.5px; margin-top:2px; }
         .pc-cta{ align-self:flex-end; }
-      `}</style>
+      ` }} />
     </div>
   );
 }

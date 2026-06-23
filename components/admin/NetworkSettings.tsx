@@ -85,7 +85,7 @@ export function NetworkSettings({ initial }: { initial: AffiliateConfig }) {
       {msg && <p className={"ns-msg" + (msg.startsWith("Error") ? " err" : "")}>{msg}</p>}
       <button className="ns-save bottom" onClick={save} disabled={saving}>{saving ? "Saving…" : "Save changes"}</button>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .ns-head{ display:flex; justify-content:space-between; align-items:flex-start; gap:20px; }
         .ns-head h1{ font-weight:400; font-size:clamp(1.6rem,2.6vw,2.2rem); margin:6px 0 0; }
         .ns-sub{ color:var(--ink-soft); max-width:60ch; margin:10px 0 0; font-size:14px; }
@@ -109,7 +109,7 @@ export function NetworkSettings({ initial }: { initial: AffiliateConfig }) {
         .ns-msg{ margin-top:16px; font-size:13px; color:var(--positive); }
         .ns-msg.err{ color:var(--danger); }
         @media (max-width:680px){ .row2, .net-fields{ grid-template-columns:1fr; } .ns-head{ flex-direction:column; } }
-      `}</style>
+      ` }} />
     </div>
   );
 }
@@ -119,13 +119,13 @@ function Field({ label, value, onChange, placeholder, mono }: { label: string; v
     <label className="field">
       <span className="field-l">{label}</span>
       <input className={mono ? "mono" : ""} value={value} placeholder={placeholder} onChange={(e) => onChange(e.target.value)} />
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .field{ display:flex; flex-direction:column; gap:6px; }
         .field-l{ font-size:12px; color:var(--ink-mute); }
         .field input{ background:var(--bg); border:1px solid var(--line); border-radius:var(--r-md); padding:10px 12px; color:var(--ink); font-size:13.5px; font-family:var(--sans); }
         .field input.mono{ font-family:var(--mono); }
         .field input:focus{ outline:none; border-color:var(--accent); }
-      `}</style>
+      ` }} />
     </label>
   );
 }

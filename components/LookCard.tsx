@@ -28,7 +28,7 @@ export function LookCard({ bundle, size = "md", index }: { bundle: EnrichedBundl
           <span className="mono lc-price">{fmtRange(bundle.totalLowCents, bundle.totalHighCents)} · {bundle.items.length} pieces</span>
         </div>
       </div>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .lookcard{ display:block; position:relative; overflow:hidden; aspect-ratio:4/5; background:var(--surface); }
         .lookcard.tall{ aspect-ratio:3/5; }
         .lookcard.wide{ aspect-ratio:16/11; }
@@ -48,7 +48,7 @@ export function LookCard({ bundle, size = "md", index }: { bundle: EnrichedBundl
           background:linear-gradient(var(--accent),var(--accent)) left bottom / 0% 1.5px no-repeat; transition:background-size .45s var(--ease-out); }
         .lookcard:hover .lc-title{ background-size:100% 1.5px; }
         .lc-price{ display:block; font-size:11px; color:var(--ink-soft); letter-spacing:.02em; }
-      `}</style>
+      ` }} />
     </Link>
   );
 }

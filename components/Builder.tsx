@@ -188,7 +188,7 @@ export function Builder({
         </ul>
       </section>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .builder{ max-width:1240px; margin:0 auto; padding:34px 24px 0; }
         .bld-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:16px; flex-wrap:wrap; }
         .bld-head h1{ font-weight:400; font-size:clamp(1.6rem,2.6vw,2.4rem); letter-spacing:-.01em; margin:6px 0 0; }
@@ -241,7 +241,7 @@ export function Builder({
         .sr-sw img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
         .sr-name{ font-size:14px; } .sr-price{ font-size:13.5px; }
         @media (max-width:900px){ .bld-grid{ grid-template-columns:1fr; } .stage-items{ grid-template-columns:1fr; } }
-      `}</style>
+      ` }} />
     </div>
   );
 }

@@ -68,7 +68,7 @@ export function ApprovalQueue({ rows }: { rows: AdminBundleRow[] }) {
         })}
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .aq-head h1{ font-weight:400; font-size:clamp(1.6rem,2.6vw,2.2rem); margin:6px 0 0; }
         .aq-sub{ color:var(--ink-soft); max-width:70ch; margin:10px 0 0; font-size:14px; }
         .aq-sub code{ font-family:var(--mono); font-size:12px; background:var(--surface); padding:2px 6px; border-radius:5px; }
@@ -93,7 +93,7 @@ export function ApprovalQueue({ rows }: { rows: AdminBundleRow[] }) {
         .mini.pub{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
         .mini.arc{ color:var(--danger); }
         @media (max-width:640px){ .aq-row{ flex-direction:column; align-items:flex-start; } .aq-state{ align-items:flex-start; } }
-      `}</style>
+      ` }} />
     </div>
   );
 }
@@ -103,11 +103,11 @@ function Flag({ ok, label, warnOnly }: { ok: boolean; label: string; warnOnly?: 
   return (
     <span className={"flag " + cls}>
       <i>{ok ? "✓" : warnOnly ? "!" : "✗"}</i> {label}
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .flag{ display:inline-flex; align-items:center; gap:4px; font-size:11px; color:var(--ink-mute); }
         .flag i{ font-style:normal; }
         .flag.ok i{ color:var(--positive); } .flag.warn i{ color:var(--warning); } .flag.bad i{ color:var(--danger); }
-      `}</style>
+      ` }} />
     </span>
   );
 }

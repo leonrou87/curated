@@ -81,7 +81,7 @@ export default async function AdminHome() {
         Full step-by-step program setup is in <code>AFFILIATE-SETUP.md</code> and <code>docs/NEXT_STEPS.md</code>.
       </p>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .adm-head h1{ font-weight:400; font-size:clamp(1.8rem,3vw,2.6rem); letter-spacing:-.02em; margin:6px 0 0; }
         .adm-sub{ color:var(--ink-soft); max-width:64ch; margin:10px 0 0; }
         .stat-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:26px 0; }
@@ -111,7 +111,7 @@ export default async function AdminHome() {
         .adm-foot{ margin-top:24px; font-size:12.5px; color:var(--ink-mute); }
         .adm-foot code{ font-family:var(--mono); font-size:11.5px; background:var(--surface); padding:2px 6px; border-radius:5px; }
         @media (max-width:760px){ .stat-row{ grid-template-columns:repeat(2,1fr); } .grid2{ grid-template-columns:1fr; } }
-      `}</style>
+      ` }} />
     </div>
   );
 }
@@ -121,11 +121,11 @@ function Stat({ n, label, accent }: { n: number; label: string; accent?: boolean
     <div className="stat">
       <span className="mono stat-n" style={accent ? { color: "var(--warning)" } : undefined}>{n}</span>
       <span className="stat-l">{label}</span>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .stat{ background:var(--surface); border:1px solid var(--line); border-radius:var(--r-md); padding:16px; }
         .stat-n{ font-size:28px; display:block; line-height:1; }
         .stat-l{ font-size:12px; color:var(--ink-mute); }
-      `}</style>
+      ` }} />
     </div>
   );
 }

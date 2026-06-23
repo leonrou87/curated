@@ -77,7 +77,7 @@ export function DisclosureBanner() {
         <span className="foot-cr">© {2026} Curated</span>
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .foot{ border-top:1px solid var(--line); margin-top:var(--s-10); padding:0 24px; max-width:var(--max); margin-left:auto; margin-right:auto; }
         .foot-news{ display:flex; justify-content:space-between; align-items:center; gap:32px; flex-wrap:wrap; padding:56px 0 40px; }
         .fn-copy h3{ font-weight:400; font-style:italic; font-size:clamp(1.6rem,3vw,2.4rem); margin:8px 0 8px; letter-spacing:-.02em; }
@@ -99,7 +99,7 @@ export function DisclosureBanner() {
         .foot-disc{ font-size:11px; color:var(--ink-mute); max-width:70ch; margin:0; line-height:1.6; }
         .foot-cr{ font-family:var(--mono); font-size:11px; color:var(--ink-mute); }
         @media (max-width:760px){ .foot-grid{ grid-template-columns:1fr 1fr; } .fn-form{ min-width:0; width:100%; } .foot-news{ gap:18px; } }
-      `}</style>
+      ` }} />
     </footer>
   );
 }

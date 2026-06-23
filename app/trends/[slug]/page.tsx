@@ -48,7 +48,7 @@ export default function TrendPage({ params }: { params: { slug: string } }) {
       <div className="tp-grid">
         {looks.map((b) => <LookCard key={b.id} bundle={b} />)}
       </div>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .trend{ max-width:1240px; margin:0 auto; padding:18px 24px 0; }
         .crumb{ font-size:12.5px; color:var(--ink-mute); display:flex; gap:8px; margin-bottom:20px; }
         .crumb a:hover{ color:var(--ink); } .crumb span:last-child{ color:var(--ink-soft); }
@@ -60,7 +60,7 @@ export default function TrendPage({ params }: { params: { slug: string } }) {
         .tp-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:36px; }
         @media (max-width:1000px){ .tp-grid{ grid-template-columns:repeat(3,1fr); } }
         @media (max-width:680px){ .tp-grid{ grid-template-columns:repeat(2,1fr); } }
-      `}</style>
+      ` }} />
     </div>
   );
 }

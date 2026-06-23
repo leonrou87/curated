@@ -44,7 +44,7 @@ export function ShareButton({
       </svg>
       {label}
       {toast && <span className="share-toast">{toast}</span>}
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .sharebtn{ position:relative; display:inline-flex; align-items:center; gap:8px; cursor:pointer; font-family:var(--sans); transition:.2s; }
         .sharebtn.ghost{ font-size:14px; background:none; color:var(--ink-soft); border:1px solid var(--line); padding:13px 20px; border-radius:999px; }
         .sharebtn.ghost:hover{ color:var(--ink); border-color:var(--ink-mute); }
@@ -54,7 +54,7 @@ export function ShareButton({
         .sharebtn.chip:hover{ color:var(--ink); border-color:var(--ink-mute); }
         .share-toast{ position:absolute; bottom:calc(100% + 8px); left:50%; transform:translateX(-50%); white-space:nowrap;
           background:var(--ink); color:var(--bg); font-size:12px; padding:6px 11px; border-radius:8px; box-shadow:var(--e-2); }
-      `}</style>
+      ` }} />
     </button>
   );
 }

@@ -5,6 +5,7 @@ import type { EnrichedBundle } from "@/lib/types";
 import type { SearchProduct } from "@/lib/data";
 import { LookCard } from "./LookCard";
 import { ProductLink } from "./ProductLink";
+import { SafeImg } from "./SafeImg";
 import { AddToCartButton } from "./AddToCartButton";
 import { useGender, genderMatch } from "@/lib/useGender";
 import { aestheticOf } from "@/lib/aesthetics";
@@ -68,7 +69,7 @@ export function SearchView({ looks, products }: { looks: EnrichedBundle[]; produ
             {matchedProducts.map((p) => (
               <div className="sp-card" key={p.id}>
                 <ProductLink offer={{ affiliateUrl: p.url } as any} productId={p.id} merchant={p.brand} className="sp-link" ariaLabel={`Shop ${p.brand} ${p.title}`}>
-                  <span className="sp-img"><img src={p.image} alt={p.title} loading="lazy" /></span>
+                  <span className="sp-img"><SafeImg src={p.image} alt={p.title} loading="lazy" /></span>
                   <span className="sp-body">
                     <span className="sp-brand">{p.brand}</span>
                     <span className="sp-title">{p.title}</span>
@@ -86,7 +87,7 @@ export function SearchView({ looks, products }: { looks: EnrichedBundle[]; produ
         <p className="s-empty">No matches for “{q}”. Try a brand, an occasion, or an aesthetic.</p>
       )}
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .search{ max-width:1200px; margin:0 auto; padding:30px 24px 0; }
         .s-bar{ display:flex; align-items:center; gap:12px; background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:14px 22px; color:var(--ink-mute); }
         .s-bar:focus-within{ border-color:var(--accent); }
@@ -115,7 +116,7 @@ export function SearchView({ looks, products }: { looks: EnrichedBundle[]; produ
         .s-empty{ text-align:center; color:var(--ink-soft); margin-top:50px; }
         @media (max-width:900px){ .s-looks{ grid-template-columns:repeat(2,1fr); } }
         @media (max-width:520px){ .s-looks{ grid-template-columns:1fr; } }
-      `}</style>
+      ` }} />
     </div>
   );
 }

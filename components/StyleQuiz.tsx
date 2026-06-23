@@ -132,7 +132,7 @@ export function StyleQuiz({ deck, recommendable }: { deck: EnrichedBundle[]; rec
 
 function Styles() {
   return (
-    <style>{`
+    <style dangerouslySetInnerHTML={{ __html: `
       .quiz, .quiz-result{ max-width:680px; margin:0 auto; padding:36px 24px 0; }
       .q-head{ text-align:center; }
       .q-head h1{ font-weight:400; font-size:clamp(2rem,4vw,3rem); letter-spacing:-.02em; margin:8px 0 6px; }
@@ -167,6 +167,6 @@ function Styles() {
       .r-recs{ margin-top:60px; }
       .r-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:14px; }
       @media (max-width:640px){ .r-grid{ grid-template-columns:repeat(2,1fr); } .q-stack{ height:62vh; } }
-    `}</style>
+    ` }} />
   );
 }

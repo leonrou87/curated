@@ -22,7 +22,7 @@ export function SavedGrid({ bundles }: { bundles: EnrichedBundle[] }) {
       ) : (
         <div className="s-grid">{saved.map((b) => <LookCard key={b.id} bundle={b} />)}</div>
       )}
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .saved{ max-width:1240px; margin:0 auto; padding:36px 24px 0; }
         .s-head h1{ font-weight:400; font-size:clamp(2rem,3.4vw,3rem); letter-spacing:-.02em; margin:0; }
         .s-blurb{ color:var(--ink-soft); margin:10px 0 0; }
@@ -31,7 +31,7 @@ export function SavedGrid({ bundles }: { bundles: EnrichedBundle[] }) {
         .s-cta{ color:var(--accent-soft); }
         @media (max-width:1000px){ .s-grid{ grid-template-columns:repeat(3,1fr); } }
         @media (max-width:760px){ .s-grid{ grid-template-columns:repeat(2,1fr); } }
-      `}</style>
+      ` }} />
     </div>
   );
 }

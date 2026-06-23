@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCart } from "@/lib/useCart";
 import { AFFILIATE_LINK_ATTRS, FTC_DISCLOSURE } from "@/lib/offers";
 import { fmtCents } from "@/lib/format";
+import { SafeImg } from "./SafeImg";
 
 export function CartView() {
   const { items, remove, setBought, clear, total } = useCart();
@@ -26,7 +27,7 @@ export function CartView() {
         <h1 className="serif">Your bag is empty.</h1>
         <p>Add pieces from any look — then check out store by store.</p>
         <Link href="/looks" className="ce-cta">Browse looks ↗</Link>
-        <style>{emptyCss}</style>
+        <style dangerouslySetInnerHTML={{ __html: emptyCss }} />
       </div>
     );
   }
@@ -45,7 +46,7 @@ export function CartView() {
             <button className="btn-line" onClick={() => { setCheckout(false); setStep(0); }}>Back to bag</button>
             <Link href="/looks" className="btn-fill">Keep shopping ↗</Link>
           </div>
-          <style>{checkoutCss}</style>
+          <style dangerouslySetInnerHTML={{ __html: checkoutCss }} />
         </div>
       );
     }
@@ -57,7 +58,7 @@ export function CartView() {
         </div>
         <div className="co-card">
           <div className="co-img" style={{ background: "#1a1815" }}>
-            {it.image && /* eslint-disable-next-line @next/next/no-img-element */ <img src={it.image} alt={it.title} />}
+            {it.image && <SafeImg src={it.image} alt={it.title} />}
           </div>
           <div className="co-meta">
             <span className="eyebrow">{it.brand}</span>
@@ -80,7 +81,7 @@ export function CartView() {
             <button key={x.id} className={"cr-dot" + (i === step ? " cur" : "") + (x.bought ? " done" : "")} onClick={() => setStep(i)} aria-label={x.title} />
           ))}
         </div>
-        <style>{checkoutCss}</style>
+        <style dangerouslySetInnerHTML={{ __html: checkoutCss }} />
       </div>
     );
   }
@@ -111,7 +112,7 @@ export function CartView() {
             {list.map((it) => (
               <li key={it.id} className={"ci" + (it.bought ? " bought" : "")}>
                 <span className="ci-img" style={{ background: "#1a1815" }}>
-                  {it.image && /* eslint-disable-next-line @next/next/no-img-element */ <img src={it.image} alt={it.title} loading="lazy" />}
+                  {it.image && <SafeImg src={it.image} alt={it.title} loading="lazy" />}
                 </span>
                 <span className="ci-meta">
                   <span className="ci-title">{it.title}</span>
@@ -129,7 +130,7 @@ export function CartView() {
         <button className="ghost" onClick={clear}>Clear bag</button>
         {boughtCount > 0 && <span className="eyebrow">{boughtCount} of {items.length} bought</span>}
       </div>
-      <style>{listCss}</style>
+      <style dangerouslySetInnerHTML={{ __html: listCss }} />
     </div>
   );
 }

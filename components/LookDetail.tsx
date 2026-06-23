@@ -9,6 +9,7 @@ import { BundleCover } from "./BundleCover";
 import { ProductLink } from "./ProductLink";
 import { ShareButton } from "./ShareButton";
 import { LookCard } from "./LookCard";
+import { SafeImg } from "./SafeImg";
 import { AddToCartButton } from "./AddToCartButton";
 import { useSaved } from "@/lib/useSaved";
 import { useCart } from "@/lib/useCart";
@@ -96,9 +97,7 @@ export function LookDetail({ bundle, related = [] }: { bundle: EnrichedBundle; r
                 ariaLabel={`Shop ${it.brand} ${it.title}, ${fmtCents(it.priceCents)} (opens in a new tab)`}
               >
                 <span className="pc-img" style={{ background: it.swatch }}>
-                  {it.image && /* eslint-disable-next-line @next/next/no-img-element */ (
-                    <img src={it.image} alt={it.title} loading="lazy" />
-                  )}
+                  {it.image && <SafeImg src={it.image} alt={it.title} loading="lazy" />}
                   <span className="index pc-idx">N°{String(i + 1).padStart(2, "0")}</span>
                   {it.isHero && <span className="pc-hero">★ Hero</span>}
                   <span className="pc-role">{titleCase(it.role)}</span>
@@ -146,7 +145,7 @@ export function LookDetail({ bundle, related = [] }: { bundle: EnrichedBundle; r
         </section>
       )}
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .ld{ padding-bottom:80px; }
         .cover{ padding:0; }
         .cover-img{ position:relative; width:100%; height:min(86vh,820px); margin:0 auto; overflow:hidden;
@@ -217,7 +216,7 @@ export function LookDetail({ bundle, related = [] }: { bundle: EnrichedBundle; r
         .related{ max-width:var(--max); margin:var(--s-9) auto 0; padding:0 24px; }
         .rel-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
         @media (max-width:900px){ .rel-grid{ grid-template-columns:repeat(2,1fr); } }
-      `}</style>
+      ` }} />
     </div>
   );
 }

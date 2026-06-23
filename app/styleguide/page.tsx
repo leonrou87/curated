@@ -97,7 +97,7 @@ export default function Styleguide() {
         </div>
       </Section>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .sg{ max-width:1080px; margin:0 auto; padding:40px 24px 0; }
         .sg-head h1{ font-weight:400; font-size:clamp(2.2rem,4vw,3.4rem); letter-spacing:-.02em; margin:8px 0 0; }
         .sg-sub{ color:var(--ink-soft); max-width:64ch; margin:12px 0 0; }
@@ -118,7 +118,7 @@ export default function Styleguide() {
         .cta-demos{ display:flex; gap:14px; align-items:center; }
         .card-demo{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
         @media (max-width:760px){ .meter-demos, .card-demo{ grid-template-columns:1fr; } }
-      `}</style>
+      ` }} />
     </div>
   );
 }
