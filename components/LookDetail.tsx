@@ -13,6 +13,7 @@ import { SafeImg } from "./SafeImg";
 import { AddToCartButton } from "./AddToCartButton";
 import { useSaved } from "@/lib/useSaved";
 import { useCart } from "@/lib/useCart";
+import { recordView } from "@/lib/useRecentlyViewed";
 
 const TYPE_PATH: Record<string, string> = { look: "looks", kit: "kits", collection: "collections", gift: "gifts" };
 
@@ -31,6 +32,13 @@ export function LookDetail({ bundle, related = [] }: { bundle: EnrichedBundle; r
     addMany(bundle.items.map((it) => ({ id: it.productId, brand: it.brand, title: it.title, image: it.image, priceCents: it.priceCents, url: it.bestOffer?.affiliateUrl || "#" })));
 
   const total = bundle.items.reduce((s, i) => s + (i.priceCents ?? 0), 0);
+
+  // snapshot this look for the "recently viewed" rail
+  useEffect(() => {
+    const hero = bundle.items.find((i) => i.isHero && i.image) ?? bundle.items.find((i) => i.image);
+    if (hero?.image) recordView({ slug: bundle.slug, title: bundle.title, image: hero.image, price: total || undefined });
+  }, [bundle.slug, bundle.title, total]);
+
   const eyebrow = [bundle.brief.gender, bundle.brief.vibe || bundle.brief.occasion]
     .filter(Boolean).map((s) => titleCase(String(s))).join(" · ");
 

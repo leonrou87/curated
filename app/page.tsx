@@ -1,6 +1,7 @@
 import { getBundlesByType, toCardBundles } from "@/lib/data";
 import { HomeFeed } from "@/components/HomeFeed";
 import { NewsletterCTA } from "@/components/NewsletterCTA";
+import { RecentlyViewed } from "@/components/RecentlyViewed";
 
 export default function HomePage() {
   const looks = getBundlesByType("look");
@@ -9,6 +10,7 @@ export default function HomePage() {
   return (
     <>
       <HomeFeed looks={toCardBundles(sample)} kits={toCardBundles(getBundlesByType("kit"))} total={looks.length} />
+      <RecentlyViewed />
       <NewsletterCTA source="home" />
     </>
   );
