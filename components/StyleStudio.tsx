@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import type { EnrichedBundle } from "@/lib/types";
 import { rankLooks, rememberPrompt, recentPrompts } from "@/lib/match";
 import { LookDetail } from "./LookDetail";
@@ -7,16 +8,20 @@ import { LookCard } from "./LookCard";
 import { useTaste } from "@/lib/useTaste";
 import { aestheticOf } from "@/lib/aesthetics";
 
-const SUGGESTIONS = [
-  "fall outdoor wedding, quiet luxury",
-  "minimalist date night, all black",
-  "first day at a new office, navy",
-  "men's smart casual for a dinner",
-  "affordable weekend brunch, summer",
+// A big library of things to search for — grouped so the page reads like a menu of ideas.
+export const PROMPT_GROUPS: { label: string; prompts: string[] }[] = [
+  { label: "Occasions", prompts: ["wedding guest in summer", "first date", "job interview", "funeral", "graduation", "cocktail party", "dinner party", "beach vacation", "ski trip", "music festival", "NYE party", "gallery opening", "garden party", "holiday party", "baby shower", "girls night out", "travel day", "courtside"] },
+  { label: "Aesthetics", prompts: ["quiet luxury", "old money", "mob wife energy", "clean girl", "coastal grandmother", "tomato girl summer", "office siren", "blokecore", "gorpcore", "eclectic grandpa", "coquette", "scandi minimalist", "all black everything", "festival boho"] },
+  { label: "Pieces & palettes", prompts: ["a slip dress", "linen everything", "a trench coat outfit", "navy blazer", "white sneakers", "loafers and trousers", "gold jewelry", "a leather tote", "head to toe cream", "earthy neutrals", "denim on denim", "a knit and trousers"] },
+  { label: "For him", prompts: ["men's smart casual", "men's date night", "men's wedding guest", "men's weekend", "men's gorpcore", "men's old money"] },
+  { label: "By budget", prompts: ["under $300", "affordable summer", "investment pieces", "splurge-worthy evening"] },
+  { label: "Weather", prompts: ["hot weather, looks cool", "cold weather layering", "rainy day", "transitional fall"] },
 ];
+const STARTERS = ["wedding guest in summer", "quiet luxury", "first date", "all black everything", "men's smart casual", "beach vacation"];
 
 // NL styling → the assemble reveal. Intent-aware + taste-personalized ranking over the full catalog.
 export function StyleStudio({ bundles }: { bundles: EnrichedBundle[] }) {
+  const sp = useSearchParams();
   const [query, setQuery] = useState("");
   const [submitted, setSubmitted] = useState<string | null>(null);
   const [results, setResults] = useState<EnrichedBundle[]>([]);
@@ -24,6 +29,11 @@ export function StyleStudio({ bundles }: { bundles: EnrichedBundle[] }) {
   const { taste, top } = useTaste();
 
   useEffect(() => { setRecent(recentPrompts()); }, []);
+  // hand-off from the home page: /style?q=...
+  useEffect(() => {
+    const q = sp.get("q");
+    if (q) { setQuery(q); run(q); }
+  }, []); // eslint-disable-line
 
   const run = (q: string) => {
     setResults(rankLooks(q, bundles, taste));
@@ -57,7 +67,7 @@ export function StyleStudio({ bundles }: { bundles: EnrichedBundle[] }) {
           <button type="submit" aria-label="Assemble a look">Assemble →</button>
         </form>
         <div className="suggest">
-          {(recent.length ? recent : SUGGESTIONS).map((s) => (
+          {(recent.length ? recent : STARTERS).map((s) => (
             <button key={s} className="sug" onClick={() => { setQuery(s); run(s); }}>{s}</button>
           ))}
         </div>
@@ -65,6 +75,22 @@ export function StyleStudio({ bundles }: { bundles: EnrichedBundle[] }) {
           <p className="taste-hint">✦ Personalizing to your taste — <b>{tasteName}</b>. <a href="/quiz">Retake the quiz</a> to refine.</p>
         )}
       </section>
+
+      {!submitted && (
+        <section className="explore">
+          <div className="explore-head"><hr className="rule" /><span className="eyebrow">Or explore by idea</span><hr className="rule" /></div>
+          {PROMPT_GROUPS.map((g) => (
+            <div className="ex-group" key={g.label}>
+              <span className="eyebrow ex-label">{g.label}</span>
+              <div className="ex-chips">
+                {g.prompts.map((p) => (
+                  <button key={p} className="ex-chip" onClick={() => { setQuery(p); run(p); window.scrollTo({ top: 0, behavior: "smooth" }); }}>{p}</button>
+                ))}
+              </div>
+            </div>
+          ))}
+        </section>
+      )}
 
       {submitted && (
         hero ? (
@@ -109,6 +135,14 @@ export function StyleStudio({ bundles }: { bundles: EnrichedBundle[] }) {
         .alts{ max-width:1180px; margin:50px auto 0; }
         .alts-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:14px; }
         .empty{ text-align:center; color:var(--ink-soft); margin-top:40px; }
+        .explore{ max-width:880px; margin:46px auto 0; }
+        .explore-head{ display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:16px; margin-bottom:34px; }
+        .ex-group{ margin-bottom:26px; }
+        .ex-label{ display:block; margin-bottom:12px; }
+        .ex-chips{ display:flex; flex-wrap:wrap; gap:8px; }
+        .ex-chip{ font-family:var(--serif); font-style:italic; font-size:15px; color:var(--ink-soft); background:var(--surface);
+          border:1px solid var(--line); padding:9px 16px; border-radius:999px; cursor:pointer; transition:.18s; }
+        .ex-chip:hover{ color:var(--ink); border-color:var(--accent); background:var(--surface-2); }
         @media (max-width:760px){ .alts-grid{ grid-template-columns:repeat(2,1fr); } }
       `}</style>
     </div>

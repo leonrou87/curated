@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 import type { EnrichedBundle } from "@/lib/types";
 import { LookCard } from "./LookCard";
 import { FeedMasonry } from "./FeedMasonry";
@@ -9,9 +10,14 @@ import { useGender, genderMatch } from "@/lib/useGender";
 import { useTaste } from "@/lib/useTaste";
 import { aestheticOf } from "@/lib/aesthetics";
 
+const HOME_PROMPTS = ["wedding guest", "first date", "job interview", "quiet luxury", "all black", "beach vacation", "men's smart casual", "office siren", "coastal grandmother", "under $300"];
+
 export function HomeFeed({ looks, kits, total }: { looks: EnrichedBundle[]; kits: EnrichedBundle[]; total?: number }) {
   const { gender } = useGender();
   const { taste, top } = useTaste();
+  const router = useRouter();
+  const [ask, setAsk] = useState("");
+  const go = (q: string) => router.push(`/style?q=${encodeURIComponent(q)}`);
 
   const filtered = useMemo(() => looks.filter((b) => genderMatch(gender, b.brief.gender)), [looks, gender]);
   const featured = filtered.find((b) => b.featured) ?? filtered[0];
@@ -69,6 +75,19 @@ export function HomeFeed({ looks, kits, total }: { looks: EnrichedBundle[]; kits
               <Link href="/looks" className="btn-line">Browse the issue</Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── style studio: ask for a look ── */}
+      <section className="ask">
+        <span className="eyebrow">The Style Studio</span>
+        <h2 className="serif ask-h">What are you dressing for?</h2>
+        <form className="ask-bar" onSubmit={(e) => { e.preventDefault(); if (ask.trim()) go(ask.trim()); }}>
+          <input value={ask} onChange={(e) => setAsk(e.target.value)} placeholder="A fall outdoor wedding · first date · job interview · beach vacation…" aria-label="Describe what you need" />
+          <button type="submit">Style me ↗</button>
+        </form>
+        <div className="ask-chips">
+          {HOME_PROMPTS.map((p) => <button key={p} onClick={() => go(p)}>{p}</button>)}
         </div>
       </section>
 
@@ -132,6 +151,17 @@ export function HomeFeed({ looks, kits, total }: { looks: EnrichedBundle[]; kits
         .btn-line{ border:1px solid var(--ink-soft); color:var(--ink); padding:14px 24px; font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; transition:.2s; }
         .btn-line:hover{ background:var(--ink); color:var(--bg); border-color:var(--ink); }
 
+        .ask{ max-width:760px; margin:var(--s-9) auto 0; padding:0 24px; text-align:center; }
+        .ask-h{ font-weight:400; font-style:italic; font-size:clamp(1.8rem,3.6vw,3rem); letter-spacing:-.02em; margin:10px 0 22px; }
+        .ask-bar{ display:flex; gap:8px; background:var(--surface); border:1px solid var(--line); padding:7px 7px 7px 22px; }
+        .ask-bar:focus-within{ border-color:var(--accent); }
+        .ask-bar input{ flex:1; min-width:0; background:none; border:none; outline:none; color:var(--ink); font-family:var(--serif); font-style:italic; font-size:17px; }
+        .ask-bar input::placeholder{ color:var(--ink-mute); }
+        .ask-bar button{ background:var(--accent); color:var(--accent-ink); border:none; padding:13px 22px; font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; cursor:pointer; white-space:nowrap; }
+        .ask-bar button:hover{ background:var(--accent-soft); }
+        .ask-chips{ display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:16px; }
+        .ask-chips button{ font-family:var(--serif); font-style:italic; font-size:14px; color:var(--ink-soft); background:none; border:1px solid var(--line); padding:7px 14px; border-radius:999px; cursor:pointer; transition:.18s; }
+        .ask-chips button:hover{ color:var(--ink); border-color:var(--ink-mute); }
         .statement{ max-width:1000px; margin:var(--s-10) auto; padding:0 24px; text-align:center; }
         .statement .index{ font-size:1rem; color:var(--accent); }
         .statement p{ font-family:var(--serif); font-weight:300; font-size:clamp(1.5rem,3.4vw,2.6rem); line-height:1.28; letter-spacing:-.015em; margin:18px auto 18px; max-width:24ch; }
