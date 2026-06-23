@@ -10,9 +10,9 @@ const LINKS = [
   { href: "/quiz", label: "Quiz" },
   { href: "/style", label: "Style" },
   { href: "/looks", label: "Looks" },
+  { href: "/collections", label: "Edits" },
   { href: "/trends", label: "Trends" },
   { href: "/kits", label: "Kits" },
-  { href: "/builder", label: "Build" },
 ];
 
 export function Nav() {

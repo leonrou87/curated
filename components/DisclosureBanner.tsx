@@ -54,6 +54,7 @@ export function DisclosureBanner() {
         <nav className="foot-col">
           <span className="eyebrow">Shop</span>
           <Link href="/looks">Looks</Link>
+          <Link href="/collections">Collections</Link>
           <Link href="/trends">Trends</Link>
           <Link href="/kits">Kits</Link>
         </nav>
