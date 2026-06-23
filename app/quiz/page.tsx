@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getBundlesByType, toClientBundles } from "@/lib/data";
+import { getBundlesByType, toCardBundles } from "@/lib/data";
 import { StyleQuiz } from "@/components/StyleQuiz";
 
 export const metadata: Metadata = {
@@ -19,5 +19,5 @@ export default function QuizPage() {
     if (deck.length >= 16) break;
   }
   // a capped, diverse pool for the "picked for you" recommendations
-  return <StyleQuiz deck={toClientBundles(deck)} recommendable={toClientBundles(looks.slice(0, 300))} />;
+  return <StyleQuiz deck={toCardBundles(deck)} recommendable={toCardBundles(looks.slice(0, 300))} />;
 }

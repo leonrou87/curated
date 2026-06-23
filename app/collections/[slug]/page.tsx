@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getBundlesByType, toClientBundles } from "@/lib/data";
+import { getBundlesByType, toCardBundles } from "@/lib/data";
 import { BundleBrowser } from "@/components/BundleBrowser";
 import { COLLECTIONS, collectionBySlug } from "@/lib/collections";
 
@@ -22,7 +22,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 export default function CollectionPage({ params }: { params: { slug: string } }) {
   const c = collectionBySlug(params.slug);
   if (!c) notFound();
-  const looks = toClientBundles(getBundlesByType("look").filter((b) => c.match(b)));
+  const looks = toCardBundles(getBundlesByType("look").filter((b) => c.match(b)));
 
   return (
     <div className="collection">

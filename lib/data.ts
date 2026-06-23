@@ -208,8 +208,23 @@ export function toClientBundles(bs: EnrichedBundle[]): EnrichedBundle[] {
   }));
 }
 
+// Even leaner than toClientBundles: a card-only shape for browse/feed/search/collections grids,
+// which render covers + facets but never the per-item offers/pins/notes. ~60% smaller payload at
+// 1800+ looks. (Detail pages fetch the full bundle separately via getPublicBundle.)
+export function toCardBundles(bs: EnrichedBundle[]): EnrichedBundle[] {
+  return bs.map((b) => ({
+    id: b.id, slug: b.slug, type: b.type, title: b.title, isFashion: b.isFashion, category: b.category,
+    heroImage: b.heroImage, flatLayImage: null, state: "published", generatedBy: b.generatedBy,
+    estPriceLow: b.estPriceLow, estPriceHigh: b.estPriceHigh,
+    totalLowCents: b.totalLowCents, totalHighCents: b.totalHighCents,
+    brief: { gender: b.brief.gender, vibe: b.brief.vibe, occasion: b.brief.occasion, season: b.brief.season, budgetTier: b.brief.budgetTier, targetFormality: b.brief.targetFormality },
+    coherence: { score: b.coherence.score, heroItemId: b.coherence.heroItemId, passed: b.coherence.passed, scheme: b.coherence.scheme, hardViolations: [], ruleScores: {} },
+    items: b.items.map((i) => ({ image: i.image, swatch: i.swatch, isHero: i.isHero, brand: i.brand, title: i.title, priceCents: i.priceCents })),
+  } as unknown as EnrichedBundle));
+}
+
 export function getLooksForBrowse(): EnrichedBundle[] {
-  return toClientBundles(getBundlesByType("look"));
+  return toCardBundles(getBundlesByType("look"));
 }
 
 // "You might also like" — same aesthetic + gender first, then same gender, then anything.
