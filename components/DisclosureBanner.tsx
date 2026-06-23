@@ -55,6 +55,7 @@ export function DisclosureBanner() {
           <span className="eyebrow">Shop</span>
           <Link href="/looks">Looks</Link>
           <Link href="/collections">Collections</Link>
+          <Link href="/gifts">Gift Guides</Link>
           <Link href="/trends">Trends</Link>
           <Link href="/kits">Kits</Link>
         </nav>
