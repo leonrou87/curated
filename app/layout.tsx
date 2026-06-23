@@ -3,6 +3,7 @@ import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { Analytics } from "@/components/Analytics";
+import { CookieNotice } from "@/components/CookieNotice";
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://curated.kytepush.com";
 const OG_DEFAULT = "/og?type=look&t=A%20Magazine%20You%20Can%20Shop&a=old-money";
@@ -56,6 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Nav />
         <main id="main">{children}</main>
         <DisclosureBanner />
+        <CookieNotice />
         <Analytics />
               <script defer src="https://kytepush.com/track.js"></script>
       </body>

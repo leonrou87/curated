@@ -67,16 +67,18 @@ export function DisclosureBanner() {
           <Link href="/saved">Closet</Link>
         </nav>
         <nav className="foot-col">
-          <span className="eyebrow">About</span>
+          <span className="eyebrow">Company</span>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/disclosure">Disclosure</Link>
+          <Link href="/privacy">Privacy</Link>
+          <Link href="/terms">Terms</Link>
         </nav>
       </div>
 
       <div className="foot-base">
         <p className="foot-disc">{FTC_DISCLOSURE}</p>
-        <span className="foot-cr">© {2026} Curated</span>
+        <span className="foot-cr">© {2026} Curated · <Link href="/privacy">Privacy</Link> · <Link href="/terms">Terms</Link></span>
       </div>
 
       <style dangerouslySetInnerHTML={{ __html: `
