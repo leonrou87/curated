@@ -1,0 +1,2 @@
+import { GridSkeleton } from "@/components/GridSkeleton";
+export default function Loading() { return <GridSkeleton count={9} label="Loading gift guides" />; }
