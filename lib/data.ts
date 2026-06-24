@@ -270,9 +270,15 @@ export interface SearchProduct {
 }
 export function getSearchProducts(): SearchProduct[] {
   const out: SearchProduct[] = [];
+  // collapse variant duplicates (same brand + title, e.g. color/size variants) so guides
+  // and search don't show the same product twice in a row.
+  const seen = new Set<string>();
   for (const p of products) {
     const img = p.imageUrls?.find((u) => /^https?:\/\//.test(u));
     if (!img || !p.inStock) continue;
+    const key = `${p.brand}|${p.title}`.toLowerCase().replace(/\s+/g, " ").trim();
+    if (seen.has(key)) continue;
+    seen.add(key);
     const o = resolveBestOffer(p);
     out.push({
       id: p.id, brand: p.brand, title: p.title, category: p.category,
