@@ -1,6 +1,7 @@
 "use client";
 import { useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 import type { EnrichedBundle } from "@/lib/types";
 import type { SearchProduct } from "@/lib/data";
 import { LookCard } from "./LookCard";
@@ -84,7 +85,10 @@ export function SearchView({ looks, products }: { looks: EnrichedBundle[]; produ
       )}
 
       {ts.length > 0 && matchedLooks.length === 0 && matchedProducts.length === 0 && (
-        <p className="s-empty">No matches for “{q}”. Try a brand, an occasion, or an aesthetic.</p>
+        <div className="s-empty">
+          <p>No matches for “{q}”. Try a brand, an occasion, or an aesthetic.</p>
+          <Link href="/looks" className="s-empty-cta">Browse all looks →</Link>
+        </div>
       )}
 
       <style dangerouslySetInnerHTML={{ __html: `
@@ -114,6 +118,9 @@ export function SearchView({ looks, products }: { looks: EnrichedBundle[]; produ
         .sp-foot{ display:flex; justify-content:space-between; align-items:center; margin-top:6px; font-size:13px; }
         .sp-cta{ color:var(--accent-soft); font-size:12px; }
         .s-empty{ text-align:center; color:var(--ink-soft); margin-top:50px; }
+        .s-empty p{ margin:0 0 18px; }
+        .s-empty-cta{ display:inline-block; font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent-ink); background:var(--accent); padding:12px 24px; }
+        .s-empty-cta:hover{ background:var(--accent-soft); }
         @media (max-width:900px){ .s-looks{ grid-template-columns:repeat(2,1fr); } }
         @media (max-width:520px){ .s-looks{ grid-template-columns:1fr; } }
       ` }} />
