@@ -13,8 +13,8 @@ export default function AboutPage() {
       <style dangerouslySetInnerHTML={{ __html: `
         .legal{ max-width:720px; margin:0 auto; padding:50px 24px 0; }
         .legal h1{ font-weight:400; font-size:clamp(2rem,4vw,3rem); letter-spacing:-.02em; margin:8px 0 20px; line-height:1.05; }
-        .legal .lead{ font-size:18px; color:var(--ink); line-height:1.6; }
-        .legal p{ color:var(--ink-soft); line-height:1.7; }
+        .legal .lead{ font-size:18px; color:var(--ink); line-height:1.6; margin:0 0 20px; }
+        .legal p{ color:var(--ink-soft); line-height:1.7; margin:0 0 16px; }
       ` }} />
     </article>
   );

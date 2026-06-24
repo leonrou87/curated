@@ -34,8 +34,8 @@ export default function PrivacyPage() {
         .legal{ max-width:720px; margin:0 auto; padding:50px 24px 0; }
         .legal h1{ font-weight:400; font-style:italic; font-size:clamp(2rem,4vw,3rem); letter-spacing:-.02em; margin:8px 0 20px; }
         .legal h2{ font-weight:400; font-size:1.4rem; margin:34px 0 10px; }
-        .legal .lead{ font-size:18px; color:var(--ink); line-height:1.6; }
-        .legal p{ color:var(--ink-soft); line-height:1.7; } .legal a{ color:var(--accent-soft); }
+        .legal .lead{ font-size:18px; color:var(--ink); line-height:1.6; margin:0 0 20px; }
+        .legal p{ color:var(--ink-soft); line-height:1.7; margin:0 0 16px; } .legal a{ color:var(--accent-soft); }
       ` }} />
     </article>
   );
